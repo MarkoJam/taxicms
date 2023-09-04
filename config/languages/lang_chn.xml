@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<language>
+	<global>
+		<value name="GLOBAL_MONTH_JANUARY">January</value>
+		<value name="GLOBAL_MONTH_FEBRUARY">February</value>
+		<value name="GLOBAL_MONTH_MARCH">March</value>
+		<value name="GLOBAL_MONTH_APRIL">April</value>
+		<value name="GLOBAL_MONTH_MAY">May</value>
+		<value name="GLOBAL_MONTH_JUNE">June</value>
+		<value name="GLOBAL_MONTH_JULY">July</value>
+		<value name="GLOBAL_MONTH_AUGUST">August</value>
+		<value name="GLOBAL_MONTH_SEPTEMBER">September</value>
+		<value name="GLOBAL_MONTH_OCTOBER">October</value>
+		<value name="GLOBAL_MONTH_NOVEMBER">November</value>
+		<value name="GLOBAL_MONTH_DECEMBER">December</value>
+		
+		<value name="GLOBAL_MONTH_JANUARY_SHORT">Jan</value>
+		<value name="GLOBAL_MONTH_FEBRUARY_SHORT">Feb</value>
+		<value name="GLOBAL_MONTH_MARCH_SHORT">Mar</value>
+		<value name="GLOBAL_MONTH_APRIL_SHORT">Apr</value>
+		<value name="GLOBAL_MONTH_MAY_SHORT">May</value>
+		<value name="GLOBAL_MONTH_JUNE_SHORT">Jun</value>
+		<value name="GLOBAL_MONTH_JULY_SHORT">Jul</value>
+		<value name="GLOBAL_MONTH_AUGUST_SHORT">Aug</value>
+		<value name="GLOBAL_MONTH_SEPTEMBER_SHORT">Sep</value>
+		<value name="GLOBAL_MONTH_OCTOBER_SHORT">Oct</value>
+		<value name="GLOBAL_MONTH_NOVEMBER_SHORT">Nov</value>
+		<value name="GLOBAL_MONTH_DECEMBER_SHORT">Dec</value>
+		
+		<value name="GLOBAL_DAY_MONDAY">Monday</value>
+		<value name="GLOBAL_DAY_TUESDAY">Tuesday</value>
+		<value name="GLOBAL_DAY_WEDNESDAY">Wednesday</value>
+		<value name="GLOBAL_DAY_THURSDAY">Thursday</value>
+		<value name="GLOBAL_DAY_FRIDAY">Friday</value>
+		<value name="GLOBAL_DAY_SATURDAY">Saturday</value>
+		<value name="GLOBAL_DAY_SUNDAY">Sunday</value>
+		
+		<value name="GLOBAL_DAY_MONDAY_SHORT">Mon</value>
+		<value name="GLOBAL_DAY_TUESDAY_SHORT">Tue</value>
+		<value name="GLOBAL_DAY_WEDNESDAY_SHORT">Wed</value>
+		<value name="GLOBAL_DAY_THURSDAY_SHORT">Thu</value>
+		<value name="GLOBAL_DAY_FRIDAY_SHORT">Fri</value>
+		<value name="GLOBAL_DAY_SATURDAY_SHORT">Sat</value>
+		<value name="GLOBAL_DAY_SUNDAY_SHORT">Sun</value>
+		
+		<value name="GLOBAL_CURRENCY">EUR</value>
+		
+		<value name="GLOBAL_PREV_TEXT">Back</value>
+		<value name="GLOBAL_NEXT_TEXT">Forward</value>
+		<value name="GLOBAL_FIRST_TEXT">First Page</value>
+		<value name="GLOBAL_LAST_TEXT">Last page</value>
+		
+		<value name="GLOBAL_SHOW_TEXT">shows</value>
+		<value name="GLOBAL_TOTAL_TEXT">of</value>
+		
+		<value name="GLOBAL_DATE">Date</value>
+		<value name="GLOBAL_YEAR">years.</value>
+		<value name="GLOBAL_DATE_UPDATE">change date</value>
+		<value name="GLOBAL_SITEMAP">Site Map</value>
+
+		<value name="PLG_PASSWORD_MESSAGE">Password</value>
+		<value name="PLG_USERNAME_MESSAGE">Username</value>
+		
+	</global>
+
+	<news>
+		<value name="PLG_NEWS_DETAILS_TITLE">roundup</value>
+		<value name="PLG_NEWS_ARCHIVE_TITLE">roundup</value>
+		<value name="PLG_NEWS_NAMEINPATH">News></value>
+		<value name="PLG_NEWS_NAMEINPATH_LONG">News>Archive</value>
+		<value name="PLG_NEWS_ERROR">Error in the view</value>
+		<value name="PLG_NEWS_DATE">Date:</value>
+		<value name="PLG_NEWS_ANNOUCEMENT">News</value>
+		<value name="PLG_NEWS_DETAILS">[more ...]</value>
+		<value name="PLG_NEWS_ARCHIVE_SHORT">Archive ...</value>
+		<value name="PLG_NEWS_ARCHIVE">Archive</value>
+		<value name="PLG_NEWS_ARCHIVE_YEAR">Year</value>
+		<value name="PLG_NEWS_ARCHIVE_MONTH">Month</value>
+		<value name="PLG_NEWS_ARCHIVE_FILTER">Filter</value>
+	</news>
+	
+	<event>
+		<value name="PLG_EVENT_DETAILS_TITLE">View Event</value>
+		<value name="PLG_EVENT_ARCHIVE_TITLE">View Event</value>
+		<value name="PLG_EVENT_NAMEINPATH">Event Announcement></value>
+		<value name="PLG_EVENT_NAMEINPATH_LONG">News>Archive</value>
+		<value name="PLG_EVENT_ERROR">Error in the view</value>
+		<value name="PLG_EVENT_DATE">Date:</value>
+		<value name="PLG_EVENT_ANNOUCEMENT">Events</value>
+		<value name="PLG_EVENT_DETAILS">[more ...]</value>
+		<value name="PLG_EVENT_ARCHIVE_SHORT">Archive ...</value>
+		<value name="PLG_EVENT_ARCHIVE">Archive event</value>
+	</event>
+
+	<search>
+		<value name="PLG_SEARCH_NAMEINPATH_LONG">results></value>
+		<value name="PLG_SEARCH_NAMEINPATH">Search</value>
+		<value name="PLG_SEARCH_TITLE">Search Site</value>
+		<value name="PLG_SEARCH_SITEWIDE">Whole site</value>
+		<value name="PLG_SEARCH_NEWS">News</value>
+		<value name="PLG_SEARCH_PAGES">Pages</value>
+		<value name="PLG_SEARCH_FIND">Search site</value>
+		<value name="PLG_SEARCH_RESULTS_PAGES">results page</value>
+		<value name="PLG_SEARCH_RESULTS_NEWS">results news</value>
+		<value name="PLG_SEARCH_RESULTS_BLOG">results blog</value>
+		<value name="PLG_SEARCH_RESULTS_PRODUCT">Product results</value>
+		<value name="PLG_SEARCH_NORESULTS">No results found</value>
+		<value name="PLG_SEARCH_NORESULTS_PAGES">no pages that satisfy the search condition</value>
+		<value name="PLG_SEARCH_NORESULTS_NEWS">No news does not meet the search condition</value>
+		<value name="PLG_SEARCH_NORESULTS_BLOG">No blog entries do not meet the search condition</value>
+		<value name="PLG_SEARCH_NORESULTS_PRODUCT">No entry does not meet the search condition</value>
+		<value name="PLG_SEARCH_VIEW_PAGE">See page</value>
+		<value name="PLG_SEARCH_VIEW_NEWS">See news</value>
+		<value name="PLG_SEARCH_VIEW_BLOG">View blog entry</value>
+		<value name="PLG_SEARCH_KEYWORDSEARCH">Keyword search</value>
+		<value name="PLG_SEARCH_KEYWORD">Keyword</value>
+		<value name="PLG_SEARCH_SEARCH">Search</value>
+	</search>
+	
+	<poll>
+		<value name="PLG_POLL_TITLE">Poll</value>
+		<value name="PLG_POLL_VOTE">Vote</value>
+		<value name="PLG_POLL_RESULT">Results</value>
+		<value name="PLG_POLL_TOTALVOTES">Total Votes</value>
+	</poll>
+	
+	<sitemap>
+		<value name="PLG_SITEMAP_TITLE">Site Map</value>
+	</sitemap>
+
+	<login>
+		<value name="PLG_LOGIN_TITLE">User Registration</value>
+		<value name="PLG_LOGIN_HEADER">Login Users</value>
+		<value name="PLG_LOGIN_USERNAME">User</value>
+		<value name="PLG_LOGIN_USERNAME_MESSAGE">User</value>
+		<value name="PLG_LOGIN_PASSWORD">Password</value>
+		<value name="PLG_LOGIN_PASSWORD_MESSAGE">Password</value>
+		<value name="PLG_LOGIN_LOGIN">Login</value>
+		<value name="PLG_LOGIN_LOGOUT">Sign Out</value>
+		<value name="PLG_LOGIN_REGISTER">Register</value>
+		<value name="PLG_LOGIN_NOREGISTER">Need an account?</value>
+		<value name="PLG_LOGIN_WELCOME">Welcome</value>
+		<value name="PLG_LOGIN_USERINFO">details of your account</value>
+		<value name="PLG_LOGIN_ERROR">Error in accessing a page</value>
+		<value name="PLG_LOGIN_ERROR_TEXT">You must login</value>
+		
+		<value name="PLG_REGISTRATION_TITLE">User Registration</value>
+		<value name="PLG_REGISTRATION_DESCRIPTION1">If you want to successfully complete the process of ordering our products, you need to register.</value>
+		<value name="PLG_REGISTRATION_DESCRIPTION2">* Fields are required for private entites</value>
+		<value name="PLG_REGISTRATION_DESCRIPTION3">For legeal enties please enter fields for company name, tax and registration number</value>
+		<value name="PLG_REGISTRATION_INFO">Please login. If you do not have a username and password, please register.</value>
+		<value name="PLG_REGISTRATION_FILLALL">Please fill out all fields to be successfully registered.</value>
+		<value name="PLG_REGISTRATION_SUCCESS_TITLE">Successful Registration</value>
+		<value name="PLG_REGISTRATION_SUCCESS_INFO">Please be patiently until you have verified your details and you activated in the system.</value>
+		<value name="PLG_REGISTRATION_COMPANY">Company Name:</value>
+		<value name="PLG_REGISTRATION_COMPANY_NOTVALID">company name field is required.</value>
+		<value name="PLG_REGISTRATION_STATE">Country:</value>
+		<value name="PLG_REGISTRATION_STATE_NOTVALID">state field is required.</value>
+		<value name="PLG_REGISTRATION_PLACE">Place:</value>
+		<value name="PLG_REGISTRATION_PLACE_NOTVALID">place field is required.</value>
+		<value name="PLG_REGISTRATION_PIB">TAX number:</value>
+		<value name="PLG_REGISTRATION_PIB_NOTVALID">TAX field is required.</value>
+		<value name="PLG_REGISTRATION_MATBR">Registration Number:</value>
+		<value name="PLG_REGISTRATION_MATBR_NOTVALID">Field ID number is required.</value>
+		<value name="PLG_REGISTRATION_NAME">Name:</value>
+		<value name="PLG_REGISTRATION_NAME_NOTVALID">name field is required.</value>
+		<value name="PLG_REGISTRATION_SURNAME">Last Name:</value>
+		<value name="PLG_REGISTRATION_SURNAME_NOTVALID">name field is required.</value>
+		<value name="PLG_REGISTRATION_ADDRESS">Address:</value>
+		<value name="PLG_REGISTRATION_ADDRESS_NOTVALID">address field is required.</value>
+		<value name="PLG_REGISTRATION_PHONE">Phone:</value>
+		<value name="PLG_REGISTRATION_PHONE_NOTVALID">phone field is required.</value>
+		<value name="PLG_REGISTRATION_EMAIL">E-mail:</value>
+		<value name="PLG_REGISTRATION_EMAIL_NOTVALID">field e-mail address is invalid.</value>
+		<value name="PLG_REGISTRATION_USERNAME">Username:</value>
+		<value name="PLG_REGISTRATION_USERNAME_NOTVALID1">field username is taken.</value>
+		<value name="PLG_REGISTRATION_USERNAME_NOTVALID2">the User Name is required.</value>
+		<value name="PLG_REGISTRATION_PASSWORD">Password:</value>
+		<value name="PLG_REGISTRATION_PASSWORD_NOTVALID1">Password field is required.</value>
+		<value name="PLG_REGISTRATION_PASSWORD_NOTVALID2">Password field and repeat password do not match.</value>
+		<value name="PLG_REGISTRATION_PASSWORDREP">Repeat password:</value>
+		<value name="PLG_REGISTRATION_PASSWORDREP_NOTVALID">repeated password field is mandatory.</value>
+		<value name="PLG_REGISTRATION_COMMENT">Comment:</value>
+		<value name="PLG_REGISTRATION_COMMENT_NOTVALID">comment is optional.</value>
+
+		<value name="PLG_REGISTRATION_SUBMIT">Submit</value>
+
+
+		<value name="PLG_VIEWUSERINFO_TITLE">details of your order:</value>
+		<value name="PLG_VIEWUSERINFO_NAMESURNAME">Name and surname:</value>
+		<value name="PLG_VIEWUSERINFO_ORDERS">Your previous orders:</value>
+		<value name="PLG_VIEWUSERINFO_ORDERNO">Order no</value>
+		<value name="PLG_VIEWUSERINFO_ORDERDATE">Order date</value>
+		<value name="PLG_VIEWUSERINFO_ORDERSTATUS">Order status</value>
+
+		<value name="PLG_VIEWUSERINFO_NO">No</value>
+		<value name="PLG_VIEWUSERINFO_CODE">No</value>
+		<value name="PLG_VIEWUSERINFO_NAME">Title</value>
+		<value name="PLG_VIEWUSERINFO_QUANTITY">Quantity</value>
+		<value name="PLG_VIEWUSERINFO_PRICE">Price</value>
+		<value name="PLG_VIEWUSERINFO_TOTAL">Total</value>
+		<value name="PLG_VIEWUSERINFO_TOTALPRICE">Total price</value>
+
+		<value name="PLG_VIEWUSERINFO_LASTLOGINTIME">Last login time: </value>
+		<value name="PLG_VIEWUSERINFO_LASTLOGINIP">Last login IP address: </value>
+	</login>
+  
+	<product>
+		<value name="COMMON_PREV_TEXT">Previous page</value>
+		<value name="COMMON_NEXT_TEXT">Next page</value>
+		<value name="COMMON_FIRST_TEXT">First page</value>
+		<value name="COMMON_LAST_TEXT">Last pagea</value>
+
+		<value name="PLG_PRODUCT_TYPE">products</value>
+		<value name="PLG_PRODUCT_TITLE">Product overview</value>
+		<value name="PLG_PRODUCT_CATALOG">Product catalog</value>
+		<value name="PLG_PRODUCT_STATUS">Product status:</value>
+
+		<value name="PLG_PRODUCT_PRICE">Price:</value>
+		<value name="PLG_PRODUCT_ORDER">Order:</value>
+		<value name="PLG_PRODUCT_CURRENCY">EUR</value>
+		<value name="PLG_PRODUCT_PDV">(VAT)</value>
+		<value name="PLG_PRODUCT_PRICE_PDV">(VAT included)</value>
+		<value name="PLG_PRODUCT_FILTER">Filter products:</value>
+		<value name="PLG_PRODUCT_SORT">Sort by</value>
+		<value name="PLG_PRODUCT_CALL">CALL</value>
+		<value name="PLG_PRODUCT_NOSTOCK">Out of stock</value>
+		<value name="PLG_PRODUCT_DETAILS">Details</value>
+		<value name="PLG_PRODUCT_SHOW">Show</value>
+		<value name="PLG_PRODUCT_SHOWTOTAL">Show: Total </value>
+		<value name="PLG_PRODUCT_SHOWFILTER">products. </value>
+		<value name="PLG_PRODUCT_ADDCART">Add to cart</value>
+		<value name="PLG_PRODUCT_MANUFACTURER">Manufacturer:</value>
+		<value name="PLG_PRODUCT_ATTRIBUTES">Features:</value>
+		<value name="PLG_PRODUCT_CODE">Code:</value>
+		<value name="PLG_PRODUCT_DOCUMENT">document</value>
+		<value name="PLG_PRODUCT_FEATURES">Product Features</value>
+
+		<value name="PLG_PRODUCT_ORDER_TITLE">Shopping cart</value>
+		<value name="PLG_PRODUCT_ORDER_TEXT">Please </value>
+		<value name="PLG_PRODUCT_ORDER_REGISTER">register</value>
+		<value name="PLG_PRODUCT_ORDER_TEXT2">, or login.</value>
+		<value name="PLG_PRODUCT_ORDER_TEXT3">Please place an order, if You finish all previous steps.</value>
+		<value name="PLG_PRODUCT_ORDER_CODE">Code</value>
+		<value name="PLG_PRODUCT_ORDER_NAME">Title</value>
+		<value name="PLG_PRODUCT_ORDER_PRICE">Price</value>
+		<value name="PLG_PRODUCT_ORDER_QUANTITY">Quantity</value>
+		<value name="PLG_PRODUCT_ORDER_SUBTOTAL">Subtotal</value>
+		<value name="PLG_PRODUCT_ORDER_TOTAL">Total:</value>
+
+		<value name="PLG_PRODUCT_ORDER_CHANGE">Change quantity</value>
+		<value name="PLG_PRODUCT_ORDER_EMPTY">Empty basket</value>
+		<value name="PLG_PRODUCT_ORDER_DELETE">Delete selected products</value>
+
+		<value name="PLG_PRODUCT_ORDER_TEXT4">Please place an order, if You finish all previous steps.</value>
+
+		<value name="PLG_PRODUCT_ORDER_TYPE1">1. Uplatom  na tekući račun</value>
+		<value name="PLG_PRODUCT_ORDER_TYPE1_TEXT">Novac nam uplaćujete na tekući račun nakon prijema predračuna, a odmah po potvrđenoj uplati šaljemo Vam poručene proizvode. Poštarina nije uključena u cenu.</value>
+		<value name="PLG_PRODUCT_ORDER_TYPE2">2. Pouzećem</value>
+		<value name="PLG_PRODUCT_ORDER_TYPE2_TEXT">Naručene proizvode dobijate poštom na kućnu adresu, a troškove plaćate poštaru.</value>
+
+		<value name="PLG_PRODUCT_ORDER_CONFIRM">Order confirm</value>
+		<value name="PLG_PRODUCT_ORDER_OFFER">Order offer request</value>
+
+		<value name="PLG_PRODUCT_ORDER_EMPTY_TEXT">Dear visitors, product basket is empty.</value>
+
+		<value name="PLG_PRODUCT_ORDER_POST1">Poštarina (uplata na tekući račun)</value>
+		<value name="PLG_PRODUCT_ORDER_POST2">Poštarina (plaćanje pouzećem)</value>
+
+		<value name="PLG_PRODUCT_ORDER_GO">Place an order</value>
+
+		<value name="PLG_PRODUCT_ORDER_DATA">Client data:</value>
+		<value name="PLG_PRODUCT_ORDER_NO">Order number:</value>
+
+		<value name="PLG_PRODUCT_ORDER_NAMESURNAME">Name and surname:</value>
+		<value name="PLG_PRODUCT_ORDER_NAME">Name:</value>
+		<value name="PLG_PRODUCT_ORDER_SURNAME">Surname:</value>
+		<value name="PLG_PRODUCT_ORDER_COMPANY">Company:</value>
+		<value name="PLG_PRODUCT_ORDER_PIB">VAT number:</value>
+		<value name="PLG_PRODUCT_ORDER_MBR">Company number:</value>
+		<value name="PLG_PRODUCT_ORDER_PLACE">City:</value>
+		<value name="PLG_PRODUCT_ORDER_ADDRESS">Address:</value>
+		<value name="PLG_PRODUCT_ORDER_POSTALCODE">Zip code:</value>
+		<value name="PLG_PRODUCT_ORDER_EMAIL">E-mail:</value>
+		<value name="PLG_PRODUCT_ORDER_PHONE">Phone:</value>
+
+		<value name="PLG_PRODUCT_ORDER_TYPE1_DATA">Način naručivanja: Uplata na tekući račun</value>
+		<value name="PLG_PRODUCT_ORDER_TYPE1_IMAGE">Uplatnica treba ovako da izgleda:</value>
+		<value name="PLG_PRODUCT_ORDER_TYPE2_DATA">Način naručivanja: Pouzećem </value>
+
+		<value name="PLG_PRODUCT_ORDER_DATA_TITLE">Filling out an order form for details.</value>
+		<value name="PLG_PRODUCT_ORDER_DATA_TEXT">Please fill in all the necessary information.</value>
+		<value name="PLG_PRODUCT_ORDER_ORDER">Order</value>
+
+		<value name="PLG_PRODUCT_ORDER_SUCCESS">Order received successfully</value>
+		<value name="PLG_PRODUCT_ORDER_SUCCESS_TEXT">You will be contacted shortly to validate your purchase orders.</value>
+
+		<value name="PLG_PRODUCT_BASKET_NO">You have </value>
+		<value name="PLG_PRODUCT_BASKET_PRODUCTS">products </value>
+		<value name="PLG_PRODUCT_BASKET_EMPTY">Basket is empty  </value>
+		<value name="PLG_PRODUCT_BASKET_ADD">The product has been successfully added to cart Order.  </value>
+		<value name="PLG_PRODUCT_BASKET_NOADD">You have not selected a single product to add to cart. </value>
+
+		<value name="PLG_PRODUCT_GROUP_EMPTY">No products in group </value>
+
+		<value name="PLG_PRODUCT_DETAILS_COMMENT_MESSAGE">Komentar je dodat. Molimo sačekajte da ga administrator odobri.</value>
+		<value name="PLG_PRODUCT_DETAILS_RATE">Product rate: </value>
+		<value name="PLG_PRODUCT_DETAILS_YOURRATE">Your rate: </value>
+		<value name="PLG_PRODUCT_DETAILS_RATE1">Rate product: </value>
+		<value name="PLG_PRODUCT_DETAILS_RATE2">Product rate:  </value>
+
+		<value name="PLG_PRODUCT_DETAILS_COMMENT">New comment input </value>
+		<value name="PLG_PRODUCT_DETAILS_COMMENT_TITLE">Input comment title: </value>
+		<value name="PLG_PRODUCT_DETAILS_COMMENT_INPUT">Input comment: </value>
+		<value name="PLG_PRODUCT_DETAILS_COMMENT_USER">User comment </value>
+	</product>
+	
+	 <newsletter>
+		<value name="PLG_NEWSLETTER_HEADER">Mailing list</value>
+		<value name="PLG_NEWSLETTER_DESCRIPTION">Mailing list</value>
+		<value name="PLG_NEWSLETTER_EMAIL">Email:</value>
+		<value name="PLG_NEWSLETTER_EMAIL_MESSAGE">Email address</value>
+		<value name="PLG_NEWSLETTER_ERROR_EMAIL_REQUIRED">Email is a required field</value>
+		<value name="PLG_NEWSLETTER_ERROR_EMAIL_EXISTS">Email already exists in the system</value>
+		<value name="PLG_NEWSLETTER_ERROR_EMAIL_BADFORMAT">Email is in bad format</value>
+		<value name="PLG_NEWSLETTER_NAME">Name:</value>
+		<value name="PLG_NEWSLETTER_ERROR_NAME_REQUIRED">Name is a required field</value>
+		<value name="PLG_NEWSLETTER_NAME_MESSAGE">Your name</value>
+		<value name="PLG_NEWSLETTER_SURNAME">Lastname:</value>
+		<value name="PLG_NEWSLETTER_ERROR_SURNAME_REQUIRED">Lastname is a required field</value>
+		<value name="PLG_NEWSLETTER_SURNAME_MESSAGE">Your lastname</value>
+		<value name="PLG_NEWSLETTER_SUBMIT">OK</value>
+		<value name="PLG_NEWSLETTER_FAIL_MESSAGE">subscribe to mailing list was unsuccessful. Please correct the errors</value>
+		<value name="PLG_NEWSLETTER_SUCCESS_MESSAGE">You have successfully signed up to our mailing list. Thank you for your trust.</value>
+	 </newsletter>
+
+	<formcontact>
+		 <value name="lang_forms_title">Molimo vas da pažljivo popunite upit.</value>
+ 	 <value name="lang_forms_company">Naziv firme:</value>
+ 	 <value name="lang_forms_company_address">Adresa firme:</value>
+	 <value name="lang_forms_company_city">Grad:</value>
+	<value name="lang_forms_company_postcode">Poštanski broj:</value>
+	<value name="lang_forms_company_country">Država:</value>
+	 <value name="lang_forms_company_phone">Telefon:</value>
+ 	 <value name="lang_forms_company_fax">Fax:</value>
+ 	 <value name="lang_forms_company_email">Email:</value>
+	  <value name="lang_forms_company_web">Web:</value>
+	 <value name="lang_forms_company_contactperson">Kontakt osoba:</value>
+ 	 <value name="lang_forms_comment">Tekst poruke:</value>
+ 	 <value name="lang_forms_submit">Send</value>
+	 <value name="lang_forms_successful">Uspešno slanje upita. Hvala na interesovanju.</value>
+
+	 <value name="lang_forms_validation_company">Polje firma ne može biti prazno</value>
+	 <value name="lang_forms_validation_address">Polje adresa ne može biti prazno</value>
+	 <value name="lang_forms_validation_city">Polje grad ne može biti prazno</value>
+	 <value name="lang_forms_validation_postcode">Polje poštanski broj ne može biti prazno</value>
+	 <value name="lang_forms_validation_country">Polje država ne može biti prazno</value>
+	 <value name="lang_forms_validation_phone">Polje telefon ne može biti prazno</value>
+	 <value name="lang_forms_validation_fax">Polje fax ne može biti prazno</value>
+	 <value name="lang_forms_validation_email">Polje email ne može biti prazno</value>
+	 <value name="lang_forms_validation_web">Polje web adresa ne može biti prazno</value>
+	 <value name="lang_forms_validation_contactperson">Polje kontakt osoba ne može biti prazno</value>
+	 <value name="lang_forms_validation_comment">Polje tekst poruke ne može biti prazno</value>
+
+
+		<value name="PLG_CONTACTFORM_TITLE">Please carefully fill in the inquiry.</value>
+	 	<value name="PLG_CONTACTFORM_COMPANY">Company Name:</value>
+	 	<value name="PLG_CONTACTFORM_ADDRESS">Company Address:</value>
+		<value name="PLG_CONTACTFORM_CITY">City:</value>
+		<value name="PLG_CONTACTFORM_POSTCODE">Zip Code:</value>
+		<value name="PLG_CONTACTFORM_COUNTRY">State:</value>
+		<value name="PLG_CONTACTFORM_PHONE">Phone:</value>
+	 	<value name="PLG_CONTACTFORM_FAX">Fax:</value>
+	 	<value name="PLG_CONTACTFORM_EMAIL">Email:</value>
+		<value name="PLG_CONTACTFORM_WEB">Web:</value>
+		<value name="PLG_CONTACTFORM_CONTACTPERSON">Contact person:</value>
+	 	<value name="PLG_CONTACTFORM_COMMENT">Message:</value>
+	 	<value name="PLG_CONTACTFORM_SUBMIT">Send</value>
+		<value name="PLG_CONTACTFORM_SUCCESSFUL">Successfully sending a query. Thank you for your interest.</value>
+		<value name="PLG_CONTACTFORM_VALIDATION_COMPANY">Company can not be empty</value>
+		<value name="PLG_CONTACTFORM_VALIDATION_ADDRESS">Address can not be empty</value>
+		<value name="PLG_CONTACTFORM_VALIDATION_CITY">City can not be empty</value>
+		<value name="PLG_CONTACTFORM_VALIDATION_POSTCODE">ZIP code can not be empty</value>
+		<value name="PLG_CONTACTFORM_VALIDATION_COUNTRY">State can not be empty</value>
+		<value name="PLG_CONTACTFORM_VALIDATION_PHONE">Phone can not be empty</value>
+		<value name="PLG_CONTACTFORM_VALIDATION_FAX">Fax can not be empty</value>
+		<value name="PLG_CONTACTFORM_VALIDATION_EMAIL">Email can not be empty</value>
+		<value name="PLG_CONTACTFORM_VALIDATION_WEB">Web address can not be empty</value>
+		<value name="PLG_CONTACTFORM_VALIDATION_CONTACTPERSON">Contact person can not be empty</value>
+		<value name="PLG_CONTACTFORM_VALIDATION_COMMENT">Message text field can not be empty</value>
+	</formcontact>
+		
+	
+</language>

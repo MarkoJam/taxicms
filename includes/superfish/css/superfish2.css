@@ -1,0 +1,135 @@
+/*** ESSENTIAL STYLES ***/
+.sf-menu2, .sf-menu2 * {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.sf-menu2 li {
+	position: relative;
+}
+.sf-menu2 ul {
+	position: absolute;
+	display: none;
+	top: 100%;
+	left: 0;
+	z-index: 99;
+}
+.sf-menu2 > li {
+	float: left;
+}
+.sf-menu2 li:hover > ul,
+.sf-menu2 li.sfHover > ul {
+	display: block;
+}
+
+.sf-menu2 a {
+	display: block;
+	position: relative;
+}
+.sf-menu2 ul ul {
+	top: 0;
+	left: 100%;
+}
+
+/*** DEMO SKIN ***/
+.sf-menu2 {
+	float:left;
+	position:relative;
+}
+.sf-menu2 a {
+	text-decoration: none;
+	color: #626a69;
+	padding: 3px 12px 5px 12px;
+	cursor: pointer;
+	zoom: 1; /* IE7 */
+}
+.sf-menu2 a, .sf-menu2 a:visited  { /* visited pseudo selector so IE6 applies text colour*/
+	font-size: 14px;
+ 	font-weight: normal;
+	font-family:  Palatino Linotype, Book Antiqua, Georgia;
+}
+.sf-menu2 a:focus, .sf-menu2 a:hover, .sf-menu2 a:active {
+	color: #000000;
+}
+.sf-menu2 li {
+	width: auto;
+	-webkit-transition: background .2s;
+	transition: background .2s;
+	border-bottom:1px solid #e7e8e6;
+}
+.sf-menu2 li li, .sf-menu2 li li {
+	background-image: none;
+	background-color:#F6F6F8;
+ 	width:auto;
+	white-space:nowrap;
+	height:auto;
+ 	
+}
+.sf-menu2 ul {	
+	border: 1px solid #d5d5d5;
+	min-width: 10em; /* allow long menu items to determine submenu width */
+	*width: 10em; /* no auto sub width for IE7, see white-space comment below */
+}
+.sf-menu2 ul a {
+ 	border: none;
+ 	color: #000000;
+	padding: 4px 18px 4px 18px;
+}
+.sf-menu2 ul a.hover {
+  	color: #CDDAE0 
+}
+.sf-menu2 li li li {
+	background-image: none;
+	background-color:#F6F6F8;
+ 	width:100%;
+	height:auto;
+ 	border-bottom: 1px solid #afafaf;
+}
+.sf-menu2 li:hover, .sf-menu2 li.sfHover {
+	/* only transition out, not in */
+	-webkit-transition: none;
+	transition: none;
+}
+
+.sf-menu2 ul li:hover, .sf-menu2 ul li.sfHover {
+  	background-color: #DADADC;
+  	background-image: none;
+
+}
+/*** arrows (for all except IE7) **/
+.sf-arrows2 .sf-with-ul {
+	padding-right: 1em;
+	*padding-right: 1em; /* no CSS arrows for IE7 (lack pseudo-elements) */
+}
+/* styling for both css and generated arrows */
+.sf-arrows2 .sf-with-ul:after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: 1em;
+	margin-top: -3px;
+	height: 0;
+	width: 0;
+	/* order of following 3 rules important for fallbacks to work */
+	border: 4px solid transparent;
+	border-top-color: #4d4e50; /* edit this to suit design (no rgba in IE8) */
+	border-top-color: rgba(77,78,80,1);
+}
+.sf-arrows2 > li > .sf-with-ul:focus:after,
+.sf-arrows2 > li:hover > .sf-with-ul:after,
+.sf-arrows2 > .sfHover > .sf-with-ul:after {
+	border-top-color: #8a8989; /* IE8 fallback colour */
+}
+/* styling for right-facing arrows */
+.sf-arrows2 ul .sf-with-ul:after {
+	margin-top: -5px;
+	margin-right: -3px;
+	border-color: transparent;
+	border-left-color: #dFeEFF; /* edit this to suit design (no rgba in IE8) */
+	border-left-color: rgba(255,255,255,.5);
+}
+.sf-arrows2 ul li > .sf-with-ul:focus:after,
+.sf-arrows2 ul li:hover > .sf-with-ul:after,
+.sf-arrows2 ul .sfHover > .sf-with-ul:after {
+	border-left-color: white;
+}

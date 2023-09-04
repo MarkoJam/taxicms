@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<language>
+ <global>
+ 
+	<value name="GLOBAL_MONTH_JANUARY">januar</value>
+	<value name="GLOBAL_MONTH_FEBRUARY">februar</value>
+	<value name="GLOBAL_MONTH_MARCH">mart</value>
+	<value name="GLOBAL_MONTH_APRIL">april</value>
+	<value name="GLOBAL_MONTH_MAY">maj</value>
+	<value name="GLOBAL_MONTH_JUNE">jun</value>
+	<value name="GLOBAL_MONTH_JULY">jul</value>
+	<value name="GLOBAL_MONTH_AUGUST">avgust</value>
+	<value name="GLOBAL_MONTH_SEPTEMBER">septembar</value>
+	<value name="GLOBAL_MONTH_OCTOBER">oktobar</value>
+	<value name="GLOBAL_MONTH_NOVEMBER">novembar</value>
+	<value name="GLOBAL_MONTH_DECEMBER">decembar</value>
+	
+	<value name="GLOBAL_MONTH_JANUARY_SHORT">jan</value>
+	<value name="GLOBAL_MONTH_FEBRUARY_SHORT">feb</value>
+	<value name="GLOBAL_MONTH_MARCH_SHORT">mar</value>
+	<value name="GLOBAL_MONTH_APRIL_SHORT">apr</value>
+	<value name="GLOBAL_MONTH_MAY_SHORT">maj</value>
+	<value name="GLOBAL_MONTH_JUNE_SHORT">jun</value>
+	<value name="GLOBAL_MONTH_JULY_SHORT">jul</value>
+	<value name="GLOBAL_MONTH_AUGUST_SHORT">avg</value>
+	<value name="GLOBAL_MONTH_SEPTEMBER_SHORT">sep</value>
+	<value name="GLOBAL_MONTH_OCTOBER_SHORT">okt</value>
+	<value name="GLOBAL_MONTH_NOVEMBER_SHORT">nov</value>
+	<value name="GLOBAL_MONTH_DECEMBER_SHORT">dec</value>
+	
+	<value name="GLOBAL_DAY_MONDAY">ponedeljak</value>
+	<value name="GLOBAL_DAY_TUESDAY">utorak</value>
+	<value name="GLOBAL_DAY_WEDNESDAY">sreda</value>
+	<value name="GLOBAL_DAY_THURSDAY">četvrtak</value>
+	<value name="GLOBAL_DAY_FRIDAY">petak</value>
+	<value name="GLOBAL_DAY_SATURDAY">subota</value>
+	<value name="GLOBAL_DAY_SUNDAY">nedelja</value>
+	
+	<value name="GLOBAL_DAY_MONDAY_SHORT">pon</value>
+	<value name="GLOBAL_DAY_TUESDAY_SHORT">uto</value>
+	<value name="GLOBAL_DAY_WEDNESDAY_SHORT">sre</value>
+	<value name="GLOBAL_DAY_THURSDAY_SHORT">čet</value>
+	<value name="GLOBAL_DAY_FRIDAY_SHORT">pet</value>
+	<value name="GLOBAL_DAY_SATURDAY_SHORT">sub</value>
+	<value name="GLOBAL_DAY_SUNDAY_SHORT">ned</value>
+	
+	<value name="GLOBAL_CURRENCY">din.</value>
+	
+	<value name="GLOBAL_PREV_TEXT">Nazad</value>
+ 	<value name="GLOBAL_NEXT_TEXT">Napred</value>
+ 	<value name="GLOBAL_FIRST_TEXT">Prva stranica</value>
+ 	<value name="GLOBAL_LAST_TEXT">Poslednja stranica</value>
+
+	<value name="GLOBAL_SHOW_TEXT">Prikazano je </value>
+ 	<value name="GLOBAL_TOTAL_TEXT"> od ukupno </value>
+
+	<value name="GLOBAL_DATE"> Datum </value>
+	<value name="GLOBAL_YEAR"> godina. </value>
+	<value name="GLOBAL_DATE_UPDATE"> Datum poslednje promene</value>
+	<value name="GLOBAL_SITEMAP"> Mapa sajta</value>
+	
+	<value name="PLG_ADDRESS">Адреса</value>
+	<value name="PLG_PASSWORD_MESSAGE">Lozinka</value>
+	<value name="PLG_USERNAME_MESSAGE">Korisnik</value>
+ 	
+ </global>
+ <news>
+	
+	<value name="PLG_NEWS_DETAILS_TITLE">Pregled vesti</value>
+	<value name="PLG_NEWS_ARCHIVE_TITLE">Pregled vesti</value>
+	<value name="PLG_NEWS_NAMEINPATH">Vesti ></value>
+ 	<value name="PLG_NEWS_NAMEINPATH_LONG">Vesti > Arhiva</value>
+ 	<value name="PLG_NEWS_ERROR">Greška u prikazu!</value>
+ 	<value name="PLG_NEWS_DATE">Datum:</value>
+ 	<value name="PLG_NEWS_ANNOUCEMENT">Vesti</value>
+ 	<value name="PLG_NEWS_DETAILS">[detaljnije...]</value>
+ 	<value name="PLG_NEWS_ARCHIVE_SHORT">Arhiva ...</value>
+	<value name="PLG_NEWS_ARCHIVE">Arhiva vesti</value>
+ </news>
+ 
+ <person>
+	<value name="PLG_PERSON_DETAILS_TITLE">Pregled osoba</value>
+	<value name="PLG_PERSON_ARCHIVE_TITLE">Pregled osoba</value>
+	<value name="PLG_PERSON_NAMEINPATH">Osoba ></value>
+ 	<value name="PLG_PERSON_NAMEINPATH_LONG">Osoba > Arhiva</value>
+ 	<value name="PLG_PERSON_ERROR">Greška u prikazu!</value>
+ 	<value name="PLG_PERSON_DATE">Datum:</value>
+ 	<value name="PLG_PERSON_ANNOUCEMENT">Osoba</value>
+ 	<value name="PLG_PERSON_DETAILS">[detaljnije...]</value>
+ 	<value name="PLG_PERSON_ARCHIVE_SHORT">Arhiva ...</value>
+	<value name="PLG_PERSON_ARCHIVE">Arhiva osoba</value>
+ </person> 
+
+ <project>
+	<value name="PLG_PROJECT_CHINESE">中国项目</value> 
+	<value name="PLG_PROJECT_DETAILS_TITLE">Pregled projekata</value>
+	<value name="PLG_PROJECT_ARCHIVE_TITLE">Pregled projekata</value>
+	<value name="PLG_PROJECT_NAMEINPATH">Projekat ></value>
+ 	<value name="PLG_PROJECT_NAMEINPATH_LONG">Projekat > Arhiva</value>
+ 	<value name="PLG_PROJECT_ERROR">Greška u prikazu!</value>
+ 	<value name="PLG_PROJECT_DATE">Datum:</value>
+ 	<value name="PLG_PROJECT_ANNOUCEMENT">Projekat</value>
+ 	<value name="PLG_PROJECT_DETAILS">[detaljnije...]</value>
+ 	<value name="PLG_PROJECT_ARCHIVE_SHORT">Arhiva ...</value>
+	<value name="PLG_PROJECT_ARCHIVE">Arhiva projekata</value>	
+ </project>
+ 
+ <event>
+	<value name="PLG_EVENT_DETAILS_TITLE">Pregled dogadjaja</value>
+	<value name="PLG_EVENT_ARCHIVE_TITLE">Pregled dogadjaja</value>
+	<value name="PLG_EVENT_NAMEINPATH">Najava događaja ></value>
+ 	<value name="PLG_EVENT_NAMEINPATH_LONG">Vesti > Arhiva</value>
+ 	<value name="PLG_EVENT_ERROR">Greška u prikazu!</value>
+ 	<value name="PLG_EVENT_DATE">Datum:</value>
+ 	<value name="PLG_EVENT_ANNOUCEMENT">Dogadjaji</value>
+ 	<value name="PLG_EVENT_DETAILS">[detaljnije...]</value>
+ 	<value name="PLG_EVENT_ARCHIVE_SHORT">Arhiva ...</value>
+	<value name="PLG_EVENT_ARCHIVE">Arhiva dogadjaja</value>
+	
+</event>
+ <search>
+ 
+ 	
+ 	<value name="PLG_SEARCH_NAMEINPATH_LONG">Rezultati pretraživanja > </value>
+ 	<value name="PLG_SEARCH_NAMEINPATH">Pretraga</value>
+ 	<value name="PLG_SEARCH_TITLE">Pretraga sajta</value>
+ 	<value name="PLG_SEARCH_SITEWIDE">Ceo sajt</value>
+ 	<value name="PLG_SEARCH_NEWS">Vesti</value>
+ 	<value name="PLG_SEARCH_PERSONS">Osobe</value>	
+ 	<value name="PLG_SEARCH_PROJECTS">Projekti</value>		
+ 	<value name="PLG_SEARCH_PAGES">Stranice</value>
+ 	<value name="PLG_SEARCH_FIND">Traži</value>
+ 	<value name="PLG_SEARCH_RESULTS_PAGES">Rezultati pretraživanja stranica</value>
+ 	<value name="PLG_SEARCH_RESULTS_NEWS">Rezultati pretraživanja vesti</value>
+ 	<value name="PLG_SEARCH_RESULTS_PERSONS">Rezultati pretraživanja osoba</value>
+ 	<value name="PLG_SEARCH_RESULTS_PROJECTS">Rezultati pretraživanja projekata</value>	
+ 	<value name="PLG_SEARCH_RESULTS_BLOG">Rezultati pretraživanja bloga</value>
+ 	<value name="PLG_SEARCH_RESULTS_PRODUCT">Rezultati pretraživanja proizvoda</value>
+	<value name="PLG_SEARCH_NORESULTS_PAGES">Nijedna stranica ne zadovoljava uslov pretraživanja</value>
+	<value name="PLG_SEARCH_NORESULTS_NEWS">Nijedna vest ne zadovoljava uslov pretraživanja</value>
+	<value name="PLG_SEARCH_NORESULTS_PERSONS">Nijedna osoba ne zadovoljava uslov pretraživanja</value>
+	<value name="PLG_SEARCH_NORESULTS_PROJECTS">Nijedan projekat ne zadovoljava uslov pretraživanja</value>
+	<value name="PLG_SEARCH_NORESULTS_BLOG">Nijedan unos u blogu ne zadovoljava uslov pretraživanja</value>
+	<value name="PLG_SEARCH_NORESULTS_PRODUCT">Nijedan unos ne zadovoljava uslov pretraživanja</value>
+	<value name="PLG_SEARCH_VIEW_PAGE">Pogledaj stranicu</value>
+ 	<value name="PLG_SEARCH_VIEW_NEWS">Pogledaj vest</value>
+ 	<value name="PLG_SEARCH_VIEW_PERSONS">Pogledaj osobu</value>		
+ 	<value name="PLG_SEARCH_VIEW_PROJECT">Pogledaj projekat</value>
+ 	<value name="PLG_SEARCH_VIEW_BLOG">Pogledaj blog unos</value>
+	<value name="PLG_SEARCH_KEYWORDSEARCH">Pretraga po ključnoj reči:</value>
+	<value name="PLG_SEARCH_KEYWORD"></value>
+	<value name="PLG_SEARCH_SEARCH">Pretraži</value>
+ </search>
+ <poll>
+ 	<value name="lang_poll_poll">Anketa</value>
+ 	<value name="lang_poll_vote">Glasaj</value>
+ 	<value name="lang_poll_result">Rezultati</value>
+ 	<value name="lang_poll_totalvotes">Ukupno glasova</value>
+ </poll>
+ <sitemap>
+ 	<value name="PLG_SITEMAP_TITLE">Mapa sajta</value>
+ </sitemap>
+
+ <login>
+ 	<value name="PLG_LOGIN_TITLE">Registracija korisnika:</value>
+  	<value name="PLG_LOGIN_HEADER">Logovanje korisnika</value>
+ 	<value name="PLG_LOGIN_USERNAME">Korisnik</value>
+ 	<value name="PLG_LOGIN_PASSWORD">Lozinka</value>
+ 	<value name="PLG_LOGIN_LOGIN">Login</value>
+ 	<value name="PLG_LOGIN_LOGOUT">Izloguj se</value>
+ 	<value name="PLG_LOGIN_REGISTER">Registrujte se!</value>
+	<value name="PLG_LOGIN_FORGOT_PASSWORD">Zaboravljena lozinka!</value>
+	<value name="PLG_LOGIN_NOREGISTER">Nemate nalog?</value>
+ 	<value name="PLG_LOGIN_WELCOME">Dobrodošli</value>
+	<value name="PLG_LOGIN_EDIT">Promena Vašeg naloga</value>
+	<value name="PLG_LOGIN_USERINFO">Detalji Vašeg naloga</value>
+	<value name="PLG_LOGIN_ERROR">Greška u pristupu stranici</value>
+	<value name="PLG_LOGIN_ERROR_TEXT">Morate biti ulogovani.</value>
+
+ 	<value name="PLG_REGISTRATION_TITLE">Registracija korisnika</value>
+	<value name="PLG_FORGOT_PASSWORD">Zaboravljena lozinka</value>
+	<value name="PLG_EDIT_USER">Promena podataka korisnika</value>
+	<value name="PLG_REGISTRATION_DESCRIPTION1">Ako želite da uspešno završite postupak naručivanja naših proizvoda, potrebno je da se registrujete.</value>
+	<value name="PLG_REGISTRATION_DESCRIPTION2">Polja * su obavezna.</value>
+	<value name="PLG_REGISTRATION_DESCRIPTION3">Ukoliko ste pravno lice, molimo Vas da popunite i polja Naziv firme, PIB i Matični broj.</value>
+	<value name="PLG_FORGOT_PASSWORD_DESCRIPTION2">Za obnovu naloga, molimo Vas, unesite novu lozinku.</value>
+	<value name="PLG_FORGOT_PASSWORD_DESCRIPTION1">Ukoliko želite da povratite nalog, unestie e-mail po kome ste se prethodno prijavili.</value>
+ 	<value name="PLG_REGISTRATION_INFO">Molimo Vas da se ulogujete. Ako nemate korisničko ime i lozinku molimo Vas da se registrujete.</value>
+ 	<value name="PLG_REGISTRATION_FILLALL">Molimo Vas da popunite sva polja kako biste se uspešno registrovali.</value>
+ 	<value name="PLG_REGISTRATION_SUCCESS_TITLE">Uspešna registracija</value>
+ 	<value name="PLG_REGISTRATION_SUCCESS_INFO">Molimo budite strplji dok administrator ne proveri Vaše podatke i aktivira vas u sistemu.</value>
+
+	<value name="PLG_REGISTRATION_CHOISE">Molimo Vas odaberite kako želite da se registrujete</value>
+	<value name="PLG_REGISTRATION_LEGALENTITY">Pravno lice</value>
+	<value name="PLG_REGISTRATION_INDIVIDUAL">Fizičko lice</value>
+ 	
+ 	<value name="PLG_REGISTRATION_COMPANY">Naziv firme:</value>
+ 	<value name="PLG_REGISTRATION_COMPANY_NOTVALID">Polje naziv firme je obavezno.</value>
+ 	
+ 	<value name="PLG_REGISTRATION_STATE">Država:</value>
+ 	<value name="PLG_REGISTRATION_STATE_NOTVALID">Polje država je obavezno.</value>
+
+ 	<value name="PLG_REGISTRATION_PLACE">Mesto:</value>
+ 	<value name="PLG_REGISTRATION_PLACE_NOTVALID">Polje mesto je obavezno.</value>
+ 	
+ 	<value name="PLG_REGISTRATION_PIB">PIB:</value>
+ 	<value name="PLG_REGISTRATION_PIB_NOTVALID">Polje PIB je obavezno.</value>
+	
+	<value name="PLG_REGISTRATION_MATBR">Matični broj:</value>
+ 	<value name="PLG_REGISTRATION_MATBR_NOTVALID">Polje Matični broj je obavezno.</value>
+ 	
+ 	<value name="PLG_REGISTRATION_NAME">Ime:</value>
+ 	<value name="PLG_REGISTRATION_NAME_NOTVALID">Polje ime je obavezno.</value>
+ 	
+ 	<value name="PLG_REGISTRATION_SURNAME">Prezime:</value>
+ 	<value name="PLG_REGISTRATION_SURNAME_NOTVALID">Polje prezime je obavezno.</value>
+ 	
+ 	<value name="PLG_REGISTRATION_ADDRESS">Adresa:</value>
+ 	<value name="PLG_REGISTRATION_ADDRESS_NOTVALID">Polje adresa je obavezno.</value>
+
+	<value name="PLG_REGISTRATION_POSTALCODE">Poštanski broj:</value>
+ 	<value name="PLG_REGISTRATION_POSTALCODE_NOTVALID">Polje poštanski broj je obavezno.</value>
+ 	
+ 	<value name="PLG_REGISTRATION_PHONE">Telefon:</value>
+ 	<value name="PLG_REGISTRATION_PHONE_NOTVALID">Polje telefon je obavezno.</value>
+ 	
+ 	<value name="PLG_REGISTRATION_EMAIL">E-mail:</value>
+ 	<value name="PLG_REGISTRATION_EMAIL_NOTVALID">Polje e-mail adresa nije ispravno.</value>
+ 	
+ 	<value name="PLG_REGISTRATION_USERNAME">Korisničko ime:</value>
+ 	<value name="PLG_REGISTRATION_USERNAME_NOTVALID1">Polje korisničko ime je obavezno.</value>
+ 	<value name="PLG_REGISTRATION_USERNAME_NOTVALID2">Polje korisničko ime je zauzeto.</value>
+ 	
+ 	<value name="PLG_REGISTRATION_PASSWORD">Lozinka:</value>
+ 	<value name="PLG_REGISTRATION_PASSWORD_NOTVALID1">Polje lozinka je obavezno.</value>
+ 	<value name="PLG_REGISTRATION_PASSWORD_NOTVALID2">Polja lozinka i ponovljena lozinka nisu ista.</value>
+ 	
+ 	<value name="PLG_REGISTRATION_PASSWORDREP">Ponovite lozinku:</value>
+ 	<value name="PLG_REGISTRATION_PASSWORDREP_NOTVALID">Polje ponovljena lozinka je obavezno.</value>
+ 	
+ 	<value name="PLG_REGISTRATION_COMMENT">Komentar:</value>
+ 	<value name="PLG_REGISTRATION_COMMENT_NOTVALID">Komentar je obavezan.</value>
+
+	<value name="PLG_REGISTRATION_SUBMIT">Pošalji</value>
+ 	
+ 	<value name="PLG_VIEWUSERINFO_TITLE">Detalji vašeg naloga:</value>
+	<value name="PLG_VIEWUSERINFO_NAMESURNAME">Ime i prezime:</value>
+	<value name="PLG_VIEWUSERINFO_ORDERS">Vaše ranije narudžbe</value>
+	<value name="PLG_VIEWUSERINFO_ORDERNO">Br. narudžbe</value>
+	<value name="PLG_VIEWUSERINFO_ORDERDATE">Datum narudžbe</value>
+	<value name="PLG_VIEWUSERINFO_ORDERSTATUS">Status</value>
+
+	<value name="PLG_VIEWUSERINFO_NO">R.br.</value>
+	<value name="PLG_VIEWUSERINFO_CODE">Šifra</value>
+	<value name="PLG_VIEWUSERINFO_NAME">Naziv</value>
+	<value name="PLG_VIEWUSERINFO_QUANTITY">Količina</value>
+	<value name="PLG_VIEWUSERINFO_PRICE">Jed. cena</value>
+	<value name="PLG_VIEWUSERINFO_TOTAL">Iznos</value>
+	<value name="PLG_VIEWUSERINFO_TOTALPRICE">Ukupno: </value>
+
+	<value name="PLG_VIEWUSERINFO_LASTLOGINTIME">Vreme poslednjeg logovanja: </value>
+	<value name="PLG_VIEWUSERINFO_LASTLOGINIP">IP adresa poslednjeg logovanja: </value>
+ </login>
+  
+ <product> 
+ 	<value name="COMMON_PREV_TEXT">Prethodna stranica</value>
+	<value name="COMMON_NEXT_TEXT">Sledeća stranica</value>
+	<value name="COMMON_FIRST_TEXT">Prva stranica</value>
+	<value name="COMMON_LAST_TEXT">Poslednja stranica</value>
+ 	
+ 	<value name="PLG_PRODUCT_TITLE">Pregled proizvoda</value>
+	<value name="PLG_PRODUCT_CATALOG">Katalog proizvoda</value>
+	<value name="PLG_PRODUCT_CONECTED_PRODUCTS">Preporučeni proizvodi</value>
+	<value name="PLG_PRODUCT_STATUS">Status proizvoda:</value>
+ 	
+ 	<value name="PLG_PRODUCT_PRICE">Cena:</value>
+	<value name="PLG_PRODUCT_ORDER">Naruči:</value>
+	<value name="PLG_PRODUCT_CURRENCY">din</value>
+	<value name="PLG_PRODUCT_PDV">(sa PDV-om)</value>
+	<value name="PLG_PRODUCT_PRICE_PDV">(uračunat 20% PDV) </value>
+	<value name="PLG_PRODUCT_FILTER">Filtriraj proizvode:</value>
+	<value name="PLG_PRODUCT_SORT">Sortiraj po</value>
+	<value name="PLG_PRODUCT_CALL">POZOVITE</value>
+	<value name="PLG_PRODUCT_LOGIN_ON">ULOGUJTE SE ZA CENU!</value>
+	<value name="PLG_PRODUCT_NOSTOCK">Nema na lageru</value>
+	<value name="PLG_PRODUCT_DETAILS">Detaljnije</value>
+	<value name="PLG_PRODUCT_SHOW">Prikaži</value>
+	<value name="PLG_PRODUCT_SHOWTOTAL">Prikazano: Ukupno </value>
+	<value name="PLG_PRODUCT_SHOWFILTER">proizvoda odgovara zadatom filteru. </value>
+	<value name="PLG_PRODUCT_ADDCART">Dodaj u korpu</value>
+	<value name="PLG_PRODUCT_MANUFACTURER">Proizvođač:</value>
+	<value name="PLG_PRODUCT_CODE">Šifra:</value>
+	<value name="PLG_PRODUCT_DOCUMENT">Dokument</value>
+	<value name="PLG_PRODUCT_ATTRIBUTES">Karakteristike:</value>
+
+	<value name="PLG_PRODUCT_ORDER_TITLE">Korpa za kupovinu</value>
+	<value name="PLG_PRODUCT_ORDER_TEXT">Kako biste uspešno izvršili narudžbinu, potrebno je da se</value>
+	<value name="PLG_PRODUCT_ORDER_REGISTER">registrujete</value>
+	<value name="PLG_PRODUCT_ORDER_TEXT2">, ili ako ste registrovani da se ulogujete na sistem.</value>
+	<value name="PLG_PRODUCT_ORDER_TEXT3">Ukoliko ste promenili željene količine proizvoda i formirali konačnu narudžbinu, i ukoliko ste ulogovani na sistem, možete naručiti željene naslove.</value>
+	<value name="PLG_PRODUCT_ORDER_CODE">Šifra</value>
+	<value name="PLG_PRODUCT_ORDER_NAME_TITLE">Naziv</value>
+	<value name="PLG_PRODUCT_ORDER_PRICE">Cena</value>
+	<value name="PLG_PRODUCT_ORDER_QUANTITY">Količina</value>
+	<value name="PLG_PRODUCT_ORDER_SUBTOTAL">Međuzbir</value>
+	<value name="PLG_PRODUCT_ORDER_TOTAL">Ukupna cena:</value>
+	<value name="PLG_PRODUCT_WEIGHT_TOTAL">Masa pošiljke:</value>
+	<value name="PLG_ORDER_POSTPRICE">Poštarina:</value>
+	<value name="PLG_POSTPRICE_LIMIT">Limit poštarine:</value>
+
+	<value name="PLG_PRODUCT_ORDER_CHANGE">Promeni količine</value>
+	<value name="PLG_PRODUCT_ORDER_EMPTY">Isprazni korpu</value>
+	<value name="PLG_PRODUCT_ORDER_DELETE">Brisanje selektovanih proizvoda</value>
+
+	<value name="PLG_PRODUCT_ORDER_TEXT4">Ukoliko ste promenili željene količine proizvoda i formirali konačnu narudžbu, i ukoliko ste ulogovani na sistem, možete izvršiti narudžbu.</value>
+	<value name="PLG_PRODUCT_ORDER_TEXT5">Molimo Vas izaberite način plaćanja.</value>
+
+	<value name="PLG_PRODUCT_ORDER_TYPE1">1. Uplatom  na tekući račun</value>
+	<value name="PLG_PRODUCT_ORDER_TYPE1_TEXT">Novac nam uplaćujete na tekući račun nakon prijema predračuna, a odmah po potvrđenoj uplati šaljemo Vam poručene proizvode. Poštarina nije uključena u cenu.</value>
+	<value name="PLG_PRODUCT_ORDER_TYPE2">2. Pouzećem</value>
+	<value name="PLG_PRODUCT_ORDER_TYPE2_TEXT">Naručene proizvode dobijate poštom na kućnu adresu, a troškove plaćate poštaru.</value>
+	<value name="PLG_PRODUCT_ORDER_TYPE3">3. Platnom karticom</value>
+	<value name="PLG_PRODUCT_ORDER_TYPE3_TEXT">Naručene proizvode dobijate poštom na kućnu adresu.</value>
+
+	<value name="PLG_PRODUCT_ORDER_CONFIRM">Potvrdi narudžbu</value>
+	<value name="PLG_PRODUCT_ORDER_OFFER">Zahtev za ponudom</value>
+
+	<value name="PLG_PRODUCT_ORDER_EMPTY_TEXT">Poštovani posetioci, korpa proizvoda je prazna</value>
+
+	<value name="PLG_PRODUCT_ORDER_POST1">Poštarina (uplata na tekući račun)</value>
+	<value name="PLG_PRODUCT_ORDER_POST2">Poštarina (plaćanje pouzećem)</value>
+
+	<value name="PLG_PRODUCT_ORDER_GO">Izvrši naručivanje</value>
+
+	<value name="PLG_PRODUCT_ORDER_DATA">Podaci o naručiocu:</value>
+	<value name="PLG_PRODUCT_ORDER_NO">Broj porudžbine:</value>
+
+	<value name="PLG_PRODUCT_ORDER_NAMESURNAME">Ime i prezime:</value>
+	<value name="PLG_PRODUCT_ORDER_NAME">Ime:</value>
+	<value name="PLG_PRODUCT_ORDER_SURNAME">Prezime:</value>
+	<value name="PLG_PRODUCT_ORDER_COMPANY">Firma:</value>
+	<value name="PLG_PRODUCT_ORDER_PIB">PIB:</value>
+	<value name="PLG_PRODUCT_ORDER_MBR">Matični broj:</value>
+	<value name="PLG_PRODUCT_ORDER_PLACE">Mesto:</value>
+	<value name="PLG_PRODUCT_ORDER_ADDRESS">Adresa:</value>
+	<value name="PLG_PRODUCT_ORDER_POSTALCODE">Poštanski broj:</value>
+	<value name="PLG_PRODUCT_ORDER_EMAIL">E-mail adresa:</value>
+	<value name="PLG_PRODUCT_ORDER_PHONE">Telefon:</value>
+
+	<value name="PLG_PRODUCT_ORDER_TYPE1_DATA">Način plaćanja: Uplata na tekući račun</value>
+	<value name="PLG_PRODUCT_ORDER_TYPE1_IMAGE">Uplatnica treba ovako da izgleda:</value>
+	<value name="PLG_PRODUCT_ORDER_TYPE2_DATA">Način plaćanja: Pouzećem </value>
+	<value name="PLG_PRODUCT_ORDER_TYPE3_DATA">Način plaćanja: Platnom karticom </value>
+
+	<value name="PLG_PRODUCT_ORDER_DATA_TITLE">Popunjavanje podataka za narudžbenicu</value>
+	<value name="PLG_PRODUCT_ORDER_DATA_TEXT">Molimo Vas da popunite sve neophodne podatke</value>
+	<value name="PLG_PRODUCT_ORDER_ORDER">Naručivanje</value>
+
+	<value name="PLG_PRODUCT_ORDER_SUCCESS">Narudžbenica uspešno primljena</value>
+	<value name="PLG_PRODUCT_ORDER_SUCCESS_TEXT">Hvala Vam na ukazanom poverenju. Bićete uskoro kontaktirani radi potvrdjivanja Vaše narudžbenice.</value>
+
+	<value name="PLG_PRODUCT_BASKET_NO">U korpi imate </value>
+	<value name="PLG_PRODUCT_BASKET_PRODUCTS">proizvoda </value>
+	<value name="PLG_PRODUCT_BASKET_EMPTY">Korpa je prazna  </value>
+	<value name="PLG_PRODUCT_BASKET_ADD">Proizvod je uspešno dodat u korpu za naručivanje.  </value>
+	<value name="PLG_PRODUCT_BASKET_NOADD">Niste izabrali ni jedan proizvod za dodavanje u korpu. </value>
+
+	<value name="PLG_PRODUCT_GROUP_EMPTY">U grupi trenutno nema proizvoda </value>
+	
+	<value name="PLG_PRODUCT_DETAILS_COMMENT_MESSAGE">Komentar je dodat. Molimo sačekajte da ga administrator odobri.</value>
+	<value name="PLG_PRODUCT_DETAILS_RATE">Ocena proizvoda: </value>
+	<value name="PLG_PRODUCT_DETAILS_YOURRATE">Vaša ocena: </value>
+	<value name="PLG_PRODUCT_DETAILS_RATE1">Oceni proizvod: </value>
+	<value name="PLG_PRODUCT_DETAILS_RATE2">Rejting proizvoda:  </value>
+
+	<value name="PLG_PRODUCT_DETAILS_COMMENT">Unos novog komentara </value>
+	<value name="PLG_PRODUCT_DETAILS_COMMENT_TITLE">Unesi naslov komentara: </value>
+	<value name="PLG_PRODUCT_DETAILS_COMMENT_INPUT">Unesi komentar: </value>
+	<value name="PLG_PRODUCT_DETAILS_COMMENT_USER">Komentari korisnika </value>
+	<value name="PLG_PRODUCT_DETAILS_COMMENT_SUBMIT">Unesi </value>
+
+
+ </product>
+ <newsletter>
+ 	<value name="PLG_NEWSLETTER_HEADER">Mailing lista</value>
+ 	<value name="PLG_NEWSLETTER_DESCRIPTION">Mailing lista</value>
+ 	<value name="PLG_NEWSLETTER_EMAIL">Email:</value>
+ 	<value name="PLG_NEWSLETTER_EMAIL_MESSAGE">Email adresa</value>
+ 	<value name="PLG_NEWSLETTER_ERROR_EMAIL_REQUIRED"> Email je obavezno polje </value>
+ 	<value name="PLG_NEWSLETTER_ERROR_EMAIL_EXISTS"> Email već postoji u sistemu </value>
+ 	<value name="PLG_NEWSLETTER_ERROR_EMAIL_BADFORMAT"> Email je u lošem formatu </value>
+ 	<value name="PLG_NEWSLETTER_NAME">Ime:</value>
+ 	<value name="PLG_NEWSLETTER_ERROR_NAME_REQUIRED">Ime je obavezno polje</value>
+ 	<value name="PLG_NEWSLETTER_NAME_MESSAGE">Vaše ime</value>
+ 	<value name="PLG_NEWSLETTER_SURNAME">Prezime:</value>
+ 	<value name="PLG_NEWSLETTER_ERROR_SURNAME_REQUIRED">Prezime je obavezno polje</value>
+ 	<value name="PLG_NEWSLETTER_SURNAME_MESSAGE">Vaše prezime</value>
+ 	<value name="PLG_NEWSLETTER_SUBMIT">Potvrdi</value>
+ 	<value name="PLG_NEWSLETTER_FAIL_MESSAGE"> Prijavljivanje na mailing listu je neuspešno. Molimo ispravite greške</value>
+ 	<value name="PLG_NEWSLETTER_SUCCESS_MESSAGE"> Uspešno ste se prijavili na mailing listu. Hvala na poverenju.</value>
+ </newsletter> 
+ <formcontact> 	
+	 <value name="lang_forms_title">Molimo vas da pažljivo popunite upit.</value>
+ 	 <value name="lang_forms_company">Naziv firme:</value>
+ 	 <value name="lang_forms_company_address">Adresa firme:</value>
+	 <value name="lang_forms_company_city">Grad:</value>
+	<value name="lang_forms_company_postcode">Poštanski broj:</value>
+	<value name="lang_forms_company_country">Država:</value>
+	 <value name="lang_forms_company_phone">Telefon:</value>
+ 	 <value name="lang_forms_company_fax">Fax:</value>
+ 	 <value name="lang_forms_company_email">Email:</value>
+	  <value name="lang_forms_company_web">Web:</value>
+	 <value name="lang_forms_company_contactperson">Kontakt osoba:</value>
+ 	 <value name="lang_forms_comment">Tekst poruke:</value>
+ 	 <value name="lang_forms_submit">Pošalji</value>
+	 <value name="lang_forms_successful">Uspešno slanje upita. Hvala na interesovanju.</value>
+
+	 <value name="lang_forms_validation_company">Polje firma ne može biti prazno</value>
+	 <value name="lang_forms_validation_address">Polje adresa ne može biti prazno</value>
+	 <value name="lang_forms_validation_city">Polje grad ne može biti prazno</value>
+	 <value name="lang_forms_validation_postcode">Polje poštanski broj ne može biti prazno</value>
+	 <value name="lang_forms_validation_country">Polje država ne može biti prazno</value>
+	 <value name="lang_forms_validation_phone">Polje telefon ne može biti prazno</value>
+	 <value name="lang_forms_validation_fax">Polje fax ne može biti prazno</value>
+	 <value name="lang_forms_validation_email">Polje email ne može biti prazno</value>
+	 <value name="lang_forms_validation_web">Polje web adresa ne može biti prazno</value>
+	 <value name="lang_forms_validation_contactperson">Polje kontakt osoba ne može biti prazno</value>
+	 <value name="lang_forms_validation_comment">Polje tekst poruke ne može biti prazno</value>
+</formcontact>
+</language>

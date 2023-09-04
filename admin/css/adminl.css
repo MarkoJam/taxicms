@@ -1,0 +1,166 @@
+/* Stilovi za administratorske stranice */
+
+body {
+  font-size: 14px;
+  font-family:  Arial, sans-serif;
+  margin: 0px;
+  padding: 0px;
+  color: #000000;
+}
+
+#header {
+	float:left;
+  background-color: #2678A8;
+  color: white;
+  width: 220px;
+  height:75px;
+  padding:0px;
+  margin:0px;
+
+}
+#horizontalNav, #verticalNav, #ProductTreeMenu, .plugins{
+	float:left;
+  padding:0px;
+  margin:0px 0px 10px 10px;
+
+}
+h2, h3 {
+	padding: 5px 0px;
+	margin: 0px;
+	font-size: 14px;
+}
+
+h2 a{
+	text-decoration: none;
+	color: #000;
+	font-size: 14px;
+}
+
+#header a, #header a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+#header a:hover, #header a:visited:hover {
+  text-decoration: underline;
+}
+
+.navigation 
+{
+	display:block;
+	float:left;
+	margin:0;
+	padding: 0px 0 10px 10px;
+}
+
+
+#TreeMenu{
+	float:left;
+	display:block;
+	width:210px
+	color: #000000;
+	padding: 15px 0px 10px 10px;
+	margin:0px 0px 0px 0px;
+}
+#TreeMenu a:visited, #TreeMenu a:link, #TreeMenu a:active,  .treeview a:visited, .treeview a:link, .treeview a:active{
+	color: #000000;
+	text-decoration: none;
+	font-size: 12px;
+}
+#TreeMenu a:hover, .treeview a:hover {
+	color: #000000;
+	text-decoration: none;
+	font-size: 12px;
+	font-weight:bold;
+}
+div.menu a:link, div.menu a:visited, div.menu a:hover, div.menu a:active {
+  display: block;
+  text-decoration: none;
+  color:  #000000;
+}
+
+.plugins h3 {
+	width:180px;
+	margin-left:10px;
+	cursor: pointer;
+	}
+div.menuItem {
+	color: #000000;
+	font-family:  Arial,Helvetica, sans-serif;
+	font-size: 14px;
+	padding: 5px;
+	margin: 2px;
+	background-color: #e6e6e6;
+}
+.menutxt {
+	color: #000000;
+	text-decoration: none;
+	font-size: 14px;
+	padding: 0px ;
+	margin: 0px;
+}
+
+#menuadmin  {
+	margin: 0;
+	padding: 5px 0px 5px 10px;
+
+}
+#menuadmin ul {
+	clear: left;
+	margin: 0;
+	padding: 0;
+	list-style:none;
+	width: auto;
+	font-size: 14px;
+	font-weight: normal;
+}
+#menuadmin li{
+	background-color: #f5f5f5;
+	color: black;
+	display: block;
+	padding: 3px;
+	margin:2px 0px 2px 0px;
+	text-decoration: none;
+	border: 1px solid #eaeaea;
+}
+#menuadmin li a{
+	margin-left: 5px; 
+	padding-left: 5px;
+	color: black;
+	text-decoration: none;
+	display: block;
+}
+
+#img_news {
+    background: url(../images/icons/newspaper.png)  no-repeat 0 50%;
+}
+#img_plugin {
+    background: url(../images/icons/plugin.png)  no-repeat 0 50%;
+}
+#img_user {
+    background: url(../images/icons/user.png)  no-repeat 0 50%;
+}
+#img_product {
+    background: url(../images/icons/product.png)  no-repeat 0 50%;
+}
+
+#img_poll{
+    background: url(../images/icons/poll.png)  no-repeat 0 50%;
+}
+#img_slink{
+    background: url(../images/icons/slink.png)  no-repeat 0 50%;
+}
+#img_pdf{
+    background: url(../images/icons/pdf.png)  no-repeat 0 50%;
+}
+#img_template{
+    background: url(../images/icons/template.png)  no-repeat 0 50%;
+}
+
+#img_universal{
+    background: url(../images/icons/universal.png)  no-repeat 0 50%;
+}
+
+#img_order{
+    background: url(../images/icons/order.gif)  no-repeat 0 50%;
+}

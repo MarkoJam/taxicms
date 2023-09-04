@@ -1,0 +1,40 @@
+DirectoryIndex index.php
+
+RewriteEngine on
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond $1 !^(index\.php|delete_html\.php|sitemap\.php|includes|admin|images|audio_content|css|javascript|swf_charts|files|system/plugins/ckeditor|robots\.txt)
+
+RewriteRule ^(.*)$ index.php?/$1 [L]
+
+# 3 Month
+<FilesMatch "\.(flv|gif|jpg|jpeg|png|ico|swf)$">
+  Header set Cache-Control "max-age=7257600"
+</FilesMatch>
+
+# 1 Week
+<FilesMatch "\.(js|css|pdf|txt)$">
+  Header set Cache-Control "max-age=604800"
+</FilesMatch>
+
+# 10 Minutes
+<FilesMatch "\.(html|htm)$">
+  Header set Cache-Control "max-age=600"
+</FilesMatch>
+
+# NONE
+<FilesMatch "\.(pl|php|cgi|spl)$">
+  Header unset Cache-Control
+  Header unset Expires
+  Header unset Last-Modified
+  FileETag None
+  Header unset Pragma
+</FilesMatch>
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php56” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php56 .php .php5 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit

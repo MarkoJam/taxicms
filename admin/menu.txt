@@ -1,0 +1,33 @@
+page pages/pages PLG_PAGES fa-file-text-o page_id=0
+adminpage pages/adminpages PLG_ADMIN_PAGES
+
+news news/news PLG_NEWS fa-newspaper-o
+newscategory news/newscategory PLG_CATEGORY
+
+module module/module PLG_MODULES fa-object-group
+modulecategory module/modulecategory PLG_CATEGORY
+module option/option PLG_OPTIONS
+
+product products/proizvod PLG_PRODUCTS fa-product-hunt
+tipproizvod products/tipproizvoda PLG_TYPE
+grupaproizvod products/grupaproizvoda PLG_GROUP  grupaproizvodaid=NULL
+xxx products/sinhronizacija PLG_SINHRO
+
+order order/order PLG_ORDERS fa-shopping-cart
+
+sections universal\sections PLG_SECTIONS fa-puzzle-piece
+universalplugin universal\universal PLG_UNIVERSAL
+sectionscategory universal\sectionscategory PLG_CATEGORY
+
+subsite subsite/subsite PLG_SUBSITE fa-language
+labels subsite/labels PLG_LABELS
+
+template templates PLG_TEMPLATES fa-cubes
+
+plugin plugins PLG_PLUGIN fa-tasks
+
+adminuser adminuser/adminuser PLG_ADMIN_USER fa-user-secret
+adminusergroup adminuser/adminusergroup PLG_ADMIN_GROUP
+adminuseraction adminuser/adminuseraction PLG_ADMIN_ACTION
+
+backup backup PLG_BACKUP fa-university

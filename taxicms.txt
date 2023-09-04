@@ -1,0 +1,355 @@
+TaxiCMS™
+Home
+About
+Contact
+
+
+
+
+TaxiCMS. It'll blow your mind.
+Manage your taxi transfers and your web site from one place. Everything you need is here for you: bookings, route management, drivers, prices, online payment, contact form - the works. All you have to do is install the software on your server and start making more money.
+Contact us now!
+
+
+Oh yeah, it's that good. See for yourself.
+Full web site, full Back-end and full CMS (Content Management System) - all in one smart application. Made for professionals by professionals. Many slick and professional styles to choose from. Latest technology in action. Check out the demo!
+Contact us now!
+
+
+Mobile devices? No problem!
+TaxiCMS website can be used on all smartphones and tablets.
+Back-end can be operated from mobile devices too, but due to it's complexity, it is reccomended to use a desktop or tablet device. Contact us now!
+
+
+Imagine this... Can you?
+Imagine your business is organized. Your customers are happy. You are making more money. Your company is a success. 
+Get a lifetime license and FREE updates and support for only €799.- Contact us now! 
+Discounts are available for more than two web sites. Please ask. 
+Installation, customization and additional requests are charged extra. 
+
+
+
+
+
+
+
+Still not convinced?
+Get some first hand experience and try 
+TaxiCMS Lite for yourself. 
+
+Send us your e-mail address and we will send you 
+a link to our demo site and login details for TaxiCMS administration. 
+
+No strings attached. No obligations. No spam. Ever!
+
+        
+
+Try it now!
+Please send more information and TaxiCMS Demo Username / Password to my e-mail: 
+
+ 
+Send
+
+
+Features
+Transfers management
+Routes management
+Vehicles management
+Content management
+Calendar
+Multiple drivers
+Online booking and payment
+Call center orders
+SEO tools included
+Language support
+Mobile devices support
+and more...
+
+Description
+TaxiCMS Lite is a basic version of TaxiCMS Pro application. It has a full content management system where you can easily edit your web site's content plus a full back office where you can manage your orders, vehicles, drivers etc. Interface is based on latest Twitter Bootstrap technology along with Ajax and jQuery. This guarantees flexibility and a great customer experience.
+
+
+Requirements
+Apache web server
+PHP 5.2+
+MySQL database
+IonCube loader
+One E-mail address
+
+
+What is TaxiCMS?
+TaxiCMS is a turnkey solution for airport taxi transfers companies.
+All you need is a domain, hosting and TaxiCMS web application.
+There is no need to hire web designers, programmers and administrators.
+You can manage your website yourself. 
+
+History
+This web application is a result of eight years of first hand experience in this business. 
+We have started in 2004. with JamTransfer.com and have been out there ever since.
+JamTransfer was powered by our own application that served as a basis for all future upgrades.
+After years of fine-tunung and experimenting, we've started a brand new web site - taxido.net.
+
+
+TaxiCMS
+That led us to another important step - building a brand new application for taxi transfers - TaxiCMS.
+TaxiCMS contains all of our practical knowledge, so you don't get just another application. You get our know-how too!
+Everything you need is here - the booking form, basic web site, driver management...
+
+
+CMS
+Content Management System is an easy way to edit and update Your web site without any programming skills.
+Most of the pages in TaxiCMS application are automatically generated, others are fully customizable by You.
+
+
+Modules and Extensions
+Different people have different needs. Therefore we have developed a series of modules, so You can customize Your application.
+Modules are sold separately. Custom modules available upon request. 
+
+Request a demo
+TaxiCMS demo is available, but access is restricted for the moment.
+You can obtain access if you contact us via e-mail and send us your name, company name and web site if you have one.
+We'll be more than happy do let you browse around and see for yourself what TaxiCMS can do for you. 
+
+               
+
+Contact Form
+
+Name *:
+Company Name:
+Email *:
+Message *:
+
+Clear Send
+
+
+TERMS AND CONDITIONS AND
+END-USER LICENSE AGREEMENT FOR TaxiCMS 
+Important: 
+PLEASE READ THE TERMS AND CONDITIONS OF THIS LICENSE AGREEMENT CAREFULLY BEFORE ORDERING: 
+J.A.M Group d.o.o. End-User License Agreement ("EULA") is a legal agreement
+between you (either an individual or a single entity) and J.A.M Group d.o.o.. for
+the J.A.M Group d.o.o. TaxiCMS identified above which may include associated
+software components, media, printed materials, and "online" or electronic
+documentation ("TaxiCMS"). By installing, copying, or otherwise using the
+TaxiCMS, you agree to be bound by the terms of this EULA. This license agreement
+represents the entire agreement concerning the program between you and J.A.M
+Group d.o.o., (referred to as "licenser"), and it supersedes any prior proposal,
+representation, or understanding between the parties. If you do not agree to the
+terms of this EULA, do not install or use the TaxiCMS.
+
+The TaxiCMS is protected by copyright laws and international copyright treaties,
+as well as other intellectual property laws and treaties.
+TaxiCMS is licensed, not sold.
+
+1. GRANT OF LICENSE. 
+The TaxiCMS is licensed as follows: 
+
+(a) Installation and Use.
+J.A.M Group d.o.o. grants you the right to install and use copies of the TaxiCMS
+on your web server for one domain.
+
+(b) Backup Copies.
+You may also make copies of the TaxiCMS as may be necessary for backup and
+archival purposes.
+
+
+2. DESCRIPTION OF OTHER RIGHTS AND LIMITATIONS.
+
+(a) Maintenance of Copyright Notices.
+You must not remove or alter any copyright notices on any and all copies of the TaxiCMS.
+
+(b) Distribution.
+You may not distribute registered copies of the TaxiCMS to third parties.
+Evaluation versions available for download from J.A.M Group d.o.o.'s websites may
+be freely distributed.
+
+(c) Prohibition on Reverse Engineering, Decompilation, and Disassembly.
+You may not reverse engineer, decompile, or disassemble the TaxiCMS, except and
+only to the extent that such activity is expressly permitted by applicable law
+notwithstanding this limitation. 
+
+(d) Rental.
+You may not rent, lease, or lend the TaxiCMS.
+
+(e) Support Services.
+J.A.M Group d.o.o. may provide you with support services related to the TaxiCMS
+("Support Services"). Any supplemental software code provided to you as part of
+the Support Services shall be considered part of the TaxiCMS and subject to the
+terms and conditions of this EULA. 
+
+(f) Compliance with Applicable Laws.
+You must comply with all applicable laws regarding use of the TaxiCMS.
+
+
+3. TERMINATION 
+Without prejudice to any other rights, J.A.M Group d.o.o. may terminate this EULA
+if you fail to comply with the terms and conditions of this EULA. 
+In such event, you must destroy all copies of the TaxiCMS in your possession.
+
+
+4. COPYRIGHT
+All title, including but not limited to copyrights, in and to the TaxiCMS and any
+copies thereof are owned by J.A.M Group d.o.o. or its suppliers. All title and
+intellectual property rights in and to the content which may be accessed through
+use of the TaxiCMS is the property of the respective content owner and may be
+protected by applicable copyright or other intellectual property laws and
+treaties. This EULA grants you no rights to use such content. 
+All rights not expressly granted are reserved by J.A.M Group d.o.o..
+
+
+5. NO WARRANTIES
+J.A.M Group d.o.o. expressly disclaims any warranty for the TaxiCMS. 
+TaxiCMS is provided 'As Is' without any express or implied warranty of any kind,
+including but not limited to any warranties of merchantability, noninfringement,
+or fitness of a particular purpose. 
+J.A.M Group d.o.o. does not warrant or assume responsibility for the accuracy or
+completeness of any information, text, graphics, links or other items contained
+within the TaxiCMS. 
+J.A.M Group d.o.o. makes no warranties respecting any harm that may be caused by
+the transmission of a computer virus, worm, time bomb, logic bomb, or other such
+computer program. J.A.M Group d.o.o. further expressly disclaims any warranty or
+representation to Authorized Users or to any third party.
+
+
+6. LIMITATION OF LIABILITY
+In no event shall J.A.M Group d.o.o. be liable for any damages (including,
+without limitation, lost profits, business interruption, or lost information)
+rising out of 'Authorized Users' use of or inability to use the TaxiCMS, even if
+J.A.M Group d.o.o. has been advised of the possibility of such damages. 
+In no event will J.A.M Group d.o.o. be liable for loss of data or for indirect,
+special, incidental, consequential (including lost profit), or other damages
+based in contract, tort or otherwise. 
+J.A.M Group d.o.o. shall have no liability with respect to the content of the
+TaxiCMS or any part thereof, including but not limited to errors or omissions
+contained therein, libel, infringements of rights of publicity, privacy,
+trademark rights, business interruption, personal injury, loss of privacy, moral
+rights or the disclosure of confidential information.
+
+
+
+
+PRIVACY POLICY
+
+This privacy policy sets out how TaxiCMS.com uses and protects any information
+that you give TaxiCMS.com when you use this website.
+TaxiCMS.com is committed to ensuring that your privacy is protected. Should we
+ask you to provide certain information by which you can be identified when using
+this website, then you can be assured that it will only be used in accordance
+with this privacy statement.
+TaxiCMS.com may change this policy from time to time by updating this page. 
+You should check this page from time to time to ensure that you are happy with
+any changes.
+
+What we collect 
+We may collect the following information:
+
+- name and job title
+- contact information including email address
+- demographic information such as postcode, preferences and interests
+- other information relevant to customer surveys and/or offers
+
+What we do with the information we gather
+We require this information to understand your needs and provide you with a
+better service, and in particular for the following reasons:
+
+Internal record keeping.
+We may use the information to improve our products and services.
+We may periodically send promotional email about new products, special offers or
+other information which we think you may find interesting using the email address
+which you have provided. 
+From time to time, we may also use your information to contact you for market
+research purposes. We may contact you by email, phone, fax or mail.
+We may use the information to customise the website according to your interests.
+We may provide your information to our third party partners for marketing or
+promotional purposes.
+We will never sell your information.
+Security 
+We are committed to ensuring that your information is secure. In order to prevent
+unauthorised access or disclosure we have put in place suitable physical,
+electronic and managerial procedures to safeguard and secure the information we
+collect online.
+
+How we use cookies 
+A cookie is a small file which asks permission to be placed on your computer's
+hard drive. Once you agree, the file is added and the cookie helps analyse web
+traffic or lets you know when you visit a particular site. Cookies allow web
+applications to respond to you as an individual. The web application can tailor
+its operations to your needs, likes and dislikes by gathering and remembering
+information about your preferences. 
+
+We use traffic log cookies to identify which pages are being used. This helps us
+analyse data about web page traffic and improve our website in order to tailor it
+to customer needs. We only use this information for statistical analysis purposes
+and then the data is removed from the system. 
+
+Overall, cookies help us provide you with a better website, by enabling us to
+monitor which pages you find useful and which you do not. A cookie in no way
+gives us access to your computer or any information about you, other than the
+data you choose to share with us. 
+
+You can choose to accept or decline cookies. Most web browsers automatically
+accept cookies, but you can usually modify your browser setting to decline
+cookies if you prefer. This may prevent you from taking full advantage of the
+website.
+
+Links to other websites
+Our website may contain links to enable you to visit other websites of interest
+easily. However, once you have used these links to leave our site, you should
+note that we do not have any control over that other website. Therefore, we
+cannot be responsible for the protection and privacy of any information which you
+provide whilst visiting such sites and such sites are not governed by this
+privacy statement. You should exercise caution and look at the privacy statement
+applicable to the website in question.
+
+
+Controlling your personal information
+You may choose to restrict the collection or use of your personal information in
+the following ways:
+
+whenever you are asked to fill in a form on the website, look for the box that
+you can click to indicate that you do not want the information to be used by
+anybody for direct marketing purposes
+
+if you have previously agreed to us using your personal information for direct
+marketing purposes, you may change your mind at any time by writing to or
+emailing us at info@taxicms.com
+
+We will not sell, distribute or lease your personal information to third parties
+unless we have your permission or are required by law. We may use your personal
+information to send you promotional information about third parties which we
+think you may find interesting if you tell us that you wish this to happen.
+
+You may request details of personal information which we hold about you under the
+Data Protection Act 1998. A small fee will be payable. If you would like a copy
+of the information held on you please write to [address].
+
+If you believe that any information we are holding on you is incorrect or
+incomplete, please write to or email us as soon as possible, at the above
+address. We will promptly correct any information found to be incorrect.
+
+Smart driver
+This app would allow drivers to manage their trips in an efficient and organized way. The app would allow drivers to track their trips, and manage their customer information.The app would also allow drivers to access their past trips and payment information, and to rate their customers. App would offer drivers the ability to access emergency services and contact support in the event of an issue.
+
+Booking site
+Taxi booking site software is a web-based platform that allows customers to book and pay for taxi rides online. It helps taxi companies manage their operations more efficiently, and provides customers with a convenient way to arrange transportation. The software is designed to make the booking process as simple and straightforward as possible, and can be customized to meet the specific needs of a business. It includes features such as online payment processing, automated dispatch, and customer loyalty programs.
+This module will allow customers to book airport taxi services online. The module will include the following features:
+
+1. Online booking form: Customers can fill out the online booking form to request a taxi. The form will include fields for customer name, contact information, pick-up location, destination, number of passengers, and desired pick-up time.
+
+2. Payment processing: Customers can pay for their taxi service using a major credit card.
+
+3. Driver assignment: The module will assign an available driver to the customer’s request. The driver will be notified of the customer’s pick-up location and destination.
+
+4. Reviews and ratings: Customers can leave reviews and ratings for their experience with the driver and the taxi service.
+
+5. Reporting: The module will generate reports on driver performance, customer satisfaction, and revenue.
+
+Site Administrator
+Administrating site content involves managing the content that is displayed on a website. This may include creating, editing, deleting, and organizing content, as well as setting permissions for who can access and view the content. It also involves ensuring that the content is up-to-date, accurate, and relevant. Other tasks may involve monitoring user comments and reviews, managing user accounts, and responding to inquiries.
+
+Transfers menager
+Transfers menager helps you manage booked transfers. It features a simple and intuitive user interface, and provides features such as booking new transfers,  change booked data, make schedule for drives, vehicles and drivers, tracking payments, and generating reports. 
+
+Routes&services designer
+Passengers transport route services software is CMS module designed to help taxi companies manage their transport routes and services. The software allows companies to create and manage their transport routes, vehicles, pricess It also helps to automate the booking process, allowing customers to book their rides easily and quickly.
+

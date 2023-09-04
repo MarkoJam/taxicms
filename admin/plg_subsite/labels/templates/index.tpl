@@ -1,0 +1,61 @@
+<script>
+{literal}
+	function table_plugin() {
+		// za editovanje labela
+		$('.edit-content').editable('plg_subsite/labels/modify_content_final.php',	{
+			id     : 'id',
+			style: 'display:inline;',
+			submit: 'OK',
+			cancel: 'Cancel',
+			cssclass: 'editable'
+		});
+		$('.edit-translate').editable('plg_subsite/labels/modify_translate_final.php',	{
+			id     : 'id',
+			style: 'display:inline;',
+			submit: 'OK',
+			cancel: 'Cancel',
+			cssclass: 'editable'
+		});	
+	}	
+{/literal}
+</script>
+
+<div class="ibox float-e-margins">
+	<div class="ibox-title">
+		<div class="ibox-tools">
+			<a class="collapse-link">
+					<i class="fa fa-chevron-up"></i>
+			</a>
+			<a class="fullscreen-link">
+                <i class="fa fa-expand"></i>
+            </a>
+
+			<a class="close-link">
+				<i class="fa fa-times"></i>
+			</a>
+		</div>
+	</div>
+	<div class="ibox-content">
+	
+		<div class="table-responsive">
+		   <div id="content">
+					{html_table_advanced 
+						filter=$filter
+						cnt_all_rows=$tbl_all_rows_count	
+						browseString=$tbl_browseString
+						scriptName=$scriptName
+						cnt_rows=$tbl_row_count
+						rowOffset=$tbl_offset
+						tr_attr=$tbl_tr_attributes
+						td_attr=$tbl_td_attributes
+						loop=$tbl_content
+						cols=$tbl_cols_count
+						tableheader=$tbl_header
+						table_attr='cellspacing=0 class="index" id="normal"'
+						message=$poruka
+					}
+
+			</div>
+		</div>	
+	</div>
+</div>

@@ -1,0 +1,16 @@
+<?php
+##################################################
+#              http://www.php-HR-net             #
+##################################################
+
+
+// uèitamo klasu
+include_once('PathVars.php');
+
+// instanciramo objekt
+$pathVars = &new PathVars($_SERVER['SCRIPT_NAME']);
+
+echo 'Ovo je skripta <b>clanak</b> bez extenzije <b>.php</b><br />';
+echo 'Id clanka je ' . $pathVars->fetchByIndex(0);
+
+?>

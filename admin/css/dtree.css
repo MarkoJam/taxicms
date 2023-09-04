@@ -1,0 +1,32 @@
+/* CSS Document ProFoto */
+.dtree {
+font-family: Arial, MS Sans Serif, Helvetica, Sans Serif;
+font-size: 8pt;
+white-space: nowrap;
+}
+.dtree img {
+border: 0px;
+vertical-align: middle;
+}
+.dtree a {
+text-decoration: none;
+}
+.dtree a.node, .dtree a.nodeSel {
+color: black;
+white-space: nowrap;
+padding: 1px 2px 1px 2px;
+}
+.dtree a.NAnode {
+color: darkgray;
+white-space: nowrap;
+padding: 1px 2px 1px 2px;
+}
+.dtree a:hover, a.node:hover, .dtree a.nodeSel:hover, .dtree a.NAnode:hover {
+text-decoration: none;
+}
+.dtree a.nodeSel {
+background-color: #c0d2ec;
+}
+.dtree .clip {
+overflow: hidden;
+}

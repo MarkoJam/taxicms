@@ -1,0 +1,252 @@
+
+div #search  {
+	font-size: 100%;
+	font-style: normal;
+	font-weight: normal;
+	text-align: left;
+	text-transform: lowercase;
+	padding:0px 0px 2px 10px;
+	margin: 0px 0px 0px 0px;
+	display:block;
+	float:right;
+	width:150px;
+}
+
+div #search_all  input.text{
+	background: url(../images/inputback.gif) no-repeat top left;
+	display:block;
+	float:left;
+	color : #acacac;
+	font-size : 11px;
+	font-family : Arial, Tahoma,Verdana;
+	font-weight: normal;
+	width:109px;
+	height:17px;
+	margin:15px 0px 0px 0px;
+	padding:4px 5px 0px 7px;
+	border:0px;
+}
+div #search_all  input.submit{
+	background: url(../images/button.gif) no-repeat top left;
+	display:block;
+	float:left;
+	width:23px;
+	height:21px;
+	border:0px;
+	margin:15px 0px 0px 0px;
+	padding:0px;
+	cursor:pointer;
+}
+div #search_eng  {
+	background-color: #303030;
+	border: 1px solid #303030;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	font-size: 100%;
+	font-style: normal;
+	font-weight: normal;
+	text-align: left;
+	text-transform: lowercase;
+	padding:0px 0px 2px 10px;
+	margin: 0px 10px 0px 0px;
+	display:block;
+	float:right;
+	width:188px;
+	height: 20px;
+	padding: 4px 6px;
+	font-size: 14px;
+	line-height: 20px;
+	color: #555;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	vertical-align: middle;
+}
+
+div #search_eng #search_all  input.text{
+	background-image:none;
+	color: #fff;
+	margin: 0px;
+	width: 150px;
+
+}
+div #search_eng #search_all  input.submit{
+	background: url(../images/search.png) no-repeat top left;
+	display:block;
+	float:right;
+	width:23px;
+	height:21px;
+	border:0px;
+	margin:2px 0px 0px 0px;
+	padding:0px;
+	cursor:pointer;
+}
+
+
+/*	Rezultati pretrage */
+
+div #search_results .product_box  {
+	background:#FFFFFF;
+	width:236px;
+	margin: 0px 0px 5px 0px;
+	padding: 0px;
+	float:left;
+	min-height: 313px;
+  }
+
+
+div #search_results .product_box div.slika, #search_results   #product_details_box div.slika  {
+	display:block;
+	width:220px;
+	text-align:center;
+	margin:0px 5px 0px 5px;
+	padding: 5px 0px 5px 0px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-moz-box-shadow: 0 0 5px #9C9C9C;
+	-webkit-box-shadow: 0 0 5px #9C9C9C;
+	box-shadow: 0px 0px 5px #9C9C9C;
+  }
+
+div #search_results  .product_box div.slika a img.slika {
+	margin:0px;
+	text-align:center;
+  }
+
+div #search_results  .product_box p.cena {
+	background: #f2f1f1;
+	font-size: 12px;
+	color: #000000;
+	text-align:center;
+	margin: 4px 10px 4px 4px;
+	font-weight: normal;
+	padding: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+  }
+div #search_results  .product_box p.pdv {
+	font-size: 100%;
+	color: #000000;
+	text-align:center;
+	margin:0px;
+	font-weight:normal;
+	padding:3px 2px 3px 2px;
+  }
+div #search_results  .product_box p.naziv {
+	display:block;
+	font-size: 110%;
+	color: #000000;
+	text-align:center;
+	margin:0px 0px 0px 0px;
+	font-weight:normal;
+	padding:5px 1px 5px 1px;
+  }
+div #search_results  .product_box p.naziv a:link,#search_results  .product_box p.naziv a:visited { 			
+	color:#000000;
+	text-decoration: none; 
+	font-weight:bold;
+}
+div #search_results .product_box p.naziv a:hover {
+	color: #ee8624;
+	text-decoration: underline;
+	font-weight:bold;
+	}
+
+/*	Rezultati pretrage detaljno*/
+
+div #search_details h1.main{
+	clear:both;
+	width:650px;
+	height:27px;
+	background: url(../images/h1back.gif) no-repeat top left;
+	display:block;
+	text-align:left;
+	font-size: 18px;
+	font-weight:normal;
+	color:#000000;
+	margin: 2px 0px 2px 0px;
+	padding:10px 0px 5px 25px;
+}
+
+div #search_details #product_details_box  {
+	float:left;
+	width:675px;
+	margin:0px;
+    padding: 0px 0px 10px 0px;
+    text-align: justify;
+	z-index:0;
+	background: url(../images/productdetailback.gif) repeat-y left top;
+}
+div #search_details #product_details_box_top{
+	width: 675px;
+	height:7px;
+	background: url(../images/productdetailtop.gif) no-repeat top left;
+	padding:0px;
+	margin:0px 0px 0px 0px;
+	float:left;
+	font-size:1px;
+}
+div #search_details #product_details_box_bottom{
+	width: 675px;
+	height:7px;
+	background: url(../images/productdetailbottom.gif) no-repeat top left;
+	padding:0px;
+	margin:0px 0px 10px 0px;
+	float:left;
+	font-size:1px;
+}
+
+div #search_details  #product_details_box_left {
+	float:left;
+	margin:5px 0px 0px 0px;
+	padding: 3px 10px 3px 10px;
+	width:220px;
+  }
+div #search_details  #product_details_box_right {
+	float:left;
+	font-size:11px;
+	background:#FFFFFF;
+	margin:0px;
+	padding: 3px 10px 5px 5px;
+	width:400px;
+	text-align:left;
+  }
+#search_details_box .slika{
+	text-align:center;
+}
+#search_details_box .cena{
+	background: url(../images/cenaback.gif) no-repeat top left;
+	font-size: 14px;
+	color: #000000;
+	text-align:center;
+	margin:0px;
+	font-weight:normal;
+	padding:0px 2px 3px 2px;
+}
+#search_details_box .pdv{
+	font-size: 100%;
+	color: #000000;
+	text-align:center;
+	margin:0px;
+	font-weight:normal;
+	padding:3px 2px 3px 2px;
+}
+#search_details_box .sifra{
+	text-align:center;
+}
+#search_details_box .order{
+	text-align:center;
+}
+#search_details #product_details_box_bellow{
+	width: 650px;
+	padding:0px 0px 0px 25px;
+	margin:0px 0px 10px 0px;
+	float:left;
+	font-size:2px;
+}
+#search_details #product_details_box_bellow table{
+	text-align:left;
+}

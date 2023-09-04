@@ -1,0 +1,91 @@
+[28-Aug-2023 10:40:24 Europe/Belgrade] PHP Fatal error:  Uncaught Error: Call to a member function getID() on null in C:\wamp\www\taxicms\admin\plg_option\option\modify.php:165
+Stack trace:
+#0 {main}
+  thrown in C:\wamp\www\taxicms\admin\plg_option\option\modify.php on line 165
+[28-Aug-2023 11:13:23 Europe/Belgrade] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function DatabaseBroker::prebrojSveSlogove(), 1 passed in C:\wamp\www\taxicms\admin\plg_option\option\index.php on line 36 and exactly 2 expected in C:\wamp\www\taxicms\common\class\dbbr.php:215
+Stack trace:
+#0 C:\wamp\www\taxicms\admin\plg_option\option\index.php(36): DatabaseBroker->prebrojSveSlogove(Object(Option))
+#1 {main}
+  thrown in C:\wamp\www\taxicms\common\class\dbbr.php on line 215
+[28-Aug-2023 12:11:25 Europe/Belgrade] PHP Fatal error:  Uncaught Error: Class 'ModuleModule' not found in C:\wamp\www\taxicms\common\factories\ObjectFactory.class.php:112
+Stack trace:
+#0 C:\wamp\www\taxicms\plugins\plg_module\modulePlugin.php(257): ObjectFactory->createObjects('ModuleModule')
+#1 C:\wamp\www\taxicms\common\class\pluginInvoker.class.php(58): modulePlugin->showDetails()
+#2 C:\wamp\www\taxicms\CmsEngine.php(470): pluginInvoker->InvokePluginDetails('module')
+#3 C:\wamp\www\taxicms\CmsEngine.php(83): CmsEngine->ProcessTemplate()
+#4 C:\wamp\www\taxicms\index.php(12): CmsEngine->Start()
+#5 {main}
+  thrown in C:\wamp\www\taxicms\common\factories\ObjectFactory.class.php on line 112
+[28-Aug-2023 12:17:57 Europe/Belgrade] PHP Fatal error:  Uncaught Error: Class 'ModuleModule' not found in C:\wamp\www\taxicms\common\factories\ObjectFactory.class.php:112
+Stack trace:
+#0 C:\wamp\www\taxicms\plugins\plg_module\modulePlugin.php(258): ObjectFactory->createObjects('ModuleModule')
+#1 C:\wamp\www\taxicms\common\class\pluginInvoker.class.php(58): modulePlugin->showDetails()
+#2 C:\wamp\www\taxicms\CmsEngine.php(470): pluginInvoker->InvokePluginDetails('module')
+#3 C:\wamp\www\taxicms\CmsEngine.php(83): CmsEngine->ProcessTemplate()
+#4 C:\wamp\www\taxicms\index.php(12): CmsEngine->Start()
+#5 {main}
+  thrown in C:\wamp\www\taxicms\common\factories\ObjectFactory.class.php on line 112
+[28-Aug-2023 12:25:33 Europe/Belgrade] PHP Fatal error:  Uncaught Error: Call to undefined method modulePlugin::count() in C:\wamp\www\taxicms\plugins\pagePlugin.php:278
+Stack trace:
+#0 C:\wamp\www\taxicms\plugins\plg_module\modulePlugin.php(255): pagePlugin->showConResource('News', 4)
+#1 C:\wamp\www\taxicms\common\class\pluginInvoker.class.php(58): modulePlugin->showDetails()
+#2 C:\wamp\www\taxicms\CmsEngine.php(470): pluginInvoker->InvokePluginDetails('module')
+#3 C:\wamp\www\taxicms\CmsEngine.php(83): CmsEngine->ProcessTemplate()
+#4 C:\wamp\www\taxicms\index.php(12): CmsEngine->Start()
+#5 {main}
+  thrown in C:\wamp\www\taxicms\plugins\pagePlugin.php on line 278
+[28-Aug-2023 12:26:13 Europe/Belgrade] PHP Fatal error:  Uncaught Error: Call to undefined method modulePlugin::count() in C:\wamp\www\taxicms\plugins\pagePlugin.php:278
+Stack trace:
+#0 C:\wamp\www\taxicms\plugins\plg_module\modulePlugin.php(255): pagePlugin->showConResource('Module', 10)
+#1 C:\wamp\www\taxicms\common\class\pluginInvoker.class.php(58): modulePlugin->showDetails()
+#2 C:\wamp\www\taxicms\CmsEngine.php(470): pluginInvoker->InvokePluginDetails('module')
+#3 C:\wamp\www\taxicms\CmsEngine.php(83): CmsEngine->ProcessTemplate()
+#4 C:\wamp\www\taxicms\index.php(12): CmsEngine->Start()
+#5 {main}
+  thrown in C:\wamp\www\taxicms\plugins\pagePlugin.php on line 278
+[28-Aug-2023 12:57:00 Europe/Belgrade] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 65015808 bytes) in C:\wamp\www\taxicms\plugins\pagePlugin.php on line 244
+[28-Aug-2023 12:57:00 Europe/Belgrade] PHP Stack trace:
+[28-Aug-2023 12:57:00 Europe/Belgrade] PHP   1. {main}() C:\wamp\www\taxicms\index.php:0
+[28-Aug-2023 12:57:00 Europe/Belgrade] PHP   2. CmsEngine->Start() C:\wamp\www\taxicms\index.php:12
+[28-Aug-2023 12:57:00 Europe/Belgrade] PHP   3. CmsEngine->ProcessTemplate() C:\wamp\www\taxicms\CmsEngine.php:83
+[28-Aug-2023 12:57:00 Europe/Belgrade] PHP   4. pluginInvoker->InvokePluginDetails() C:\wamp\www\taxicms\CmsEngine.php:470
+[28-Aug-2023 12:57:00 Europe/Belgrade] PHP   5. modulePlugin->showDetails() C:\wamp\www\taxicms\common\class\pluginInvoker.class.php:58
+[28-Aug-2023 12:57:00 Europe/Belgrade] PHP   6. modulePlugin->showConResource() C:\wamp\www\taxicms\plugins\plg_module\modulePlugin.php:235
+[28-Aug-2023 12:57:00 Europe/Belgrade] PHP   7. print_r() C:\wamp\www\taxicms\plugins\pagePlugin.php:244
+[31-Aug-2023 09:02:11 Europe/Belgrade] PHP Fatal error:  Uncaught Error: Call to a member function setModuleID() on null in C:\wamp\www\taxicms\common\option.php:489
+Stack trace:
+#0 C:\wamp\www\taxicms\common\class\dbbr.php(206): Option->napuni(Object(stdClass))
+#1 C:\wamp\www\taxicms\common\factories\ObjectFactory.class.php(57): DatabaseBroker->nadjiSlogVratiGa(Object(Option), '*')
+#2 C:\wamp\www\taxicms\admin\plg_option\option\modify.php(35): ObjectFactory->createObject('Option', '2', Array)
+#3 {main}
+  thrown in C:\wamp\www\taxicms\common\option.php on line 489
+[31-Aug-2023 09:05:33 Europe/Belgrade] PHP Fatal error:  Uncaught Error: Call to a member function setModuleID() on null in C:\wamp\www\taxicms\common\option.php:489
+Stack trace:
+#0 C:\wamp\www\taxicms\common\class\dbbr.php(206): Option->napuni(Object(stdClass))
+#1 C:\wamp\www\taxicms\common\factories\ObjectFactory.class.php(57): DatabaseBroker->nadjiSlogVratiGa(Object(Option), '*')
+#2 C:\wamp\www\taxicms\admin\plg_option\option\modify.php(35): ObjectFactory->createObject('Option', '2', Array)
+#3 {main}
+  thrown in C:\wamp\www\taxicms\common\option.php on line 489
+[31-Aug-2023 09:07:40 Europe/Belgrade] PHP Fatal error:  Uncaught Error: Call to a member function setModuleID() on null in C:\wamp\www\taxicms\common\option.php:489
+Stack trace:
+#0 C:\wamp\www\taxicms\common\class\dbbr.php(206): Option->napuni(Object(stdClass))
+#1 C:\wamp\www\taxicms\common\factories\ObjectFactory.class.php(57): DatabaseBroker->nadjiSlogVratiGa(Object(Option), '*')
+#2 C:\wamp\www\taxicms\admin\plg_option\option\modify.php(35): ObjectFactory->createObject('Option', '2', Array)
+#3 {main}
+  thrown in C:\wamp\www\taxicms\common\option.php on line 489
+[31-Aug-2023 09:10:00 Europe/Belgrade] PHP Fatal error:  Uncaught Error: Call to undefined method SfStatus::getHeader() in C:\wamp\www\taxicms\admin\plg_option\option\modify.php:71
+Stack trace:
+#0 {main}
+  thrown in C:\wamp\www\taxicms\admin\plg_option\option\modify.php on line 71
+[31-Aug-2023 10:20:20 Europe/Belgrade] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 65015808 bytes) in C:\wamp\www\taxicms\admin\common\comboFilter.class.php on line 756
+[31-Aug-2023 10:20:20 Europe/Belgrade] PHP Stack trace:
+[31-Aug-2023 10:20:20 Europe/Belgrade] PHP   1. {main}() C:\wamp\www\taxicms\admin\plg_module\module\index.php:0
+[31-Aug-2023 10:20:20 Europe/Belgrade] PHP   2. ModuleStatusFilter->generateProccessComboBox() C:\wamp\www\taxicms\admin\plg_module\module\index.php:23
+[31-Aug-2023 10:20:20 Europe/Belgrade] PHP   3. ModuleStatusFilter->generateComboBox() C:\wamp\www\taxicms\admin\common\comboFilter.class.php:714
+[31-Aug-2023 10:20:20 Europe/Belgrade] PHP   4. print_r() C:\wamp\www\taxicms\admin\common\comboFilter.class.php:756
+[31-Aug-2023 10:20:23 Europe/Belgrade] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 65015808 bytes) in C:\wamp\www\taxicms\admin\common\comboFilter.class.php on line 756
+[31-Aug-2023 10:20:23 Europe/Belgrade] PHP Stack trace:
+[31-Aug-2023 10:20:23 Europe/Belgrade] PHP   1. {main}() C:\wamp\www\taxicms\admin\plg_option\option\index.php:0
+[31-Aug-2023 10:20:23 Europe/Belgrade] PHP   2. OptionStatusFilter->generateProccessComboBox() C:\wamp\www\taxicms\admin\plg_option\option\index.php:23
+[31-Aug-2023 10:20:23 Europe/Belgrade] PHP   3. OptionStatusFilter->generateComboBox() C:\wamp\www\taxicms\admin\common\comboFilter.class.php:714
+[31-Aug-2023 10:20:23 Europe/Belgrade] PHP   4. print_r() C:\wamp\www\taxicms\admin\common\comboFilter.class.php:756

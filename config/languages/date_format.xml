@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<language>
+	<srpski>
+		<value name="GLOBAL_MONTH_JANUARY">јaнуар</value>
+		<value name="GLOBAL_MONTH_FEBRUARY">фебруар</value>
+		<value name="GLOBAL_MONTH_MARCH">март</value>
+		<value name="GLOBAL_MONTH_APRIL">април</value>
+		<value name="GLOBAL_MONTH_MAY">мaj</value>
+		<value name="GLOBAL_MONTH_JUNE">јун</value>
+		<value name="GLOBAL_MONTH_JULY">јул</value>
+		<value name="GLOBAL_MONTH_AUGUST">август</value>
+		<value name="GLOBAL_MONTH_SEPTEMBER">септембар</value>
+		<value name="GLOBAL_MONTH_OCTOBER">октобар</value>
+		<value name="GLOBAL_MONTH_NOVEMBER">новембар</value>
+		<value name="GLOBAL_MONTH_DECEMBER">децембар</value>
+		
+		<value name="GLOBAL_MONTH_JANUARY_SHORT">јан</value>
+		<value name="GLOBAL_MONTH_FEBRUARY_SHORT">феб</value>
+		<value name="GLOBAL_MONTH_MARCH_SHORT">мар</value>
+		<value name="GLOBAL_MONTH_APRIL_SHORT">апр</value>
+		<value name="GLOBAL_MONTH_MAY_SHORT">мај</value>
+		<value name="GLOBAL_MONTH_JUNE_SHORT">jун</value>
+		<value name="GLOBAL_MONTH_JULY_SHORT">јул</value>
+		<value name="GLOBAL_MONTH_AUGUST_SHORT">aбг</value>
+		<value name="GLOBAL_MONTH_SEPTEMBER_SHORT">сеп</value>
+		<value name="GLOBAL_MONTH_OCTOBER_SHORT">окт</value>
+		<value name="GLOBAL_MONTH_NOVEMBER_SHORT">нов</value>
+		<value name="GLOBAL_MONTH_DECEMBER_SHORT">дец</value>
+		
+		<value name="GLOBAL_DAY_MONDAY">понедељак</value>
+		<value name="GLOBAL_DAY_TUESDAY">уторак</value>
+		<value name="GLOBAL_DAY_WEDNESDAY">среда</value>
+		<value name="GLOBAL_DAY_THURSDAY">четвртак</value>
+		<value name="GLOBAL_DAY_FRIDAY">петак</value>
+		<value name="GLOBAL_DAY_SATURDAY">субота</value>
+		<value name="GLOBAL_DAY_SUNDAY">недеља</value>
+		
+		<value name="GLOBAL_DAY_MONDAY_SHORT">пон</value>
+		<value name="GLOBAL_DAY_TUESDAY_SHORT">уто</value>
+		<value name="GLOBAL_DAY_WEDNESDAY_SHORT">сре</value>
+		<value name="GLOBAL_DAY_THURSDAY_SHORT">чет</value>
+		<value name="GLOBAL_DAY_FRIDAY_SHORT">пет</value>
+		<value name="GLOBAL_DAY_SATURDAY_SHORT">суб</value>
+		<value name="GLOBAL_DAY_SUNDAY_SHORT">нед</value>
+		
+	</srpski>
+	
+	<srpskil>
+		<value name="GLOBAL_MONTH_JANUARY">januar</value>
+		<value name="GLOBAL_MONTH_FEBRUARY">februar</value>
+		<value name="GLOBAL_MONTH_MARCH">mart</value>
+		<value name="GLOBAL_MONTH_APRIL">April</value>
+		<value name="GLOBAL_MONTH_MAY">maj</value>
+		<value name="GLOBAL_MONTH_JUNE">jun</value>
+		<value name="GLOBAL_MONTH_JULY">jul</value>
+		<value name="GLOBAL_MONTH_AUGUST">avgust</value>
+		<value name="GLOBAL_MONTH_SEPTEMBER">septembar</value>
+		<value name="GLOBAL_MONTH_OCTOBER">oktobar</value>
+		<value name="GLOBAL_MONTH_NOVEMBER">novembar</value>
+		<value name="GLOBAL_MONTH_DECEMBER">decembar</value>
+		
+		<value name="GLOBAL_MONTH_JANUARY_SHORT">Jan</value>
+		<value name="GLOBAL_MONTH_FEBRUARY_SHORT">Feb</value>
+		<value name="GLOBAL_MONTH_MARCH_SHORT">Mar</value>
+		<value name="GLOBAL_MONTH_APRIL_SHORT">Apr</value>
+		<value name="GLOBAL_MONTH_MAY_SHORT">Maj</value>
+		<value name="GLOBAL_MONTH_JUNE_SHORT">Jun</value>
+		<value name="GLOBAL_MONTH_JULY_SHORT">Jul</value>
+		<value name="GLOBAL_MONTH_AUGUST_SHORT">Avg</value>
+		<value name="GLOBAL_MONTH_SEPTEMBER_SHORT">Sep</value>
+		<value name="GLOBAL_MONTH_OCTOBER_SHORT">Okt</value>
+		<value name="GLOBAL_MONTH_NOVEMBER_SHORT">Nov</value>
+		<value name="GLOBAL_MONTH_DECEMBER_SHORT">Dec</value>
+		
+		<value name="GLOBAL_DAY_MONDAY">Ponedeljak</value>
+		<value name="GLOBAL_DAY_TUESDAY">Utorak</value>
+		<value name="GLOBAL_DAY_WEDNESDAY">Sreda</value>
+		<value name="GLOBAL_DAY_THURSDAY">Četvrtak</value>
+		<value name="GLOBAL_DAY_FRIDAY">Petak</value>
+		<value name="GLOBAL_DAY_SATURDAY">Subota</value>
+		<value name="GLOBAL_DAY_SUNDAY">Nedelja</value>
+		
+		<value name="GLOBAL_DAY_MONDAY_SHORT">Pon</value>
+		<value name="GLOBAL_DAY_TUESDAY_SHORT">Uto</value>
+		<value name="GLOBAL_DAY_WEDNESDAY_SHORT">Sre</value>
+		<value name="GLOBAL_DAY_THURSDAY_SHORT">Čet</value>
+		<value name="GLOBAL_DAY_FRIDAY_SHORT">Pet</value>
+		<value name="GLOBAL_DAY_SATURDAY_SHORT">Sub</value>
+		<value name="GLOBAL_DAY_SUNDAY_SHORT">Ned</value>
+		
+	</srpskil>
+	
+	<english>
+		<value name="GLOBAL_MONTH_JANUARY">January</value>
+		<value name="GLOBAL_MONTH_FEBRUARY">February</value>
+		<value name="GLOBAL_MONTH_MARCH">March</value>
+		<value name="GLOBAL_MONTH_APRIL">April</value>
+		<value name="GLOBAL_MONTH_MAY">May</value>
+		<value name="GLOBAL_MONTH_JUNE">June</value>
+		<value name="GLOBAL_MONTH_JULY">July</value>
+		<value name="GLOBAL_MONTH_AUGUST">August</value>
+		<value name="GLOBAL_MONTH_SEPTEMBER">September</value>
+		<value name="GLOBAL_MONTH_OCTOBER">October</value>
+		<value name="GLOBAL_MONTH_NOVEMBER">November</value>
+		<value name="GLOBAL_MONTH_DECEMBER">December</value>
+		
+		<value name="GLOBAL_MONTH_JANUARY_SHORT">Jan</value>
+		<value name="GLOBAL_MONTH_FEBRUARY_SHORT">Feb</value>
+		<value name="GLOBAL_MONTH_MARCH_SHORT">Mar</value>
+		<value name="GLOBAL_MONTH_APRIL_SHORT">Apr</value>
+		<value name="GLOBAL_MONTH_MAY_SHORT">May</value>
+		<value name="GLOBAL_MONTH_JUNE_SHORT">Jun</value>
+		<value name="GLOBAL_MONTH_JULY_SHORT">Jul</value>
+		<value name="GLOBAL_MONTH_AUGUST_SHORT">Aug</value>
+		<value name="GLOBAL_MONTH_SEPTEMBER_SHORT">Sep</value>
+		<value name="GLOBAL_MONTH_OCTOBER_SHORT">Oct</value>
+		<value name="GLOBAL_MONTH_NOVEMBER_SHORT">Nov</value>
+		<value name="GLOBAL_MONTH_DECEMBER_SHORT">Dec</value>
+		
+		<value name="GLOBAL_DAY_MONDAY">Monday</value>
+		<value name="GLOBAL_DAY_TUESDAY">Tuesday</value>
+		<value name="GLOBAL_DAY_WEDNESDAY">Wednesday</value>
+		<value name="GLOBAL_DAY_THURSDAY">Thursday</value>
+		<value name="GLOBAL_DAY_FRIDAY">Friday</value>
+		<value name="GLOBAL_DAY_SATURDAY">Saturday</value>
+		<value name="GLOBAL_DAY_SUNDAY">Sunday</value>
+		
+		<value name="GLOBAL_DAY_MONDAY_SHORT">Mon</value>
+		<value name="GLOBAL_DAY_TUESDAY_SHORT">Tue</value>
+		<value name="GLOBAL_DAY_WEDNESDAY_SHORT">Wed</value>
+		<value name="GLOBAL_DAY_THURSDAY_SHORT">Thu</value>
+		<value name="GLOBAL_DAY_FRIDAY_SHORT">Fri</value>
+		<value name="GLOBAL_DAY_SATURDAY_SHORT">Sat</value>
+		<value name="GLOBAL_DAY_SUNDAY_SHORT">Sun</value>
+		
+	</english>
+
+	<russian>
+		<value name="GLOBAL_MONTH_JANUARY">Январь</value>
+		<value name="GLOBAL_MONTH_FEBRUARY">Февраль</value>
+		<value name="GLOBAL_MONTH_MARCH">Mарт</value>
+		<value name="GLOBAL_MONTH_APRIL">Апрель</value>
+		<value name="GLOBAL_MONTH_MAY">Май</value>
+		<value name="GLOBAL_MONTH_JUNE">Июнь</value>
+		<value name="GLOBAL_MONTH_JULY">Июль</value>
+		<value name="GLOBAL_MONTH_AUGUST">Aвгуст</value>
+		<value name="GLOBAL_MONTH_SEPTEMBER">Сентябрь</value>
+		<value name="GLOBAL_MONTH_OCTOBER">Октябрь</value>
+		<value name="GLOBAL_MONTH_NOVEMBER">Ноябрь</value>
+		<value name="GLOBAL_MONTH_DECEMBER">Декабрь</value>
+		
+		<value name="GLOBAL_MONTH_JANUARY_SHORT">Янв</value>
+		<value name="GLOBAL_MONTH_FEBRUARY_SHORT">Фев</value>
+		<value name="GLOBAL_MONTH_MARCH_SHORT">Mар</value>
+		<value name="GLOBAL_MONTH_APRIL_SHORT">Апр</value>
+		<value name="GLOBAL_MONTH_MAY_SHORT">Май</value>
+		<value name="GLOBAL_MONTH_JUNE_SHORT">Июн</value>
+		<value name="GLOBAL_MONTH_JULY_SHORT">Июл</value>
+		<value name="GLOBAL_MONTH_AUGUST_SHORT">Aвг</value>
+		<value name="GLOBAL_MONTH_SEPTEMBER_SHORT">Сен</value>
+		<value name="GLOBAL_MONTH_OCTOBER_SHORT">Окт</value>
+		<value name="GLOBAL_MONTH_NOVEMBER_SHORT">Ноя</value>
+		<value name="GLOBAL_MONTH_DECEMBER_SHORT">Дек</value>
+		
+		<value name="GLOBAL_DAY_MONDAY">Понедельник</value>
+		<value name="GLOBAL_DAY_TUESDAY">Вторник</value>
+		<value name="GLOBAL_DAY_WEDNESDAY">Среда</value>
+		<value name="GLOBAL_DAY_THURSDAY">Четверг</value>
+		<value name="GLOBAL_DAY_FRIDAY">Пятница</value>
+		<value name="GLOBAL_DAY_SATURDAY">Суббота</value>
+		<value name="GLOBAL_DAY_SUNDAY">Воскресенье</value>
+		
+		<value name="GLOBAL_DAY_MONDAY_SHORT">Понедельник</value>
+		<value name="GLOBAL_DAY_TUESDAY_SHORT">Вторник</value>
+		<value name="GLOBAL_DAY_WEDNESDAY_SHORT">Среда</value>
+		<value name="GLOBAL_DAY_THURSDAY_SHORT">Четверг</value>
+		<value name="GLOBAL_DAY_FRIDAY_SHORT">Пятница</value>
+		<value name="GLOBAL_DAY_SATURDAY_SHORT">Суббота</value>
+		<value name="GLOBAL_DAY_SUNDAY_SHORT">Воскресенье</value>		
+	</russian>
+	
+	<chinese>
+		<value name="GLOBAL_MONTH_JANUARY">一月</value>
+		<value name="GLOBAL_MONTH_FEBRUARY">二月</value>
+		<value name="GLOBAL_MONTH_MARCH">三月</value>
+		<value name="GLOBAL_MONTH_APRIL">四月</value>
+		<value name="GLOBAL_MONTH_MAY">五月</value>
+		<value name="GLOBAL_MONTH_JUNE">六月</value>
+		<value name="GLOBAL_MONTH_JULY">七月</value>
+		<value name="GLOBAL_MONTH_AUGUST">八月</value>
+		<value name="GLOBAL_MONTH_SEPTEMBER">九月</value>
+		<value name="GLOBAL_MONTH_OCTOBER">十月</value>
+		<value name="GLOBAL_MONTH_NOVEMBER">十一月</value>
+		<value name="GLOBAL_MONTH_DECEMBER">十二月</value>
+		
+		<value name="GLOBAL_MONTH_JANUARY_SHORT">一月</value>
+		<value name="GLOBAL_MONTH_FEBRUARY_SHORT">二月</value>
+		<value name="GLOBAL_MONTH_MARCH_SHORT">三月</value>
+		<value name="GLOBAL_MONTH_APRIL_SHORT">四月</value>
+		<value name="GLOBAL_MONTH_MAY_SHORT">五月</value>
+		<value name="GLOBAL_MONTH_JUNE_SHORT">六月</value>
+		<value name="GLOBAL_MONTH_JULY_SHORT">七月</value>
+		<value name="GLOBAL_MONTH_AUGUST_SHORT">八月</value>
+		<value name="GLOBAL_MONTH_SEPTEMBER_SHORT">九月</value>
+		<value name="GLOBAL_MONTH_OCTOBER_SHORT">十月</value>
+		<value name="GLOBAL_MONTH_NOVEMBER_SHORT">十一月</value>
+		<value name="GLOBAL_MONTH_DECEMBER_SHORT">十二月</value>
+		
+		<value name="GLOBAL_DAY_MONDAY">星期一</value>
+		<value name="GLOBAL_DAY_TUESDAY">星期二</value>
+		<value name="GLOBAL_DAY_WEDNESDAY">星期三</value>
+		<value name="GLOBAL_DAY_THURSDAY">星期四</value>
+		<value name="GLOBAL_DAY_FRIDAY">星期五</value>
+		<value name="GLOBAL_DAY_SATURDAY">星期六</value>
+		<value name="GLOBAL_DAY_SUNDAY">星期日</value>
+		
+		<value name="GLOBAL_DAY_MONDAY_SHORT">星期一</value>
+		<value name="GLOBAL_DAY_TUESDAY_SHORT">星期二</value>
+		<value name="GLOBAL_DAY_WEDNESDAY_SHORT">星期三</value>
+		<value name="GLOBAL_DAY_THURSDAY_SHORT">星期四</value>
+		<value name="GLOBAL_DAY_FRIDAY_SHORT">星期五</value>
+		<value name="GLOBAL_DAY_SATURDAY_SHORT">星期六</value>
+		<value name="GLOBAL_DAY_SUNDAY_SHORT">星期日</value>		
+	</chinese>
+	
+	<german>
+		<value name="GLOBAL_MONTH_JANUARY">Januar</value>
+		<value name="GLOBAL_MONTH_FEBRUARY">Februar</value>
+		<value name="GLOBAL_MONTH_MARCH">März</value>
+		<value name="GLOBAL_MONTH_APRIL">April</value>
+		<value name="GLOBAL_MONTH_MAY">Mai</value>
+		<value name="GLOBAL_MONTH_JUNE">Juni</value>
+		<value name="GLOBAL_MONTH_JULY">Juli</value>
+		<value name="GLOBAL_MONTH_AUGUST">August</value>
+		<value name="GLOBAL_MONTH_SEPTEMBER">September</value>
+		<value name="GLOBAL_MONTH_OCTOBER">Oktober</value>
+		<value name="GLOBAL_MONTH_NOVEMBER">November</value>
+		<value name="GLOBAL_MONTH_DECEMBER">Dezember</value>
+		
+		<value name="GLOBAL_MONTH_JANUARY_SHORT">Jan</value>
+		<value name="GLOBAL_MONTH_FEBRUARY_SHORT">Feb</value>
+		<value name="GLOBAL_MONTH_MARCH_SHORT">Mär</value>
+		<value name="GLOBAL_MONTH_APRIL_SHORT">Apr</value>
+		<value name="GLOBAL_MONTH_MAY_SHORT">Mai</value>
+		<value name="GLOBAL_MONTH_JUNE_SHORT">Jun</value>
+		<value name="GLOBAL_MONTH_JULY_SHORT">Jul</value>
+		<value name="GLOBAL_MONTH_AUGUST_SHORT">Aug</value>
+		<value name="GLOBAL_MONTH_SEPTEMBER_SHORT">Sep</value>
+		<value name="GLOBAL_MONTH_OCTOBER_SHORT">Okt</value>
+		<value name="GLOBAL_MONTH_NOVEMBER_SHORT">Nov</value>
+		<value name="GLOBAL_MONTH_DECEMBER_SHORT">Dez</value>
+		
+		<value name="GLOBAL_DAY_MONDAY">Monteg</value>
+		<value name="GLOBAL_DAY_TUESDAY">Dienstag</value>
+		<value name="GLOBAL_DAY_WEDNESDAY">Mittwoch</value>
+		<value name="GLOBAL_DAY_THURSDAY">Donnerstag</value>
+		<value name="GLOBAL_DAY_FRIDAY">Freitag</value>
+		<value name="GLOBAL_DAY_SATURDAY">Samstag</value>
+		<value name="GLOBAL_DAY_SUNDAY">Sonntag</value>
+		
+		<value name="GLOBAL_DAY_MONDAY_SHORT">Mon</value>
+		<value name="GLOBAL_DAY_TUESDAY_SHORT">Die</value>
+		<value name="GLOBAL_DAY_WEDNESDAY_SHORT">Mit</value>
+		<value name="GLOBAL_DAY_THURSDAY_SHORT">Don</value>
+		<value name="GLOBAL_DAY_FRIDAY_SHORT">Fre</value>
+		<value name="GLOBAL_DAY_SATURDAY_SHORT">Sam</value>
+		<value name="GLOBAL_DAY_SUNDAY_SHORT">Son</value>		
+	</german>	
+	
+	<spanish>
+		<value name="GLOBAL_MONTH_JANUARY">Enero</value>
+		<value name="GLOBAL_MONTH_FEBRUARY">Febrero</value>
+		<value name="GLOBAL_MONTH_MARCH">Marzo</value>
+		<value name="GLOBAL_MONTH_APRIL">Abril</value>
+		<value name="GLOBAL_MONTH_MAY">Mayo</value>
+		<value name="GLOBAL_MONTH_JUNE">Junio</value>
+		<value name="GLOBAL_MONTH_JULY">Julio</value>
+		<value name="GLOBAL_MONTH_AUGUST">Agosto</value>
+		<value name="GLOBAL_MONTH_SEPTEMBER">Septiembre</value>
+		<value name="GLOBAL_MONTH_OCTOBER">Octubre</value>
+		<value name="GLOBAL_MONTH_NOVEMBER">Noviembre</value>
+		<value name="GLOBAL_MONTH_DECEMBER">Diciembre</value>
+		
+		<value name="GLOBAL_MONTH_JANUARY_SHORT">Ene</value>
+		<value name="GLOBAL_MONTH_FEBRUARY_SHORT">Feb</value>
+		<value name="GLOBAL_MONTH_MARCH_SHORT">Mar</value>
+		<value name="GLOBAL_MONTH_APRIL_SHORT">Abr</value>
+		<value name="GLOBAL_MONTH_MAY_SHORT">May</value>
+		<value name="GLOBAL_MONTH_JUNE_SHORT">Jun</value>
+		<value name="GLOBAL_MONTH_JULY_SHORT">Jul</value>
+		<value name="GLOBAL_MONTH_AUGUST_SHORT">Ago</value>
+		<value name="GLOBAL_MONTH_SEPTEMBER_SHORT">Sep</value>
+		<value name="GLOBAL_MONTH_OCTOBER_SHORT">Oct</value>
+		<value name="GLOBAL_MONTH_NOVEMBER_SHORT">Nov</value>
+		<value name="GLOBAL_MONTH_DECEMBER_SHORT">Dic</value>
+		
+		<value name="GLOBAL_DAY_MONDAY">Lunes</value>
+		<value name="GLOBAL_DAY_TUESDAY">Martes</value>
+		<value name="GLOBAL_DAY_WEDNESDAY">Miércoles</value>
+		<value name="GLOBAL_DAY_THURSDAY">Jueves</value>
+		<value name="GLOBAL_DAY_FRIDAY">Viernes</value>
+		<value name="GLOBAL_DAY_SATURDAY">Sábado</value>
+		<value name="GLOBAL_DAY_SUNDAY">Domingo</value>
+		
+		<value name="GLOBAL_DAY_MONDAY_SHORT">Lun</value>
+		<value name="GLOBAL_DAY_TUESDAY_SHORT">Mar</value>
+		<value name="GLOBAL_DAY_WEDNESDAY_SHORT">Mié</value>
+		<value name="GLOBAL_DAY_THURSDAY_SHORT">Jue</value>
+		<value name="GLOBAL_DAY_FRIDAY_SHORT">Vie</value>
+		<value name="GLOBAL_DAY_SATURDAY_SHORT">Sáb</value>
+		<value name="GLOBAL_DAY_SUNDAY_SHORT">Dom</value>
+		
+	</spanish>	
+</language>

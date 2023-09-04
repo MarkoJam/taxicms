@@ -1,0 +1,49 @@
+
+#naviglinks {
+	float:left;
+	width: 230px;
+    margin:2px 0px 5px 0px;
+	padding:0px 0px 0px 0px;	
+	font-size: 12px;
+	font-family: Verdana;
+}
+
+#naviglinks a:hover {color: #333333;text-decoration: underline;}
+
+div #naviglinks h2 {
+	background: url(../images/h2back.gif) no-repeat top left;
+	font-size: 140%;
+	color: #000000;
+	margin: 0px;
+	padding: 12px 0px 0px 20px;
+	font-weight:bold;
+	text-align:left;
+	display:block;
+	width:210px;
+	height:30px;
+}
+div #naviglinks ul li {
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	text-align: left;
+	padding:8px 0px 2px 20px;
+	margin: 2px 0px 2px 0px;
+	display:block;
+	background: url(../images/liback.gif) no-repeat top left;
+	width:210px;
+	height:20px;
+	}
+
+div #naviglinks li a:link, div #naviglinks li a:visited { 
+	color:  #a72423;
+	text-decoration: none;
+	}
+
+div #naviglinks li a:hover {color: #333333;text-decoration: underline;}
+
+div #naviglinks_body {
+	float:left;
+	padding:5px 0px 5px 0px;
+	margin:0px;
+}

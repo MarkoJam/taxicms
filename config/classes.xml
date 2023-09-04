@@ -1,0 +1,1590 @@
+<!--  
+	/* meta podaci za sve klase koje se koriste u aplikaciji
+	*	
+	*	Nacin koriscsenja:
+	*
+	*	- Sve klase se nalaze u CLASSESS tagu
+	*	- Svaka klasa ima svoj zaseban tag CLASS u okviru CLASSES taga
+	*		- atributi klase su name i file
+	*			- name: predstavlja naziv klase
+	*			- file: je fizicki naziv fajla u kome se klasa nalazi,
+	*					klase koje su po prirodi stvari povezana nalaze se
+	*					u istim fajlovima
+	*
+	*	- Atributi klase nalaze se u okvriu ATTR taga
+	*	- Svaki atribut ima svoj poseban tag ATTRS u okviru ATTR taga
+	*		- atributi atribut taga su type, value, key
+	*			- type:  tip atributa klase
+	*			- value: default vrednost atributa klase
+	*			- key:	ako je atribut kljuc u bazi moze biti ili pk ili fk
+	*		
+	*			- PRIMERI KORISCENJA
+	*			- atribut za primarnikljuc:
+	*				<attrs type="int" value="-1" key="pk">PageID</attrs>
+	*			- obican atribut:
+	*				<attrs type="string" value="" key="">Html</attrs>
+	*			- atribut koji je spoljni kljuc koristi se za veze 1-1
+	*			  (poseban pristup i ima dodatak u sekciji relations)
+	*				<attrs type="object" value="" key="fk">ParentID</attrs>
+	*	
+	*	- Releacije koje postoje izmedju klasa cuvaju se u okviru RELATIONS taga
+	*	- Svaka relacija ima poseban RELATION tag u okviru RELATIONS taga
+	*		- Relacije se koriste za dva tipa veza izmedju objekata 1-1 i 1-M
+	*		- Postoje i posebne veze M-M medjutim uvek se posmatra u odnosu na
+	*		  tekuci objekat tako da u tom slucaju postoje dve veze 1-M na dva
+	*		  medjusobno povezana objekta.
+	*		- atributi taga RELATIONS su class i type
+	*			- class: predstavlja klasu sa kojom se uspostavlja relacija
+	*			- type:  tip relacije koju zelimo da uspostavimo
+	*			
+	*			- PRIMERI KORISCENJA
+	*			- ostvarivanje veze 1-1 
+	*				<attrs type="object" value="" key="fk">ParentID</attrs>
+	*				<relation class="Page" type="1-1"/>
+	*			- ostvarivanje veze 1-M
+	*				<relation class="Plugin" type="1-M"/>
+	*/
+	-->
+
+<classes>
+<class name="Page" file="page.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">PageID</attrs>
+		<attrs type="int" value="" key="">Level</attrs>
+		<attrs type="int" value="" key="">Order</attrs>
+		<attrs type="string" value="" key="">Header</attrs>
+		<attrs type="string" value="" key="">Html</attrs>
+		
+		<attrs type="object" value="" key="fk">ParentID</attrs>
+		<attrs type="object" value="" key="fk">TemplateID</attrs>
+		<attrs type="object" value="" key="fk">UserRoleID</attrs>
+		<attrs type="object" value="" key="fk">StatusID</attrs>
+		<attrs type="object" value="" key="fk">PageTypeID</attrs>
+		<attrs type="object" value="" key="fk">PageProtectionID</attrs>
+	</attr>
+	<relations>
+		<relation class="Page"				type="1-1"/>
+		<relation class="Template"			type="1-1"/>
+		<relation class="UserRole"			type="1-1"/>
+		<relation class="SfStatus"			type="1-1"/>
+		<relation class="SfPageType" 		type="1-1"/>
+		<relation class="SfPageProtection"	type="1-1"/>
+	</relations>
+</class>
+
+<class name="StaticPage" file="spage.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">SPageID</attrs>
+		<attrs type="string" value="" key="">Level</attrs>
+		
+		<attrs type="int" value="" key="">Order</attrs>
+		<attrs type="string" value="" key="">Header</attrs>
+		<attrs type="string" value="" key="">Html</attrs>
+		
+		<attrs type="object" value="" key="fk">StatusID</attrs>
+		<attrs type="object" value="" key="fk">TemplateID</attrs>
+		<attrs type="object" value="" key="fk">TipStranicaID</attrs>
+	</attr>
+	<relations>
+		<relation class="SfStatus" type="1-1"/>	
+		<relation class="Template" type="1-1"/>
+		<relation class="SfPageType" type="1-1"/>
+	</relations>
+</class>
+
+<class name="StaticPageLink" file="spagelink.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">SPageID</attrs>
+		<attrs type="string" value="" key="">Target</attrs>
+	</attr>
+	<relations/>
+</class>
+
+<class name="Template" file="template.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">TemplateID</attrs>
+		<attrs type="string" value="" key="">Title</attrs>
+		<attrs type="string" value="" key="">Description</attrs>
+	</attr>
+	<relations>
+		<relation class="Plugin" type="1-M"/>
+		<relation class="PluginTemplate" type="1-M"/>
+	</relations>
+</class>
+
+<class name="Labels" file="labels.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">ID</attrs>
+		<attrs type="string" value="" key="">Name</attrs>		
+	</attr>
+	<relations/>	
+</class>
+
+<class name="User" file="user.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">UserID</attrs>
+		<attrs type="string" value="" key="">Name</attrs>
+		<attrs type="string" value="" key="">Surname</attrs>
+		<attrs type="string" value="" key="">Firm</attrs>
+		<attrs type="string" value="" key="">PIB</attrs>
+		<attrs type="string" value="" key="">Place</attrs>
+		<attrs type="string" value="" key="">Address</attrs>
+		<attrs type="string" value="" key="">Email</attrs>
+		<attrs type="string" value="" key="">Comment</attrs>
+		<attrs type="string" value="" key="">Phone</attrs>
+		<attrs type="string" value="" key="">IssueNo</attrs>
+		<attrs type="string" value="" key="">UserName</attrs>
+		<attrs type="string" value="" key="">Password</attrs>
+		<attrs type="int" 	 value="" key="">ExpiryDate</attrs>
+		
+		<attrs type="object" value="" key="fk">UserTypeID</attrs>
+		<attrs type="object" value="" key="fk">UserCategoryID</attrs>
+		<attrs type="object" value="" key="fk">StatusID</attrs>
+		<attrs type="object" value="" key="fk">SubSiteID</attrs>
+	</attr>
+	<relations>
+		<relation class="SubSite" type="1-1" />
+		<relation class="UserRole" type="1-M" />
+		<relation class="UserSubSites" type="1-M" />
+		<relation class="PrOrder" type="1-M" />
+		<relation class="PrInvoice" type="1-M" />		
+		<relation class="SfStatus" type="1-1" />
+		<relation class="SfUserType" type="1-1" />
+		<relation class="SfUserCategory" type="1-1" />
+	</relations>
+</class>
+
+<class name="UserStatus" file="proizvod.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">StatusID</attrs>
+		<attrs type="string" value="" key="">Vrednost</attrs>
+	</attr>
+	<relations/>
+</class>
+
+<class name="UserRole" file="user.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">UserRoleID</attrs>
+		<attrs type="string" value="" key="">Role</attrs>
+		<attrs type="string" value="" key="">Description</attrs>
+	</attr>
+	<relations>
+		<relation class="User" type="1-M"/>
+	</relations>
+</class>
+
+<class name="UserUserRole" file="user.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">UserID</attrs>
+		<attrs type="int" value="-1" key="pk">UserRoleID</attrs>
+	</attr>
+	<relations />
+</class>
+
+<class name="UserLogHistory" file="user.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">UserLogID</attrs>
+		<attrs type="object" value="" key="fk">UserID</attrs>
+		<attrs type="int" value="-1" key="pk">LastLogDate</attrs>
+		<attrs type="string" value="" key="">LastLogIp</attrs>
+	</attr>
+	<relations>
+		<relation class="User" type="1-1"/>
+	</relations>
+</class>
+
+<class name="Newsletter" file="newsletter.php">
+	<attr>
+		<attrs type="int"    value="-1" key="pk">NewsletterID</attrs>
+		<attrs type="string" value=""   key="">Header</attrs>
+		<attrs type="string" value=""   key="">Html</attrs>
+		<attrs type="int"    value=""   key="">Date</attrs>
+		<attrs type="string" value=""   key="">TotalForSend</attrs>
+		<attrs type="string" value=""   key="">Status</attrs>
+		
+		<attrs type="object" value=""   key="fk">UserRoleID</attrs>
+		<attrs type="object" value=""   key="fk">StatusID</attrs>
+	</attr>
+	<relations>
+		<relation class="UserRole" type="1-1"/>
+		<relation class="SfStatus" type="1-1"/>
+	</relations>
+</class>
+
+<class name="NewsletterBatch" file="newsletter.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">NewsletterBatchID</attrs>
+		<attrs type="object" value="" key="fk">NewsletterID</attrs>
+		<attrs type="object" value="" key="fk">UserID</attrs>
+		<attrs type="int" value="-1" key="pk">SendTime</attrs>
+		<attrs type="int" value="-1" key="pk">Status</attrs>
+	</attr>
+	<relations>
+		<relation class="Newsletter" type="1-1"/>
+		<relation class="User" type="1-1"/>
+	</relations>
+</class>
+	
+<class name="Plugin" file="plugin.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">PluginID</attrs>
+		<attrs type="string" value="" key="">Title</attrs>
+		<attrs type="string" value="" key="">FileName</attrs>
+		<attrs type="string" value="" key="">ClassName</attrs>
+		<attrs type="string" value="" key="">Module</attrs>
+		<attrs type="string" value="" key="">ActionPrefix</attrs>
+		<attrs type="string" value="" key="">TemplateBase</attrs>
+		<attrs type="string" value="" key="">Active</attrs>
+		
+		<attrs type="object" value="" key="fk">PluginModuleID</attrs>
+	</attr>
+	<relations>
+		<relation class="SfPluginModule" type="1-1" />
+	</relations>
+</class>
+
+<class name="PluginTemplate" file="plgtempl.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">PlgtemID</attrs>
+		<attrs type="string" value="" key="">Filename</attrs>
+		<attrs type="int" value="" key="">FilterID</attrs>
+
+		<attrs type="object" value="" key="fk">PluginID</attrs>
+		<attrs type="object" value="" key="fk">TemplateID</attrs>
+	</attr>
+	<relations>
+		<relation class="Plugin" type="1-M" />
+		<relation class="Template" type="1-M" />
+	</relations>
+</class>
+	
+<class name="PageLink" file="pagelink.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">PageID</attrs>
+	 	<attrs type="string" value="" key="">Target</attrs>
+	</attr>
+	<relations>
+		<relation/>
+	</relations>
+</class>
+
+<class name="GenRes" file="genres.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">GenResID</attrs>
+		<attrs type="string" value="" key="">Header</attrs>
+		<attrs type="string" value="" key="">ShortHtml</attrs>
+		<attrs type="string" value="" key="">Html</attrs>
+		<attrs type="string" value="" key="">Date</attrs>
+		
+		<attrs type="object" value="" key="fk">GenResTypeID</attrs>
+		<attrs type="object" value="" key="fk">StatusID</attrs>
+	</attr>
+	<relations>
+		<relation class="GenResType" type="1-1"/>
+		<relation class="GenResCategory" type="1-M"/>
+		<relation class="SfStatus" type="1-1"/>
+	</relations>
+</class>
+
+<class name="GenResType" file="genres.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">GenResTypeID</attrs>
+		<attrs type="string" value="" key="">Title</attrs>
+		<attrs type="string" value="" key="">Description</attrs>
+	</attr>
+	<relations>
+		<relation class="GenRes" type="1-M"/>
+	</relations>
+</class>
+
+<class name="GenResCategory" file="genres.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">GenResCategoryID</attrs>
+		<attrs type="string" value="" key="">Title</attrs>
+		<attrs type="string" value="" key="">MessageNum</attrs>
+		<attrs type="string" value="" key="">Status</attrs>
+	</attr>
+	<relations>
+		<relation class="GenRes" type="1-M"/>
+	</relations>
+</class>
+
+<class name="GenResGenResCategory" file="genres.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">GenResID</attrs>
+		<attrs type="int" value="-1" key="pk">GenResCategoryID</attrs>
+	</attr>
+	<relations>
+		<relation class="GenRes" type="1-1"/>
+		<relation class="GenResCategory" type="1-1"/>
+	</relations>
+</class>
+
+<class name="GenResGenRes" file="genres.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">GenResID</attrs>
+		<attrs type="int" value="-1" key="pk">ConGenResID</attrs>
+	</attr>
+	<relations/>
+</class>
+
+<class name="News" file="news.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">NewsID</attrs>
+		<attrs type="string" value="" key="">Header</attrs>
+		<attrs type="string" value="" key="">ShortHtml</attrs>
+		<attrs type="string" value="" key="">Html</attrs>
+		<attrs type="string" value="" key="">Date</attrs>
+		
+		<attrs type="object" value="" key="fk">NewsTypeID</attrs>
+		<attrs type="object" value="" key="fk">StatusID</attrs>
+	</attr>
+	<relations>
+		<relation class="NewsType" type="1-1"/>
+		<relation class="NewsCategory" type="1-M"/>
+		<relation class="SfStatus" type="1-1"/>
+	</relations>
+</class>
+
+<class name="NewsType" file="news.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">NewsTypeID</attrs>
+		<attrs type="string" value="" key="">Title</attrs>
+		<attrs type="string" value="" key="">Description</attrs>
+	</attr>
+	<relations>
+		<relation class="News" type="1-M"/>
+	</relations>
+</class>
+
+<class name="NewsCategory" file="news.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">NewsCategoryID</attrs>
+		<attrs type="string" value="" key="">Title</attrs>
+		<attrs type="string" value="" key="">MessageNum</attrs>
+		<attrs type="string" value="" key="">Status</attrs>
+	</attr>
+	<relations>
+		<relation class="News" type="1-M"/>
+	</relations>
+</class>
+
+<class name="NewsNewsCategory" file="news.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">NewsID</attrs>
+		<attrs type="int" value="-1" key="pk">NewsCategoryID</attrs>
+	</attr>
+	<relations>
+		<relation class="News" type="1-1"/>
+		<relation class="NewsCategory" type="1-1"/>
+	</relations>
+</class>
+
+<class name="NewsNews" file="news.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">NewsID</attrs>
+		<attrs type="int" value="-1" key="pk">ConNewsID</attrs>
+	</attr>
+	<relations/>
+</class>
+
+<class name="Persons" file="persons.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">PersonsID</attrs>
+		<attrs type="string" value="" key="">Header</attrs>
+		<attrs type="string" value="" key="">ShortHtml</attrs>
+		<attrs type="string" value="" key="">Html</attrs>
+		<attrs type="string" value="" key="">Date</attrs>
+		
+		<attrs type="object" value="" key="fk">PersonsTypeID</attrs>
+		<attrs type="object" value="" key="fk">StatusID</attrs>
+	</attr>
+	<relations>
+		<relation class="PersonsType" type="1-1"/>
+		<relation class="PersonsCategory" type="1-M"/>
+		<relation class="SfStatus" type="1-1"/>
+	</relations>
+</class>
+
+<class name="PersonsType" file="persons.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">PersonsTypeID</attrs>
+		<attrs type="string" value="" key="">Title</attrs>
+		<attrs type="string" value="" key="">Description</attrs>
+	</attr>
+	<relations>
+		<relation class="Persons" type="1-M"/>
+	</relations>
+</class>
+
+<class name="PersonsCategory" file="persons.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">PersonsCategoryID</attrs>
+		<attrs type="string" value="" key="">Title</attrs>
+		<attrs type="string" value="" key="">MessageNum</attrs>
+		<attrs type="string" value="" key="">Status</attrs>
+	</attr>
+	<relations>
+		<relation class="Persons" type="1-M"/>
+	</relations>
+</class>
+
+<class name="PersonsPersonsCategory" file="persons.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">PersonsID</attrs>
+		<attrs type="int" value="-1" key="pk">PersonsCategoryID</attrs>
+	</attr>
+	<relations>
+		<relation class="Persons" type="1-1"/>
+		<relation class="PersonsCategory" type="1-1"/>
+	</relations>
+</class>
+
+<class name="PersonsPersons" file="persons.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">PersonsID</attrs>
+		<attrs type="int" value="-1" key="pk">ConPersonsID</attrs>
+	</attr>
+	<relations/>
+</class>
+
+<class name="Module" file="module.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">ModuleID</attrs>
+		<attrs type="string" value="" key="">Header</attrs>
+		<attrs type="string" value="" key="">ShortHtml</attrs>
+		<attrs type="string" value="" key="">Html</attrs>
+		<attrs type="string" value="" key="">Date</attrs>
+		
+		<attrs type="object" value="" key="fk">ModuleTypeID</attrs>
+		<attrs type="object" value="" key="fk">StatusID</attrs>
+	</attr>
+	<relations>
+		<relation class="ModuleType" type="1-1"/>
+		<relation class="ModuleCategory" type="1-M"/>
+		<relation class="SfStatus" type="1-1"/>
+	</relations>
+</class>
+
+<class name="ModuleType" file="module.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">ModuleTypeID</attrs>
+		<attrs type="string" value="" key="">Title</attrs>
+		<attrs type="string" value="" key="">Description</attrs>
+	</attr>
+	<relations>
+		<relation class="Module" type="1-M"/>
+	</relations>
+</class>
+
+<class name="ModuleCategory" file="module.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">ModuleCategoryID</attrs>
+		<attrs type="string" value="" key="">Title</attrs>
+		<attrs type="string" value="" key="">MessageNum</attrs>
+		<attrs type="string" value="" key="">Status</attrs>
+	</attr>
+	<relations>
+		<relation class="Module" type="1-M"/>
+	</relations>
+</class>
+
+<class name="ModuleModuleCategory" file="module.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">ModuleID</attrs>
+		<attrs type="int" value="-1" key="pk">ModuleCategoryID</attrs>
+	</attr>
+	<relations>
+		<relation class="Module" type="1-1"/>
+		<relation class="ModuleCategory" type="1-1"/>
+	</relations>
+</class>
+
+<class name="ModuleModule" file="module.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">ModuleID</attrs>
+		<attrs type="int" value="-1" key="pk">ConModuleID</attrs>
+	</attr>
+	<relations/>
+</class>
+
+<class name="Option" file="option.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">OptionID</attrs>
+		<attrs type="string" value="" key="">Header</attrs>
+		<attrs type="string" value="" key="">ShortHtml</attrs>
+		<attrs type="string" value="" key="">Html</attrs>
+		<attrs type="string" value="" key="">Date</attrs>
+		
+		<attrs type="object" value="" key="fk">OptionTypeID</attrs>
+		<attrs type="object" value="" key="fk">StatusID</attrs>
+	</attr>
+	<relations>
+		<relation class="OptionType" type="1-1"/>
+		<relation class="OptionCategory" type="1-M"/>
+		<relation class="SfStatus" type="1-1"/>
+		<relation class="Module" type="1-1"/>
+	</relations>
+</class>
+
+<class name="OptionType" file="option.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">OptionTypeID</attrs>
+		<attrs type="string" value="" key="">Title</attrs>
+		<attrs type="string" value="" key="">Description</attrs>
+	</attr>
+	<relations>
+		<relation class="Option" type="1-M"/>
+	</relations>
+</class>
+
+<class name="OptionCategory" file="option.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">OptionCategoryID</attrs>
+		<attrs type="string" value="" key="">Title</attrs>
+		<attrs type="string" value="" key="">MessageNum</attrs>
+		<attrs type="string" value="" key="">Status</attrs>
+	</attr>
+	<relations>
+		<relation class="Option" type="1-M"/>
+	</relations>
+</class>
+
+<class name="OptionOptionCategory" file="option.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">OptionID</attrs>
+		<attrs type="int" value="-1" key="pk">OptionCategoryID</attrs>
+	</attr>
+	<relations>
+		<relation class="Option" type="1-1"/>
+		<relation class="OptionCategory" type="1-1"/>
+	</relations>
+</class>
+
+<class name="OptionOption" file="option.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">OptionID</attrs>
+		<attrs type="int" value="-1" key="pk">ConOptionID</attrs>
+	</attr>
+	<relations/>
+</class>
+
+<class name="Gallery" file="gallery.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">GalleryID</attrs>
+		<attrs type="string" value="" key="">Header</attrs>
+		<attrs type="string" value="" key="">Html</attrs>
+		<attrs type="string" value="" key="">Date</attrs>
+		
+		<attrs type="object" value="" key="fk">StatusID</attrs>
+	</attr>
+	<relations>
+		<relation class="GalleryType" type="1-1"/>
+		<relation class="GalleryCategory" type="1-M"/>
+		<relation class="SfStatus" type="1-1"/>
+	</relations>
+</class>
+
+<class name="GalleryCategory" file="gallery.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">GalleryCategoryID</attrs>
+		<attrs type="string" value="" key="">Title</attrs>
+		<attrs type="string" value="" key="">MessageNum</attrs>
+		<attrs type="string" value="" key="">Status</attrs>
+	</attr>
+	<relations>
+		<relation class="Gallery" type="1-M"/>
+	</relations>
+</class>
+
+<class name="GalleryGalleryCategory" file="gallery.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">GalleryID</attrs>
+		<attrs type="int" value="-1" key="pk">GalleryCategoryID</attrs>
+	</attr>
+	<relations>
+		<relation class="Gallery" type="1-1"/>
+		<relation class="GalleryCategory" type="1-1"/>
+	</relations>
+</class>
+
+<class name="Document" file="document.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">DocumentID</attrs>
+		<attrs type="string" value="" key="">Title</attrs>
+		<attrs type="string" value="" key="">Description</attrs>
+		<attrs type="string" value="" key="">File</attrs>
+	</attr>
+	<relations>
+		<relation class="SfDocumentType" type="1-1"/>
+		<relation class="DocumentCategory" type="1-1"/>
+		<relation class="DocumentGroup" type="1-M"/>
+	</relations>
+</class>
+
+<class name="DocumentCategory" file="document.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">DocumentCategoryID</attrs>
+		<attrs type="string" value="" key="">Title</attrs>
+		<attrs type="string" value="" key="">Description</attrs>
+	</attr>
+	<relations>
+		<relation class="Document" type="1-M"/>
+	</relations>
+</class>
+
+<class name="DocumentGroup" file="document.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">DocumentGroupID</attrs>
+		<attrs type="string" value="" key="">Title</attrs>
+		<attrs type="string" value="" key="">Description</attrs>
+		<attrs type="int" value="-1" key="">StatusID</attrs>
+	</attr>
+	<relations>
+		<relation class="Document" type="1-M"/>
+		<relation class="SfStatus" type="1-1"/>
+	</relations>
+</class>
+
+<class name="DocumentDocumentGroup" file="document.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">DocumentGroupID</attrs>
+		<attrs type="int" value="-1" key="pk">DocumentID</attrs>
+	</attr>
+	<relations>
+		<relation class="Document" type="1-1"/>
+		<relation class="DocumentGroup" type="1-1"/>
+	</relations>
+</class>
+
+<class name="UniversalPlugin" file="universal.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">UniversalPluginID</attrs>
+		<attrs type="string" value="" key="">Header</attrs>
+		<attrs type="string" value="" key="">Html</attrs>
+	</attr>
+	<relations/>
+</class>
+
+<class name="Lexicon" file="lexicon.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">LexiconID</attrs>
+		<attrs type="string" value="" key="">Header</attrs>
+		<attrs type="string" value="" key="">Html</attrs>
+	</attr>
+	<relations/>
+</class>
+
+<class name="Sections" file="sections.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">SectionsID</attrs>
+		<attrs type="string" value="" key="">Header</attrs>
+		<attrs type="string" value="" key="">ShortHtml</attrs>
+		<attrs type="string" value="" key="">Html</attrs>
+		<attrs type="string" value="" key="">Date</attrs>
+		
+		<attrs type="object" value="" key="fk">SectionsTypeID</attrs>
+		<attrs type="object" value="" key="fk">StatusID</attrs>
+	</attr>
+	<relations>
+		<relation class="SectionsType" type="1-1"/>
+		<relation class="SectionsCategory" type="1-M"/>
+		<relation class="SfStatus" type="1-1"/>
+	</relations>
+</class>
+
+<class name="SectionsCategory" file="sections.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">SectionsCategoryID</attrs>
+		<attrs type="string" value="" key="">Title</attrs>
+		<attrs type="string" value="" key="">MessageNum</attrs>
+		<attrs type="string" value="" key="">Status</attrs>
+	</attr>
+	<relations>
+		<relation class="Sections" type="1-M"/>
+	</relations>
+</class>
+
+<class name="SectionsSectionsCategory" file="sections.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">SectionsID</attrs>
+		<attrs type="int" value="-1" key="pk">SectionsCategoryID</attrs>
+	</attr>
+	<relations>
+		<relation class="Sections" type="1-1"/>
+		<relation class="SectionsCategory" type="1-1"/>
+	</relations>
+</class>
+
+<class name="Poll" file="poll.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">PollID</attrs>
+		<attrs type="string" value="" key="">Header</attrs>
+		<attrs type="string" value="" key="">Description</attrs>
+		
+		<attrs type="object" value="" key="fk">StatusID</attrs>
+	</attr>
+	<relations>	
+		<relation class="PollQuestion" type="1-M" />
+		<relation class="SfStatus" type="1-1" />
+	</relations>	
+</class>
+
+<class name="PollQuestion" file="poll.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">PollQuestionID</attrs>
+		<attrs type="string" value="" key="">PollID</attrs>
+		<attrs type="string" value="" key="">Title</attrs>
+		<attrs type="string" value="" key="">Votes</attrs>
+	</attr>
+	<relations>
+		<relation class="PollQuestion" type="1-1" />
+	</relations>
+</class>
+
+<class name="AdminUser" file="adminuser.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">AdminUserID</attrs>
+		<attrs type="string" value="" key="">FullName</attrs>
+		<attrs type="string" value="" key="">Place</attrs>
+		<attrs type="string" value="" key="">Address</attrs>
+		<attrs type="string" value="" key="">Email</attrs>
+		<attrs type="string" value="" key="">Comment</attrs>
+		<attrs type="string" value="" key="">Phone</attrs>
+		<attrs type="string" value="" key="">UserName</attrs>
+		<attrs type="string" value="" key="">Password</attrs>
+		<attrs type="int" value="" key="">ExpiryDate</attrs>
+		
+		<attrs type="object" value="" key="fk">SubSiteID</attrs>	 
+		<attrs type="object" value="" key="fk">AdminUserGroupID</attrs>
+		<attrs type="object" value="" key="fk">StatusID</attrs>
+		</attr>
+	<relations>
+		<relation class="SubSite" type="1-1"/>
+		<relation class="AdminUserGroup" type="1-1"/>
+		<relation class="SfStatus" type="1-1"/>
+	</relations>
+</class>
+
+<class name="SubSite" file="subsite.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">SubSiteID</attrs>
+		<attrs type="string" value="-1" key="">Name</attrs>
+		<attrs type="string" value="-1" key="">Language</attrs>
+		<attrs type="string" value="-1" key="">FilePostfix</attrs>
+		<attrs type="string" value="-1" key="">DbPostfix</attrs>
+		<attrs type="object" value="" key="fk">StatusID</attrs>
+	</attr>
+	<relations>
+		<relation class="SfStatus" type="1-1"/>
+	</relations>
+</class>
+
+<class name="AdminUserGroup" file="adminuser.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">AdminUserGroupID</attrs>
+		<attrs type="string" value="" key="">Title</attrs>
+		<attrs type="string" value="" key="">Description</attrs>
+	</attr>
+	<relations>
+		<relation class="AdminUserAction" type="1-M"/>
+	</relations>
+</class>
+
+<class name="AdminUserAction" file="adminuser.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">AdminUserActionID</attrs>
+		<attrs type="string" value="" key="">Title</attrs>
+		<attrs type="string" value="" key="">Description</attrs>
+		<attrs type="string" value="" key="">ActionCode</attrs>
+		<attrs type="object" value="" key="">PluginID</attrs>
+	</attr>
+	<relations>
+		<relation class="Plugin" type="1-1" />
+	</relations>
+</class>
+
+<class name="AdminUserGroupAction" file="adminuser.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">AdminUserGroupID</attrs>
+		<attrs type="int" value="-1" key="pk">AdminUserActionID</attrs>
+	</attr>
+	<relations/>	
+</class>
+
+<class name="AdminUserLogHistory" file="adminuser.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">AdminUserLogID</attrs>
+		<attrs type="object" value="" key="fk">AdminUserID</attrs>
+		<attrs type="int" value="-1" key="">LastLogDate</attrs>
+		<attrs type="int" value="-1" key="">LastLogIP</attrs>
+	</attr>
+	<relations>
+		<relation class="AdminUser" type="1-1"/>
+	</relations>
+</class>
+
+<class name="AdminPage" file="adminpage.php">
+	<attr>
+		<attrs type="string" value="" key="pk">AdminPageID</attrs>
+		<attrs type="string" value="" key="">AdminPageName</attrs>
+		<attrs type="string" value="" key="">Header</attrs>
+		<attrs type="string" value="" key="">Html</attrs>
+		<attrs type="object" value="" key="fk">TemplateID</attrs>
+	</attr>
+	<relations>
+		<relation class="Template" type="1-1"/>
+	</relations>
+</class>
+
+<class name="Template" file="template.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">TemplateID</attrs>
+	</attr>
+	<relations/>
+</class>
+
+<class name="LinksCategory" file="linkscategory.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">LinksCategoryID</attrs>
+		<attrs type="string" value="" key="">CategoryName</attrs>
+	</attr>
+	<relations>
+		<relation class="Links" type="1-M"/>
+	</relations>
+</class>
+
+<class name="Links" file="linkscategory.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">LinksID</attrs>
+		<attrs type="string" value="" key="">LinksName</attrs>
+		<attrs type="string" value="" key="">LinksUrl</attrs>
+	</attr>
+	<relations>
+		<relation class="LinksCategory" type="1-1"/>
+	</relations>
+</class>
+
+<class name="SlideShow" file="slide.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">SlideShowID</attrs>
+		<attrs type="string" value="" key="">ShowName</attrs>
+	</attr>
+	<relations>
+		<relation class="Slide" type="1-M"/>
+	</relations>
+</class>
+
+<class name="Slide" file="slide.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">SlideID</attrs>
+		<attrs type="string" value="" key="">SlideName</attrs>
+		<attrs type="string" value="" key="">SlideUrl</attrs>
+		<attrs type="object" value="" key="fk">StatusID</attrs>
+	</attr>
+	<relations>
+		<relation class="SlideShow" type="1-1"/>
+		<relation class="SfStatus" type="1-1"/>
+	</relations>
+</class>
+
+<class name="Questionnaire" file="question.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">QuestionnaireID</attrs>
+		<attrs type="string" value="" key="">Questionnaire</attrs>
+	</attr>
+	<relations>
+		<relation class="Question" type="1-M"/>
+	</relations>
+</class>
+
+<class name="Question" file="question.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">QuestionID</attrs>
+		<attrs type="string" value="" key="">Question</attrs>
+		<attrs type="object" value="" key="fk">StatusID</attrs>
+	</attr>
+	<relations>
+		<relation class="Questionnaire" type="1-1"/>
+		<relation class="SfStatus" type="1-1"/>
+	</relations>
+</class>
+
+<!-- Classes for products module -->
+
+<class name="PrProizvodjac" file="proizvodi.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">ProizvodjacID</attrs>
+		<attrs type="string" value="" key="">Naziv</attrs>
+		<attrs type="string" value="" key="">Opis</attrs>
+	</attr>
+	<relations>
+		<relation class="PrProizvodi" type="1-M"/>
+	</relations>
+</class>
+
+<class name="PrProizvod" file="proizvodi.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">ProizvodID</attrs>
+		<attrs type="string" value="" key="">Naziv</attrs>
+		<attrs type="string" value="" key="">Sifra</attrs>
+		<attrs type="string" value="" key="">Opis</attrs>
+		<attrs type="string" value="" key="">KratakOpis</attrs>
+		<attrs type="string" value="" key="">CenaA</attrs>
+		<attrs type="string" value="" key="">CenaB</attrs>
+		<attrs type="string" value="" key="">CenaC</attrs>
+		<attrs type="string" value="" key="">Jedinica</attrs>
+		<attrs type="string" value="" key="">Slika</attrs>
+		<attrs type="string" value="" key="">Dokument</attrs>
+		<attrs type="int" value="0" key="">Datum</attrs>
+		<attrs type="object" value="0" key="fk">StatusID</attrs>
+	</attr>
+	<relations>
+		<relation class="PrProizvodjac" type="1-1" />
+		<relation class="PrTipProizvoda" type="1-1" />
+		<relation class="SfStatus" type="1-1" />
+		<relation class="SfCountries" type="1-1" />		
+		<relation class="PrOrder" type="1-M" />
+		<relation class="PrInvoice" type="1-M" />		
+		<relation class="PrKarakteristika" type="1-M" />
+		<relation class="PrKategorija" type="1-M" />
+		<relation class="PrGrupaProizvoda" type="1-M" />
+		<relation class="PrProizvodOcena" type="1-M" />
+		<relation class="PrProizvodKomentar" type="1-M" />
+	</relations>
+</class>
+
+<class name="PrProizvodProiz" file="proizvodi.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">ProizvodID</attrs>
+		<attrs type="int" value="-1" key="pk">VProizvodID</attrs>
+	</attr>		
+
+	<relations/>
+</class>
+
+<class name="SfDocumentType" file="sifarnici.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">StatusID</attrs>
+		<attrs type="string" value="" key="">Vrednost</attrs>
+		<attrs type="object" value="0" key="fk">TipStatusID</attrs>
+	</attr>
+	<relations/>
+</class>
+
+<class name="SfStatus" file="sifarnici.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">StatusID</attrs>
+		<attrs type="string" value="" key="">Vrednost</attrs>
+		<attrs type="object" value="0" key="fk">TipStatusID</attrs>
+	</attr>
+	<relations>
+		<relation class="SfTipStatus" type="1-1" />
+	</relations>
+</class>
+
+<class name="SfTipStatus" file="sifarnici.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">TipStatusID</attrs>
+		<attrs type="string" value="" key="">TipStatusa</attrs>
+	</attr>
+	<relations/>
+</class>
+
+<class name="SfTipStranica" file="sifarnici.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">TipStranicaID</attrs>
+		<attrs type="string" value="" key="">Vrednost</attrs>
+	</attr>
+	<relations/>
+</class>
+
+<class name="SfPageType" file="sifarnici.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">ID</attrs>
+		<attrs type="string" value="" key="">Vrednost</attrs>
+	</attr>
+	<relations/>
+</class>
+
+<class name="SfPageProtection" file="sifarnici.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">ID</attrs>
+		<attrs type="string" value="" key="">Vrednost</attrs>
+	</attr>
+	<relations/>
+</class>
+
+<class name="SfOrderType" file="sifarnici.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">ID</attrs>
+		<attrs type="string" value="" key="">Vrednost</attrs>
+	</attr>
+	<relations/>
+</class>
+
+<class name="SfCountries" file="sifarnici.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">CountryID</attrs>
+		<attrs type="string" value="" key="">Vrednost</attrs>
+	</attr>
+	<relations/>
+</class>
+
+<class name="SfPluginModule" file="sifarnici.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">ID</attrs>
+		<attrs type="string" value="" key="">Vrednost</attrs>
+		<attrs type="string" value="" key="">Code</attrs>
+	</attr>
+	<relations/>
+</class>
+
+<class name="SfPluginType" file="sifarnici.php">
+	<attr>
+		<attrs type="int" value="-1" key="">ID</attrs>
+		<attrs type="string" value="" key="pk">Code</attrs>		
+		<attrs type="string" value="" key="">Vrednost</attrs>
+	</attr>
+	<relations/>
+</class>
+
+<class name="SfResource" file="resource.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">ID</attrs>
+		<attrs type="string" value="" key="">Vrednost</attrs>
+		<attrs type="string" value="" key="">Code</attrs>
+	</attr>
+	<relations/>
+</class>
+
+<class name="ResRes" file="resource.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">ResID</attrs>
+		<attrs type="int" value="-1" key="pk">ConResID</attrs>
+	</attr>		
+
+	<relations/>
+</class>
+
+
+<class name="SfUserType" file="sifarnici.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">ID</attrs>
+		<attrs type="string" value="" key="">Vrednost</attrs>
+	</attr>
+	<relations/>
+</class>
+
+<class name="SfUserCategory" file="sifarnici.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">ID</attrs>
+		<attrs type="string" value="" key="">Vrednost</attrs>
+	</attr>
+	<relations/>
+</class>
+
+<class name="SfStatistikaType" file="sifarnici.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">ID</attrs>
+		<attrs type="string" value="" key="">Vrednost</attrs>
+	</attr>
+	<relations/>
+</class>
+
+
+
+<class name="PrProizvodGrupaProiz" file="proizvodi.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">ProizvodID</attrs>
+		<attrs type="int" value="-1" key="pk">GrupaProizvodaID</attrs>
+	</attr>		
+	<relations/>
+</class>
+
+<class name="PrVeznaGrupa" file="proizvodi.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">ProizvodID</attrs>
+		<attrs type="int" value="-1" key="pk">GrupaProizvodaID</attrs>
+	</attr>		
+	<relations/>
+</class>
+
+<class name="PrKitGrupa" file="proizvodi.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">ProizvodID</attrs>
+		<attrs type="int" value="-1" key="pk">GrupaProizvodaID</attrs>
+	</attr>		
+	<relations/>
+</class>
+
+
+<class name="PrGrupaProizvoda" file="proizvodi.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">GrupaProizvodaID</attrs>
+		<attrs type="string" value="" key="">Naziv</attrs>
+		<attrs type="string" value="" key="">Opis</attrs>
+	</attr>
+	<relations>
+		<relation class="PrProizvod" type="1-M" />
+		<relation class="ParentGrupaProizvoda" type="1-1" />
+		<relation class="Template" type="1-1" />
+		<relation class="SfStatus" type="1-1" />
+	</relations>
+</class>
+
+<class name="PrProizvodList" file="proizvodi.php">
+	<attr/>
+	<relations/>
+</class>
+
+<class name="PrProizvodKategorija" file="proizvodi.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">ProizvodID</attrs>
+		<attrs type="int" value="-1" key="pk">KategorijaID</attrs>
+	</attr>		
+	<relations/>
+</class>
+
+<class name="PrKategorija" file="proizvodi.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">KategorijaID</attrs>
+		<attrs type="string" value="" key="">Naziv</attrs>
+		<attrs type="string" value="" key="">Opis</attrs>
+	</attr>
+	<relations>
+		<relation class="PrProizvod" type="1-M" />
+		<relation class="PrGrupaKategorija" type="1-M" />
+	</relations>
+</class>
+
+<class name="PrKategorijaGrupaKateg" file="proizvodi.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">GrupaKategorijaID</attrs>
+		<attrs type="int" value="-1" key="pk">KategorijaID</attrs>
+	</attr>		
+	<relations/>
+</class>
+
+<class name="PrGrupaKategorija" file="proizvodi.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">GrupaKategorijaID</attrs>
+		<attrs type="string" value="" key="">Naziv</attrs>
+		<attrs type="string" value="" key="">Opis</attrs>
+	</attr>
+	<relations>
+		<relation class="PrKategorija" type="1-M" />
+		<relation class="PrGrupaProizvoda" type="1-M" />
+	</relations>
+</class>
+
+<class name="PrTipProizvoda" file="proizvodi.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">TipProizvodaID</attrs>
+		<attrs type="string" value="" key="">Naziv</attrs>
+		<attrs type="string" value="" key="">Opis</attrs>
+	</attr>
+	<relations>
+		<relation class="PrOrder" type="1-M" />
+		<relation class="PrProizvod" type="1-M" />
+		<relation class="PrKarakteristika" type="1-M" />
+	</relations>
+</class>
+
+<class name="PrTipProizvodaGrupaTipovaProiz" file="proizvodi.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">TipProizvodaID</attrs>
+		<attrs type="int" value="-1" key="pk">GrupaTipovaProizvodaID</attrs>
+	</attr>
+	<relations/>
+		
+</class>
+
+<class name="PrGrupaTipovaProizvoda" file="proizvodi.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">GrupaTipovaProizvodaID</attrs>
+		<attrs type="string" value="" key="">Naziv</attrs>
+		<attrs type="string" value="" key="">Opis</attrs>
+	</attr>
+	<relations>
+		<relation class="PrTipProizvoda" type="1-M" />
+	</relations>
+</class>
+
+<class name="PrKarakteristikaProizvoda" file="proizvodi.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">GrupaTipovaProizvodaID</attrs>
+		<attrs type="string" value="" key="">Naziv</attrs>
+		<attrs type="string" value="" key="">Opis</attrs>
+	</attr>
+	<relations>
+		<relation class="PrTipProizvoda" type="1-M" />
+	</relations>
+</class>
+
+<class name="PrKarakteristika" file="proizvodi.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">KarakteristikaID</attrs>
+		<attrs type="int" value="-1" key="pk">TipProizvodaID</attrs>
+		<attrs type="string" value="" key="">Naziv</attrs>
+		<attrs type="string" value="" key="">Vrednost</attrs>
+	</attr>
+	<relations>
+		<relation class="PrTipProizvoda" type="1-1" />
+	</relations>
+</class>
+
+<class name="PrKarakteristikaVrsta" file="proizvodi.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">KarakteristikaVrstaID</attrs>
+		<attrs type="string" value="" key="">Naziv</attrs>
+		<attrs type="string" value="" key="">Opis</attrs>
+	</attr>
+	<relations>
+		<relation class="PrKarakteristikaElement" type="1-M"/>
+	</relations>
+</class>
+
+<class name="PrKarakteristikaElement" file="proizvodi.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">KarakteristikaElementID</attrs>
+		<attrs type="string" value="" key="">Vrednost</attrs>
+		<attrs type="object" value="" key="fk">KarakteristikaVrstaID</attrs>
+	</attr>
+	<relations>
+		<relation class="PrKarakteristikaVrsta" type="1-1"/>
+	</relations>
+</class>
+
+<class name="PrOrder" file="order.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">OrderID</attrs>
+		<attrs type="int" value="-1" key="">Date</attrs>
+		<attrs type="int" value="-1" key="">Amount</attrs>
+		<attrs type="int" value="-1" key="">PostPrice</attrs>
+		
+		<attrs type="object" value="" key="fk">UserID</attrs>
+		<attrs type="object" value="" key="fk">StatusID</attrs>
+	</attr>
+	<relations>
+		<relation class="User" type="1-1" />
+		<relation class="SfStatus" type="1-1" />
+		<relation class="SfOrderType" type="1-1" />
+		<relation class="PrOrderItem" type="1-M" />
+	</relations>
+</class>
+
+<class name="PrOrderItem" file="order.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">OrderItemID</attrs>
+		<attrs type="int" value="-1" key="">Quantity</attrs>
+		<attrs type="string" value="" key="">Status</attrs>
+	</attr>
+	<relations>
+		<relation class="PrOrder" type="1-1" />	
+		<relation class="PrProizvod" type="1-1" />
+	</relations>
+</class>
+
+<class name="PrOrderShipping" file="order.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">OrderID</attrs>
+		<attrs type="string" value="" key="">Name</attrs>
+		<attrs type="string" value="" key="">Surname</attrs>
+		<attrs type="string" value="" key="">Firm</attrs>
+		<attrs type="string" value="" key="">PIB</attrs>
+		<attrs type="string" value="" key="">Place</attrs>
+		<attrs type="string" value="" key="">Address</attrs>
+		<attrs type="string" value="" key="">Email</attrs>
+		<attrs type="string" value="" key="">Phone</attrs>
+	</attr>
+	<relations>
+		<relation class="SfCountries" type="1-1" />		
+	</relations>
+</class>
+
+<class name="PrOrderBilling" file="order.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">OrderID</attrs>
+		<attrs type="string" value="" key="">Name</attrs>
+		<attrs type="string" value="" key="">Surname</attrs>
+		<attrs type="string" value="" key="">Firm</attrs>
+		<attrs type="string" value="" key="">PIB</attrs>
+		<attrs type="string" value="" key="">Place</attrs>
+		<attrs type="string" value="" key="">Address</attrs>
+		<attrs type="string" value="" key="">Email</attrs>
+		<attrs type="string" value="" key="">Phone</attrs>
+	</attr>
+	<relations>
+		<relation class="SfCountries" type="1-1" />		
+	</relations>
+</class>
+
+<class name="PrInvoice" file="invoice.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">InvoiceID</attrs>
+		<attrs type="int" value="-1" key="">Date</attrs>
+		<attrs type="int" value="-1" key="">Amount</attrs>
+		<attrs type="int" value="-1" key="">PostPrice</attrs>
+		
+		<attrs type="object" value="" key="fk">UserID</attrs>
+		<attrs type="object" value="" key="fk">StatusID</attrs>
+	</attr>
+	<relations>
+		<relation class="User" type="1-1" />
+		<relation class="SfStatus" type="1-1" />
+		<relation class="SfInvoiceType" type="1-1" />
+		<relation class="PrInvoiceItem" type="1-M" />
+	</relations>
+</class>
+
+<class name="PrInvoiceItem" file="invoice.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">InvoiceItemID</attrs>
+		<attrs type="int" value="-1" key="">Quantity</attrs>
+		<attrs type="string" value="" key="">Status</attrs>
+	</attr>
+	<relations>
+		<relation class="PrInvoice" type="1-1" />	
+		<relation class="PrProizvod" type="1-1" />
+	</relations>
+</class>
+
+<class name="PrKurs" file="proizvodi.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">KursID</attrs>
+		<attrs type="int" value="-1" key="">Kurs</attrs>
+	</attr>
+	<relations/>
+</class>
+
+
+<class name="PrPrice" file="proizvodi.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">PriceID</attrs>
+		<attrs type="int" value="-1" key="">Price</attrs>
+	</attr>
+	<relations/>
+</class>
+
+<class name="PostPrice" file="proizvodi.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">PriceID</attrs>
+		<attrs type="string" value="-1" key="">Rang</attrs>
+		<attrs type="int" value="-1" key="">WeightFrom</attrs>
+		<attrs type="int" value="-1" key="">WeightTo</attrs>
+		<attrs type="int" value="-1" key="">Price</attrs>
+	</attr>
+	<relations/>
+</class>
+
+<class name="PrProizvodOcena" file="proizvodi.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">OcenaID</attrs>
+		<attrs type="int" value="-1" key="">Ocena</attrs>
+	</attr>
+	<relations>
+		<relation class="PrProizvod" type="1-1" />
+		<relation class="User" type="1-1" />
+	</relations>
+</class>
+
+<class name="PrProizvodKomentar" file="proizvodi.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">KomentarID</attrs>
+		<attrs type="string" value="" key="">Naslov</attrs>
+		<attrs type="string" value="" key="">Komentar</attrs>
+	</attr>
+	<relations>
+		<relation class="PrProizvod" type="1-1" />
+		<relation class="User" type="1-1" />
+		<relation class="SfStatus" type="1-1" />
+	</relations>
+</class>
+
+<class name="PrVelicina" file="proizvodi.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">VelicinaID</attrs>
+	</attr>
+	<relations>
+		<relation class="PrProizvod" type="1-M"/>
+	</relations>
+</class>
+
+<class name="PrProizvodVelicina" file="proizvodi.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">ProizvodID</attrs>
+		<attrs type="int" value="-1" key="pk">VelicinaID</attrs>
+	</attr>
+	<relations>
+		<relation class="PrVelicina" type="1-1"/>
+		<relation class="PrProizvod" type="1-1"/>
+	</relations>
+</class>
+
+<class name="StoreCity" file="stores.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">StoreCityID</attrs>
+		<attrs type="string" value="" key="">StoreCityName</attrs>
+		<attrs type="string" value="" key="">StoreCityDescription</attrs>
+		<attrs type="float" value="" key="">StoreCityLocationX</attrs>
+		<attrs type="float" value="" key="">StoreCityLocationY</attrs>
+	</attr>
+	<relations/>
+</class>
+
+<class name="Store" file="stores.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">StoreID</attrs>
+		<attrs type="string" value="" key="">StoreName</attrs>
+		<attrs type="string" value="" key="">StoreAddress</attrs>
+		<attrs type="string" value="" key="">StoreCategory</attrs>
+		<attrs type="string" value="" key="">StoreSpace</attrs>
+		<attrs type="string" value="" key="">StoreLocation</attrs>
+		<attrs type="string" value="" key="">StoreSales</attrs>
+		<attrs type="string" value="" key="">StoreWindowSize</attrs>
+		
+		<attrs type="object" value="" key="fk">StoreCityID</attrs>
+	</attr>
+	<relations>
+		<relation class="StoreCity" type="1-1"/>
+	</relations>
+</class>
+
+<class name="Comment" file="comment.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">CommentID</attrs>
+		<attrs type="string" value="" key="">FullName</attrs>
+		<attrs type="string" value="" key="">City</attrs>
+		<attrs type="string" value="" key="">State</attrs>
+		<attrs type="string" value="" key="">Title</attrs>
+		<attrs type="string" value="" key="">Message</attrs>
+		<attrs type="string" value="" key="">Email</attrs>
+		<attrs type="int" value="-1" key="pk">CreateDate</attrs>
+		<attrs type="object" value="" key="fk">StatusID</attrs>		
+	</attr>
+	<relations>
+		<relation class="SfStatus" type="1-1"/>
+		<relation class="SfResource" type="1-1"/>		
+	</relations>	
+</class>
+
+<class name="Rate" file="rate.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">RateID</attrs>
+		<attrs type="string" value="" key="">Rate</attrs>
+		<attrs type="int" value="-1" key="pk">CreateDate</attrs>
+		<attrs type="object" value="" key="fk">StatusID</attrs>		
+	</attr>
+	<relations>
+		<relation class="SfResource" type="1-1"/>		
+	</relations>	
+</class>
+
+<!-- Begining of Setting classes -->
+
+<class name="Setting" file="setting.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">SettingID</attrs>
+		<attrs type="string" value="" key="">Name</attrs>
+		<attrs type="string" value="" key="">Description</attrs>
+		<attrs type="string" value="" key="">Value</attrs>
+		<attrs type="int" value="-1" key="pk">Order</attrs>
+		<attrs type="object" value="" key="fk">PluginModuleID</attrs>
+		<attrs type="object" value="" key="fk">SettingCoverID</attrs>
+		<attrs type="object" value="" key="fk">SettingGroupID</attrs>
+		<attrs type="object" value="" key="fk">SettingTypeID</attrs>
+	</attr>
+	<relations>
+		<relation class="SfPluginModule" type="1-1"/>
+		<relation class="SfSettingType" type="1-1"/>
+		<relation class="SfSettingCover" type="1-1"/>
+		<relation class="SfSettingGroup" type="1-1"/>
+	</relations>
+</class>
+
+<class name="SfSettingCover" file="sifarnici.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">SettingCoverID</attrs>
+		<attrs type="string" value="" key="">Value</attrs>
+	</attr>
+	<relations>
+	</relations>
+</class>
+
+<class name="SfSettingGroup" file="sifarnici.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">SettingGroupID</attrs>
+		<attrs type="string" value="" key="">Value</attrs>
+	</attr>
+	<relations>
+	</relations>
+</class>
+
+<class name="SfSettingType" file="sifarnici.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">SettingTypeID</attrs>
+		<attrs type="string" value="" key="">Value</attrs>
+	</attr>
+	<relations/>
+</class>
+
+<class name="SfSettingTypeValues" file="sifarnici.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">SettingTypeValuesID</attrs>
+		<attrs type="string" value="" key="">Value</attrs>
+		<attrs type="object" value="" key="fk">SettingTypeID</attrs>
+	</attr>
+	<relations>
+		<relation class="SfSettingType" type="1-1"/>
+	</relations>
+</class>
+
+<!-- End of Setting classes -->
+
+<class name="Servis" file="servis.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">ServisID</attrs>
+		<attrs type="string" value="" key="">ServisNo</attrs>
+		<attrs type="string" value="" key="">FirstName</attrs>
+		<attrs type="string" value="" key="">LastName</attrs>
+		<attrs type="string" value="" key="">Info</attrs>
+		<attrs type="string" value="" key="">Status</attrs>
+		<attrs type="int" value="-1" key="">Date</attrs>
+	</attr>
+	<relations/>
+</class>
+
+<class name="ServisArhiva" file="servis.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">ServisID</attrs>
+		<attrs type="string" value="" key="">ServisNo</attrs>
+		<attrs type="string" value="" key="">FirstName</attrs>
+		<attrs type="string" value="" key="">LastName</attrs>
+		<attrs type="string" value="" key="">Info</attrs>
+		<attrs type="string" value="" key="">Status</attrs>
+		<attrs type="int" value="-1" key="">Date</attrs>
+	</attr>
+	<relations/>
+</class>
+
+<class name="Popup" file="popup.php">
+	<attr>
+		<attrs type="int" value="-1" key="pk">PopupID</attrs>
+		<attrs type="string" value="" key="">Header</attrs>
+		<attrs type="string" value="" key="">ShortHtml</attrs>
+		<attrs type="string" value="" key="">Html</attrs>
+		<attrs type="string" value="" key="">CreateDate</attrs>
+		<attrs type="string" value="" key="">ValidFrom</attrs>
+		<attrs type="string" value="" key="">ValidTo</attrs>
+		
+		<attrs type="object" value="" key="fk">StatusID</attrs>
+	</attr>
+	<relations>
+		<relation class="SfStatus" type="1-1"/>
+	</relations>
+</class>
+
+
+
+</classes>

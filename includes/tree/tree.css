@@ -1,0 +1,49 @@
+#document_list {
+	margin:10px 0px 0px 0px;
+}
+.sapling-list li {
+	clear: left;
+	display: inline-block;
+	float: left;
+	list-style: none;
+	position: relative;
+	padding: 1px 0px 2px 0px !important;
+	margin: 0px 5px 2px 0px !important;
+	background: none !important;
+	text-align: left !important;
+}
+.sapling-list ul {
+	display: none;
+}
+.sapling-list .sapling-item {
+	cursor: pointer;
+	padding-left: 0;
+}
+.sapling-list .sapling-item:before {
+	background: url('folder_close.png') no-repeat;
+	content: "";
+	display: inline-block;
+	font-size: .8em;
+	height: 16px;
+	padding-right: 4px;
+	margin-bottom: -2px;
+	width: 16px;
+}
+.sapling-list .sapling-item.sapling-expanded:before {
+	background-image: url('folder_open.png');
+}
+.sapling-list .sapling-item ul {
+	padding-left: 17px;
+}
+.sapling-list .sapling-item.sapling-expanded > ul {
+	cursor: default;
+	display: block;
+}
+li.sapling-expanded {
+	font-weight:bold !important;
+}
+.sapling-list li p.pdf {
+	padding: 2px 0px 2px 23px !important;
+	margin:  0px !important;
+
+}
