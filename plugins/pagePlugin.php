@@ -242,9 +242,13 @@
 				$id_arr=explode('.',$nn->getConResID());	
 				$resource = $this->ObjectFactory->createObject("SfResource",$id_arr[0]);
 				$class=$resource->getClass();
+
 				eval ('$ss=STATUS_'.strtoupper($class).'_AKTIVAN;');
 				$conres = $this->ObjectFactory->createObject($class,$id_arr[1],array("SfStatus",$category));
+				if ($class=="PrProizvod") $class="Proizvod";				
 				eval('$idx=$conres->get'.$class.'ID();');
+				if ($class=="Proizvod") $class="PrProizvod";
+
 				$ids[]=$id_arr[1];
 				if($conres->SfStatus->getStatusID()==$ss) $conres_all[]=$this->prepareConResource($conres,$class,$idx);
 				else $i=$i-1;
