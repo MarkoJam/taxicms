@@ -244,7 +244,8 @@
 				$class=$resource->getClass();
 
 				eval ('$ss=STATUS_'.strtoupper($class).'_AKTIVAN;');
-				$conres = $this->ObjectFactory->createObject($class,$id_arr[1],array("SfStatus",$category));
+				if (!in_array($class,array("Option","PrProizvod"))) $conres = $this->ObjectFactory->createObject($class,$id_arr[1],array("SfStatus",$category));
+				else $conres = $this->ObjectFactory->createObject($class,$id_arr[1],array("SfStatus"));
 				if ($class=="PrProizvod") $class="Proizvod";				
 				eval('$idx=$conres->get'.$class.'ID();');
 				if ($class=="Proizvod") $class="PrProizvod";

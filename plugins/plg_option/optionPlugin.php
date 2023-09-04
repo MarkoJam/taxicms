@@ -101,25 +101,16 @@
 				
 				$option->setShortHtml($html);
 				$option_array = $option->toArray();
+				$content = (strip_tags($html));
+				$html_clean = preg_replace ("/&#?[a-z0-9]+;/i"," ", $content );// dodat ociscen html unos za post na linkedin
+				$html_clean = preg_replace('/\s+/', ' ', trim($html_clean)); // izbacivanje novog reda zbog popup prozora
+				$html_clean = str_replace("'","", $html_clean); 
+				$option_array = array_merge($option_array, array("html_clean" => $html_clean));
+		
+				$links_print_dt = $this->LanguageHelper->GetPrintLink ( new LinkResourceDetails($this->LanguageHelper, 'option', $option->getOptionID(),'w',$option->getHeaderUnchanged()));
+				$links_print_fb = $this->LanguageHelper->GetPrintLink ( new LinkResourceDetails($this->LanguageHelper, 'option', $option->getOptionID(),'fb',$option->getHeaderUnchanged()));
+				$links_print_in = $this->LanguageHelper->GetPrintLink ( new LinkResourceDetails($this->LanguageHelper, 'option', $option->getOptionID(),'in',$option->getHeaderUnchanged()));
 				
-
-				if(strlen($option->getHtml()) == 0) {
-					$links_print_dt = "#";
-					$links_print_fb = "#";
-					$links_print_in = "#";
-				}	
-				else
-				{		
-					$content = (strip_tags($html));
-					$html_clean = preg_replace ("/&#?[a-z0-9]+;/i"," ", $content );// dodat ociscen html unos za post na linkedin
-					$html_clean = preg_replace('/\s+/', ' ', trim($html_clean)); // izbacivanje novog reda zbog popup prozora
-					$html_clean = str_replace("'","", $html_clean); 
-					$option_array = array_merge($option_array, array("html_clean" => $html_clean));
-			
-					$links_print_dt = $this->LanguageHelper->GetPrintLink ( new LinkResourceDetails($this->LanguageHelper, 'option', $option->getOptionID(),'w',$option->getHeaderUnchanged()));
-					$links_print_fb = $this->LanguageHelper->GetPrintLink ( new LinkResourceDetails($this->LanguageHelper, 'option', $option->getOptionID(),'fb',$option->getHeaderUnchanged()));
-					$links_print_in = $this->LanguageHelper->GetPrintLink ( new LinkResourceDetails($this->LanguageHelper, 'option', $option->getOptionID(),'in',$option->getHeaderUnchanged()));
-				}
 				$option_array = array_merge($option_array, array("order" => $option->Order));										
 				$option_array = array_merge($option_array, array("link_print_dt" => $links_print_dt));
 				$option_array = array_merge($option_array, array("link_print_fb" => $links_print_fb));

@@ -89,3 +89,48 @@ Stack trace:
 [31-Aug-2023 10:20:23 Europe/Belgrade] PHP   2. OptionStatusFilter->generateProccessComboBox() C:\wamp\www\taxicms\admin\plg_option\option\index.php:23
 [31-Aug-2023 10:20:23 Europe/Belgrade] PHP   3. OptionStatusFilter->generateComboBox() C:\wamp\www\taxicms\admin\common\comboFilter.class.php:714
 [31-Aug-2023 10:20:23 Europe/Belgrade] PHP   4. print_r() C:\wamp\www\taxicms\admin\common\comboFilter.class.php:756
+[04-Sep-2023 14:40:53 Europe/Belgrade] PHP Fatal error:  Uncaught Error: Call to a member function getFile() on null in C:\wamp\www\taxicms\common\factories\ObjectFactory.class.php:220
+Stack trace:
+#0 C:\wamp\www\taxicms\common\factories\ObjectFactory.class.php(64): ObjectFactory->loadIfNotExists(NULL)
+#1 C:\wamp\www\taxicms\plugins\pagePlugin.php(247): ObjectFactory->createObject('PrProizvod', '11', Array)
+#2 C:\wamp\www\taxicms\plugins\plg_option\optionPlugin.php(228): pagePlugin->showConResource('PrProizvod', 10)
+#3 C:\wamp\www\taxicms\common\class\pluginInvoker.class.php(58): optionPlugin->showDetails()
+#4 C:\wamp\www\taxicms\CmsEngine.php(470): pluginInvoker->InvokePluginDetails('option')
+#5 C:\wamp\www\taxicms\CmsEngine.php(83): CmsEngine->ProcessTemplate()
+#6 C:\wamp\www\taxicms\index.php(12): CmsEngine->Start()
+#7 {main}
+  thrown in C:\wamp\www\taxicms\common\factories\ObjectFactory.class.php on line 220
+[04-Sep-2023 14:42:50 Europe/Belgrade] PHP Fatal error:  Uncaught Error: Call to a member function getFile() on null in C:\wamp\www\taxicms\common\factories\ObjectFactory.class.php:220
+Stack trace:
+#0 C:\wamp\www\taxicms\common\factories\ObjectFactory.class.php(64): ObjectFactory->loadIfNotExists(NULL)
+#1 C:\wamp\www\taxicms\plugins\pagePlugin.php(248): ObjectFactory->createObject('PrProizvod', '11', Array)
+#2 C:\wamp\www\taxicms\plugins\plg_option\optionPlugin.php(228): pagePlugin->showConResource('PrProizvod', 10)
+#3 C:\wamp\www\taxicms\common\class\pluginInvoker.class.php(58): optionPlugin->showDetails()
+#4 C:\wamp\www\taxicms\CmsEngine.php(470): pluginInvoker->InvokePluginDetails('option')
+#5 C:\wamp\www\taxicms\CmsEngine.php(83): CmsEngine->ProcessTemplate()
+#6 C:\wamp\www\taxicms\index.php(12): CmsEngine->Start()
+#7 {main}
+  thrown in C:\wamp\www\taxicms\common\factories\ObjectFactory.class.php on line 220
+[04-Sep-2023 14:47:26 Europe/Belgrade] PHP Fatal error:  Uncaught Error: Call to a member function getFile() on null in C:\wamp\www\taxicms\common\factories\ObjectFactory.class.php:220
+Stack trace:
+#0 C:\wamp\www\taxicms\common\factories\ObjectFactory.class.php(64): ObjectFactory->loadIfNotExists(NULL)
+#1 C:\wamp\www\taxicms\plugins\pagePlugin.php(247): ObjectFactory->createObject('PrProizvod', '11', Array)
+#2 C:\wamp\www\taxicms\plugins\plg_option\optionPlugin.php(228): pagePlugin->showConResource('PrProizvod', 10)
+#3 C:\wamp\www\taxicms\common\class\pluginInvoker.class.php(58): optionPlugin->showDetails()
+#4 C:\wamp\www\taxicms\CmsEngine.php(470): pluginInvoker->InvokePluginDetails('option')
+#5 C:\wamp\www\taxicms\CmsEngine.php(83): CmsEngine->ProcessTemplate()
+#6 C:\wamp\www\taxicms\index.php(12): CmsEngine->Start()
+#7 {main}
+  thrown in C:\wamp\www\taxicms\common\factories\ObjectFactory.class.php on line 220
+[04-Sep-2023 14:48:34 Europe/Belgrade] PHP Parse error:  syntax error, unexpected '$conres' (T_VARIABLE) in C:\wamp\www\taxicms\plugins\pagePlugin.php on line 247
+[04-Sep-2023 14:48:46 Europe/Belgrade] PHP Fatal error:  Uncaught Error: Call to a member function getFile() on null in C:\wamp\www\taxicms\common\factories\ObjectFactory.class.php:220
+Stack trace:
+#0 C:\wamp\www\taxicms\common\factories\ObjectFactory.class.php(64): ObjectFactory->loadIfNotExists(NULL)
+#1 C:\wamp\www\taxicms\plugins\pagePlugin.php(247): ObjectFactory->createObject('PrProizvod', '11', Array)
+#2 C:\wamp\www\taxicms\plugins\plg_option\optionPlugin.php(228): pagePlugin->showConResource('PrProizvod', 10)
+#3 C:\wamp\www\taxicms\common\class\pluginInvoker.class.php(58): optionPlugin->showDetails()
+#4 C:\wamp\www\taxicms\CmsEngine.php(470): pluginInvoker->InvokePluginDetails('option')
+#5 C:\wamp\www\taxicms\CmsEngine.php(83): CmsEngine->ProcessTemplate()
+#6 C:\wamp\www\taxicms\index.php(12): CmsEngine->Start()
+#7 {main}
+  thrown in C:\wamp\www\taxicms\common\factories\ObjectFactory.class.php on line 220

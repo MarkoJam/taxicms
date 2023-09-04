@@ -529,6 +529,42 @@ class katalogproizvodaPlugin extends pagePlugin {
 			$images_thumb[]=dirname($img)."/thumb_".basename($img);
 			}
 		}
+		$crid="1.".ltrim($pr_arr['proizvodid']);
+		//moduli za proizvod
+		$this->ObjectFactory->Reset();
+		$this->ObjectFactory->AddFilter("conres_id=".$crid);
+		$rr = $this->ObjectFactory->createObjects("ResRes");
+		$this->ObjectFactory->Reset();
+		foreach ($rr as $res) {
+			$resX=explode(".",$res->getResID());
+			if ($resX[0]=="7") $modulesX[]=$resX[1];
+			if ($resX[0]=="8") $optionsX[]=$resX[1];
+		}
+		$modules=array();		
+		foreach ($modulesX as $m) {
+			$module['id']=$m;
+			$md = $this->ObjectFactory->createObject("Module",$m);
+			$module['title']=$md->getHeader();
+			$module['link'] = $this->LanguageHelper->GetPrintLink ( new LinkResourceDetails($this->LanguageHelper, 'module', $md->getModuleID(),'w',$md->getHeaderUnchanged()));
+			$this->ObjectFactory->Reset();
+			$this->ObjectFactory->AddFilter("module_id=".$m);
+			$opt = $this->ObjectFactory->createObjects("Option");
+			$this->ObjectFactory->Reset();
+			$options=array();
+			foreach ($opt as $o) {
+				if (in_array($o->getOptionID(),$optionsX)) {
+					$option['id']=$o->getOptionID();
+					$option['title']=$o->getHeader();
+					$option['link'] = $this->LanguageHelper->GetPrintLink ( new LinkResourceDetails($this->LanguageHelper, 'option', $o->getOptionID(),'w',$o->getHeaderUnchanged()));
+					$options[]=$option;
+				}	
+			}	
+			$module['options']=$options;
+			$modules[]=$module;
+		}	
+		$pr_arr = array_merge($pr_arr, array("modules" => $modules));
+
+		//print_r($pr_arr);
 		//$this->smarty->assign("images",$images);
 		//$this->smarty->assign("images_thumb",$images_thumb);
 		//$pr_array = array_merge($pr_array, array("img_rows" => $view->ViewConnectedObject('Proizvod', 'img', $proizvod->getProizvodID())));

@@ -104,25 +104,15 @@
 				
 				$module->setShortHtml($html);
 				$module_array = $module->toArray();
-				
-
-				if(strlen($module->getHtml()) == 0) {
-					$links_print_dt = "#";
-					$links_print_fb = "#";
-					$links_print_in = "#";
-				}	
-				else
-				{		
-					$content = (strip_tags($html));
-					$html_clean = preg_replace ("/&#?[a-z0-9]+;/i"," ", $content );// dodat ociscen html unos za post na linkedin
-					$html_clean = preg_replace('/\s+/', ' ', trim($html_clean)); // izbacivanje novog reda zbog popup prozora
-					$html_clean = str_replace("'","", $html_clean); 
-					$module_array = array_merge($module_array, array("html_clean" => $html_clean));
-			
-					$links_print_dt = $this->LanguageHelper->GetPrintLink ( new LinkResourceDetails($this->LanguageHelper, 'module', $module->getModuleID(),'w',$module->getHeaderUnchanged()));
-					$links_print_fb = $this->LanguageHelper->GetPrintLink ( new LinkResourceDetails($this->LanguageHelper, 'module', $module->getModuleID(),'fb',$module->getHeaderUnchanged()));
-					$links_print_in = $this->LanguageHelper->GetPrintLink ( new LinkResourceDetails($this->LanguageHelper, 'module', $module->getModuleID(),'in',$module->getHeaderUnchanged()));
-				}
+				$content = (strip_tags($html));
+				$html_clean = preg_replace ("/&#?[a-z0-9]+;/i"," ", $content );// dodat ociscen html unos za post na linkedin
+				$html_clean = preg_replace('/\s+/', ' ', trim($html_clean)); // izbacivanje novog reda zbog popup prozora
+				$html_clean = str_replace("'","", $html_clean); 
+				$module_array = array_merge($module_array, array("html_clean" => $html_clean));
+		
+				$links_print_dt = $this->LanguageHelper->GetPrintLink ( new LinkResourceDetails($this->LanguageHelper, 'module', $module->getModuleID(),'w',$module->getHeaderUnchanged()));
+				$links_print_fb = $this->LanguageHelper->GetPrintLink ( new LinkResourceDetails($this->LanguageHelper, 'module', $module->getModuleID(),'fb',$module->getHeaderUnchanged()));
+				$links_print_in = $this->LanguageHelper->GetPrintLink ( new LinkResourceDetails($this->LanguageHelper, 'module', $module->getModuleID(),'in',$module->getHeaderUnchanged()));
 				$module_array = array_merge($module_array, array("order" => $module->Order));										
 				$module_array = array_merge($module_array, array("link_print_dt" => $links_print_dt));
 				$module_array = array_merge($module_array, array("link_print_fb" => $links_print_fb));

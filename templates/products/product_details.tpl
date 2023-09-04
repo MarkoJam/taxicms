@@ -96,9 +96,9 @@ function update_basket_details(url) {
 								<div class="col-sm-12 col-md-6 col-lg-6 product-detail-image">
 										<div class="product-detail-thumb">
                     	<div class="swiper myimage">
-														<div class="swiper-wrapper">
+							<div class="swiper-wrapper">
                               <div class="swiper-slide">
-  															<a class="lightbox-image" data-fancybox="gallery" href="{$ROOT_WEB}{$proizvod_detail.slika}">
+  									<a class="lightbox-image" data-fancybox="gallery" href="{$ROOT_WEB}{$proizvod_detail.slika}">
                                 	<img src="{$ROOT_WEB}{$proizvod_detail.slika}"  alt="Image">
                                 </a>
                               </div>
@@ -131,54 +131,60 @@ function update_basket_details(url) {
                                 <h4>{$pathData.title}</h4>
                                 <p class="code">{$proizvod_detail.sifra}</p>
                                 <h2 class="product-detail-title">{$proizvod_detail.naziv}</h2>
-																{if $proizvod_detail.cenaamp neq 0}
-																	{if $proizvod_detail.cenabmp eq 0}
-																		<div class="product-detail-price">€ {$proizvod_detail.cenaampformatirano}</div>
-																	{else}
-																		<div class="product-detail-old-price">€ {$proizvod_detail.cenaampformatirano}</div>
-																		<div class="product-detail-price">€ {$proizvod_detail.cenabmpformatirano}</div>
-																	{/if}
+								{if $proizvod_detail.cenaamp neq 0}
+									{if $proizvod_detail.cenabmp eq 0}
+										<div class="product-detail-price">€ {$proizvod_detail.cenaampformatirano}</div>
+									{else}
+										<div class="product-detail-old-price">€ {$proizvod_detail.cenaampformatirano}</div>
+										<div class="product-detail-price">€ {$proizvod_detail.cenabmpformatirano}</div>
+									{/if}
+								{else}
 
-																{else}
+								{/if}
 
-																{/if}
-
-                                <div class="product-description">{$proizvod_detail.opis}
-                                {*  <p class="product-detail-desc">{$proizvod_detail.napomena}</p>*}
-                                </div>
+                                <div class="product-description">{$proizvod_detail.opis}</div>
+								
+								{section loop=$proizvod_detail.modules name=cnt}
+									<h4><a href="{$proizvod_detail.modules[cnt].link}">{$proizvod_detail.modules[cnt].title}</a></h4>
+									{section loop=$proizvod_detail.modules[cnt].options name=cnt2}
+										<ul><a href="{$proizvod_detail.modules[cnt].options[cnt2].link}">{$proizvod_detail.modules[cnt].options[cnt2].title}</a></ul>
+									{/section}
+								{/section}
                               </div>
                             </div>
+							{*
                             <div class="col-sm-12 col-md-6 col-lg-6 product-detail-cart ">
-                                  <div class="row">
+                                <div class="row">
                                     <div class="col-lg-6">
-                                        <div class="pro-qty"><label>{$PLG_PRODUCT_ORDER_QUANTITY}:</label>
-                                          <button type="button" id="sub" class="sub"><i class="fa-solid fa-chevron-down"></i></button>
+                                        <div class="pro-qty">
+											<label>{$PLG_PRODUCT_ORDER_QUANTITY}:</label>
+											<button type="button" id="sub" class="sub"><i class="fa-solid fa-chevron-down"></i></button>
                                             <input type="text" class="quantity" title="Quantity" value="1"  disabled />
                                             <button type="button" id="add" class="add"><i class="fa-solid fa-chevron-up"></i></button>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
-																		{if $proizvod_detail.statusid neq 54 and $proizvod_detail.cenaamp neq 0 }
-                                    <button id="add_cart" class="product-detail-cart-btn" type="button"><i class="fa-solid fa-cart-shopping"></i> <span>{$PLG_PRODUCT_BASKET}</span></button>
-                                    <div id="proizvodid" style="display:none">{$proizvod_detail.proizvodid}</div>
-																		{/if}
+									{if $proizvod_detail.statusid neq 54 and $proizvod_detail.cenaamp neq 0 }
+										<button id="add_cart" class="product-detail-cart-btn" type="button"><i class="fa-solid fa-cart-shopping"></i> <span>{$PLG_PRODUCT_BASKET}</span></button>
+										<div id="proizvodid" style="display:none">{$proizvod_detail.proizvodid}</div>
+									{/if}
                                     </div>
-                                  </div>
                                 </div>
-                                {*
-																<ul class="product-detail-meta">
-																	{if $karakteristike_all|@count gt 0}
-																	{section name=cnt loop=$karakteristike_all}
-																	{if $karakteristike_all[cnt].vrednost neq "*"}
-																	<li><span>{$karakteristike_all[cnt].naziv}:</span>{$karakteristike_all[cnt].vrednost}</li>
-																	{else}
-																	<li><span>{$karakteristike_all[cnt].naziv}</span></li>
-																	{/if}
-																	{/section}
-																	{/if}
-																</ul>
-                                *}
-														</div>
+                            </div>
+							
+							<ul class="product-detail-meta">
+								{if $karakteristike_all|@count gt 0}
+								{section name=cnt loop=$karakteristike_all}
+								{if $karakteristike_all[cnt].vrednost neq "*"}
+								<li><span>{$karakteristike_all[cnt].naziv}:</span>{$karakteristike_all[cnt].vrednost}</li>
+								{else}
+								<li><span>{$karakteristike_all[cnt].naziv}</span></li>
+								{/if}
+								{/section}
+								{/if}
+							</ul>
+							*}
+						</div>
                             	{include file="products/conected_products.tpl"}
 													</div>
 
