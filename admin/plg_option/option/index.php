@@ -60,14 +60,14 @@
 		//ZA SADRZAJ TABELE
 		if(!empty($objlist))
 		{
-			if (isset($_SESSION["sess_optioncategoryid"]) && ($_SESSION["sess_optioncategoryid"] != -1) && (!isset($_REQUEST["sortby"])))
-			{
+			//if (isset($_SESSION["sess_optioncategoryid"]) && ($_SESSION["sess_optioncategoryid"] != -1) && (!isset($_REQUEST["sortby"])))
+			//{
 				foreach($objlist as $nw)
 				{
 					$nid=$nw->getOptionID();
 					$ncid=$_SESSION["sess_optioncategoryid"];
 					$ObjectFactory->Reset();
-					$ObjectFactory->AddFilter("option_id = " . $nid. " AND option_category_id = " .$ncid);
+					$ObjectFactory->AddFilter("option_id = " . $nid);
 					$nc = $ObjectFactory->createObjects("OptionOptionCategory");
 					$ObjectFactory->Reset();
 					foreach($nc as $option)
@@ -78,7 +78,7 @@
 				usort($objlist,function($first,$second){
 					return $first->Order > $second->Order;
 				});
-			}
+			//}
 			foreach($objlist as $nw)
 			{
 				$option_type_title = "";

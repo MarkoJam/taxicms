@@ -871,7 +871,7 @@ class OptionOptionCategory extends OpstiDomenskiObjekat
 		$this->OptionID = -1;
 		$this->OptionCategoryID = -1;
 		$this->OptionOptionCategoryOrder = 0;
-		$this->TableName = "optionoptioncategory";
+		$this->TableName = "menu_optionoptioncategory";
 		$this->LanguageHelper->ChangeTableName($this->TableName);
 	}
 

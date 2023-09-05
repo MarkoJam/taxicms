@@ -52,7 +52,16 @@
 			$nw->setPublishingDate(mktime ($publishingdateT[0],$publishingdateT[1],0,$publishingdateD[1],$publishingdateD[0],$publishingdateD[2]));			
 
 			// deo koji puni i odrzava kategorije vesti
-			
+			$ObjectFactory->ResetFilters();
+			$ObjectFactory->AddFilter("option_id = ".$_REQUEST["option_id"] );
+			$categ = $ObjectFactory->createObjects("OptionOptionCategory");
+			$ObjectFactory->ResetFilters();			
+			if (count($categ)==0) {
+				$optionOptionCateg = $ObjectFactory->createObject("OptionOptionCategory",-1);	
+				$optionOptionCateg->setOptionID($_REQUEST["option_id"]);
+				$optionOptionCateg->setOptionCategoryID(1);
+				$DBBR->kreirajSlog($optionOptionCateg);				
+			}
 			if(isset($_REQUEST["optioncategories"]))
 			{				
 				if(count($_REQUEST["optioncategories"]) > 0)

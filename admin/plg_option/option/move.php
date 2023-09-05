@@ -12,15 +12,15 @@
 	
 	
 	$id_array=$_REQUEST["sectionsid"];	
-	$ncid=$_REQUEST["ncid"];	
+	//$ncid=$_REQUEST["ncid"];	
 	$cnt_array=count($id_array);	
-	$ncIdQuery = " AND option_category_id = " . $ncid;
+	//$ncIdQuery = " AND option_category_id = " . $ncid;
 	if($auth->isActionAllowed("ACTION_OPTION_MODIFY"))
 	{
 		for ($i = 0; $i <$cnt_array; $i++) 
 		{	
 			$ObjectFactory->Reset();
-			$ObjectFactory->AddFilter("option_id = " . $id_array[$i]. $ncIdQuery);
+			$ObjectFactory->AddFilter("option_id = " . $id_array[$i]);
 			$nc = $ObjectFactory->createObjects("OptionOptionCategory");
 			$ObjectFactory->Reset();
 			foreach($nc as $option)

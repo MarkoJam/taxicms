@@ -545,6 +545,11 @@ class katalogproizvodaPlugin extends pagePlugin {
 			$module['id']=$m;
 			$md = $this->ObjectFactory->createObject("Module",$m);
 			$module['title']=$md->getHeader();
+			$this->ObjectFactory->Reset();
+			$this->ObjectFactory->AddFilter("module_id=".$m);
+			$orders = $this->ObjectFactory->createObjects("ModuleModuleCategory");
+			$this->ObjectFactory->Reset();
+			$module['order']=$orders[0]->getModuleModuleCategoryOrder();
 			$module['link'] = $this->LanguageHelper->GetPrintLink ( new LinkResourceDetails($this->LanguageHelper, 'module', $md->getModuleID(),'w',$md->getHeaderUnchanged()));
 			$this->ObjectFactory->Reset();
 			$this->ObjectFactory->AddFilter("module_id=".$m);
@@ -555,13 +560,24 @@ class katalogproizvodaPlugin extends pagePlugin {
 				if (in_array($o->getOptionID(),$optionsX)) {
 					$option['id']=$o->getOptionID();
 					$option['title']=$o->getHeader();
+					$this->ObjectFactory->Reset();
+					$this->ObjectFactory->AddFilter("option_id=".$o->getOptionID());
+					$orders2 = $this->ObjectFactory->createObjects("OptionOptionCategory");
+					$this->ObjectFactory->Reset();			
+					$option['order']=$orders2[0]->getOptionOptionCategoryOrder();
 					$option['link'] = $this->LanguageHelper->GetPrintLink ( new LinkResourceDetails($this->LanguageHelper, 'option', $o->getOptionID(),'w',$o->getHeaderUnchanged()));
 					$options[]=$option;
 				}	
-			}	
+			}
+			usort($options,function($first,$second){
+					return $first['order'] > $second['order'];
+			});				
 			$module['options']=$options;
 			$modules[]=$module;
-		}	
+		}
+		usort($modules,function($first,$second){
+				return $first['order'] > $second['order'];
+		});		
 		$pr_arr = array_merge($pr_arr, array("modules" => $modules));
 
 		//print_r($pr_arr);
