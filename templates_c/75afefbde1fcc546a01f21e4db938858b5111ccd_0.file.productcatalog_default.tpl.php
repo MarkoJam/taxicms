@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2023-04-03 14:08:45
+/* Smarty version 3.1.32, created on 2023-09-06 10:49:41
   from 'C:\wamp\www\taxicms\templates\products\productcatalog_default.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_642ac1cdc31558_72027955',
+  'unifunc' => 'content_64f83d25cbcea0_52675843',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '75afefbde1fcc546a01f21e4db938858b5111ccd' => 
     array (
       0 => 'C:\\wamp\\www\\taxicms\\templates\\products\\productcatalog_default.tpl',
-      1 => 1671542194,
+      1 => 1693399416,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:products/filters.tpl' => 1,
   ),
 ),false)) {
-function content_642ac1cdc31558_72027955 (Smarty_Internal_Template $_smarty_tpl) {
+function content_64f83d25cbcea0_52675843 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- productcatalog_default START-->
 <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3">
   <div class="category-box">
@@ -35,7 +35,7 @@ function content_642ac1cdc31558_72027955 (Smarty_Internal_Template $_smarty_tpl)
     </h2>
     <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse dont-collapse-sm" aria-labelledby="panelsStayOpen-headingOne">
 
-                  <ul>
+          <ul>
           <?php
 $__section_cnt_0_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['data']->value['menuItem']['items']) ? count($_loop) : max(0, (int) $_loop));
 $__section_cnt_0_total = $__section_cnt_0_loop;
@@ -79,8 +79,7 @@ for ($__section_inner_1_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_
 }
 ?>
           <ul>
-        
-        
+
     </div>
   </div>
 </div>
@@ -100,7 +99,6 @@ for ($__section_inner_1_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_
 	       <h2 ><?php echo $_smarty_tpl->tpl_vars['PLG_PRODUCT_ALL']->value;?>
 </h3>
          </div>
-
 			<div class="row ">
 				<?php
 $__section_cnt_2_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['data']->value['paginationData']) ? count($_loop) : max(0, (int) $_loop));
@@ -127,6 +125,10 @@ echo $_smarty_tpl->tpl_vars['data']->value['paginationData'][(isset($_smarty_tpl
 								<h5 class="product-item-title mt-6 mb-0" ><a href="<?php echo $_smarty_tpl->tpl_vars['data']->value['paginationData'][(isset($_smarty_tpl->tpl_vars['__smarty_section_cnt']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_cnt']->value['index'] : null)]['link'];?>
 "><?php echo $_smarty_tpl->tpl_vars['data']->value['paginationData'][(isset($_smarty_tpl->tpl_vars['__smarty_section_cnt']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_cnt']->value['index'] : null)]['naziv'];?>
 </a></h5>
+								<?php echo $_smarty_tpl->tpl_vars['data']->value['paginationData'][(isset($_smarty_tpl->tpl_vars['__smarty_section_cnt']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_cnt']->value['index'] : null)]['grupa'];?>
+ 
+								<?php echo $_smarty_tpl->tpl_vars['data']->value['paginationData'][(isset($_smarty_tpl->tpl_vars['__smarty_section_cnt']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_cnt']->value['index'] : null)]['kratakopis'];?>
+
 								<?php if ($_smarty_tpl->tpl_vars['data']->value['paginationData'][(isset($_smarty_tpl->tpl_vars['__smarty_section_cnt']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_cnt']->value['index'] : null)]['cenaa'] != 0) {?>
 									<?php if ($_smarty_tpl->tpl_vars['data']->value['paginationData'][(isset($_smarty_tpl->tpl_vars['__smarty_section_cnt']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_cnt']->value['index'] : null)]['cenab'] == 0) {?>
 										<div class="product-item-price mb-0">€ <?php echo $_smarty_tpl->tpl_vars['data']->value['paginationData'][(isset($_smarty_tpl->tpl_vars['__smarty_section_cnt']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_cnt']->value['index'] : null)]['cenaaformatirano'];?>

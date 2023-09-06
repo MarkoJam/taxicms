@@ -134,3 +134,11 @@ Stack trace:
 #6 C:\wamp\www\taxicms\index.php(12): CmsEngine->Start()
 #7 {main}
   thrown in C:\wamp\www\taxicms\common\factories\ObjectFactory.class.php on line 220
+[06-Sep-2023 11:55:24 Europe/Belgrade] PHP Fatal error:  Uncaught Error: Call to a member function getPrice() on array in C:\wamp\www\taxicms\admin\plg_products\proizvod\modify.php:70
+Stack trace:
+#0 {main}
+  thrown in C:\wamp\www\taxicms\admin\plg_products\proizvod\modify.php on line 70
+[06-Sep-2023 11:56:04 Europe/Belgrade] PHP Fatal error:  Uncaught Error: Call to a member function getOptionPrice() on array in C:\wamp\www\taxicms\admin\plg_products\proizvod\modify.php:70
+Stack trace:
+#0 {main}
+  thrown in C:\wamp\www\taxicms\admin\plg_products\proizvod\modify.php on line 70

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2023-04-03 13:44:17
+/* Smarty version 3.1.32, created on 2023-09-06 12:02:58
   from 'C:\wamp\www\taxicms\admin\plg_products\proizvod\templates\modify.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_642abc115152c9_17597148',
+  'unifunc' => 'content_64f84e52ca6123_75774806',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e74d9786b314ef4e87113aea7673d66848aa49f3' => 
     array (
       0 => 'C:\\wamp\\www\\taxicms\\admin\\plg_products\\proizvod\\templates\\modify.tpl',
-      1 => 1666608896,
+      1 => 1693994574,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_642abc115152c9_17597148 (Smarty_Internal_Template $_smarty_tpl) {
+function content_64f84e52ca6123_75774806 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\wamp\\www\\taxicms\\common\\libs\\plugins\\function.html_options.php','function'=>'smarty_function_html_options',),));
 echo '<script'; ?>
  type="text/javascript" src="CKeditor/ckeditor/ckeditor.js"><?php echo '</script'; ?>
@@ -177,11 +177,9 @@ echo '<script'; ?>
 						SEO</a></li>
 						<li class=""><a data-toggle="tab" href="#tab-3"> <?php echo $_smarty_tpl->tpl_vars['PLG_DESCRIPTION']->value;?>
 </a></li>
-						<li class=""><a data-toggle="tab" href="#tab-4"> <?php echo $_smarty_tpl->tpl_vars['PLG_CARACTERISTICS']->value;?>
+						<li class=""><a data-toggle="tab" href="#tab-4"> <?php echo $_smarty_tpl->tpl_vars['PLG_IMAGE']->value;?>
 </a></li>
-						<li class=""><a data-toggle="tab" href="#tab-5"> <?php echo $_smarty_tpl->tpl_vars['PLG_IMAGE']->value;?>
-</a></li>
-						<li class=""><a data-toggle="tab" href="#tab-6"> <?php echo $_smarty_tpl->tpl_vars['PLG_EXT_RES']->value;?>
+						<li class=""><a data-toggle="tab" href="#tab-5"> <?php echo $_smarty_tpl->tpl_vars['PLG_EXT_RES']->value;?>
 </a></li>
 					</ul>
 					 <div class="tab-content">
@@ -217,19 +215,20 @@ echo '<script'; ?>
 " size="40" class="form-control">
 										</div>
 									</div>
-																		<div class="form-group"><label class="col-sm-2 control-label"><?php echo $_smarty_tpl->tpl_vars['PLG_WEIGHT']->value;?>
-</label>
-										<div class="col-sm-10">
-										   <input name="tezina" type="text" value="<?php echo $_smarty_tpl->tpl_vars['tezina']->value;?>
-" size="20" class="form-control">
-										</div>
-									</div>
 
-									<div class="form-group"><label class="col-sm-2 control-label"><?php echo $_smarty_tpl->tpl_vars['PLG_PRICE']->value;?>
+									<div class="form-group">
+										<label class="col-sm-2 control-label"><?php echo $_smarty_tpl->tpl_vars['PLG_PRICE']->value;?>
 </label>
-										<div class="col-sm-10">
+										<div class="col-sm-4">
 											<input name="cenaa" type="text" value="<?php echo $_smarty_tpl->tpl_vars['cenaa']->value;?>
 " size="20" class="form-control">
+										</div>
+										<label class="col-sm-2 control-label"><?php echo $_smarty_tpl->tpl_vars['PLG_PRICE']->value;?>
+ <?php echo $_smarty_tpl->tpl_vars['PLG_OPTION']->value;?>
+</label>
+										<div class="col-sm-4">
+											<?php echo $_smarty_tpl->tpl_vars['options_price']->value;?>
+
 										</div>
 									</div>
 
@@ -238,25 +237,6 @@ echo '<script'; ?>
 										<div class="col-sm-10">
 											<input name="cenab" type="text" value="<?php echo $_smarty_tpl->tpl_vars['cenab']->value;?>
 " size="20" class="form-control">
-										</div>
-									</div>
-																		<div class="form-group"><label class="col-sm-2 control-label">Povezane grupe proizvoda</label>
-										<div class="col-sm-10">
-											<div>
-												<select size="5"  name="grupaproizvodaid[]" class="chosen-select up">
-													<?php echo smarty_function_html_options(array('values'=>$_smarty_tpl->tpl_vars['vezanegrupe_val']->value,'selected'=>$_smarty_tpl->tpl_vars['vezanegrupe_sel']->value,'output'=>$_smarty_tpl->tpl_vars['vezanegrupe_out']->value),$_smarty_tpl);?>
-
-												</select>
-											</div>
-										</div>
-									</div>
-																	<div class="form-group"><label class="col-sm-2 control-label"><?php echo $_smarty_tpl->tpl_vars['PLG_MANUFACTURER']->value;?>
-</label>
-										<div class="col-sm-10">
-											<select id="proizvodjacid" name="proizvodjacid" class="form-control">
-												<?php echo smarty_function_html_options(array('values'=>$_smarty_tpl->tpl_vars['proizvodj_val']->value,'selected'=>$_smarty_tpl->tpl_vars['proizvodj_sel']->value,'output'=>$_smarty_tpl->tpl_vars['proizvodj_out']->value),$_smarty_tpl);?>
-
-											</select>
 										</div>
 									</div>
 								</fieldset>
@@ -278,7 +258,6 @@ echo '<script'; ?>
 "  class="form-control">
 										</div>
 									</div>
-
 								</fieldset>
 							</div>
 						</div>
@@ -295,7 +274,7 @@ echo '<script'; ?>
 											
 												CKEDITOR.replace( 'kratak_opis',
 													 { height:'100',
-													   width:'700'
+													   width:'700',
 													  });
 											
 											<?php echo '</script'; ?>
@@ -312,7 +291,8 @@ echo '<script'; ?>
 											
 												CKEDITOR.replace( 'opis',
 													 { height:'250',
-													   width:'700'
+													   width:'700',
+													   toolbar: 'toolbar_Full'													   
 													  });
 											
 											<?php echo '</script'; ?>
@@ -324,14 +304,6 @@ echo '<script'; ?>
 							</div>
 						</div>
 						<div id="tab-4" class="tab-pane">
-							<div class="panel-body">
-								<fieldset class="form-horizontal">
-									<?php echo $_smarty_tpl->tpl_vars['tr_td_karakteristike']->value;?>
-
-								</fieldset>
-							</div>
-						</div>
-						<div id="tab-5" class="tab-pane">
 							<div class="panel-body">
 								<fieldset class="form-horizontal">
 									<div class="form-group"><label class="col-sm-2 control-label"><?php echo $_smarty_tpl->tpl_vars['PLG_IMAGE']->value;?>
@@ -369,7 +341,7 @@ echo $_smarty_tpl->tpl_vars['slikaover']->value;?>
 								</fieldset>
 							</div>
 						</div>
-						<div id="tab-6" class="tab-pane">
+						<div id="tab-5" class="tab-pane">
 							<div class="panel-body">
 								<fieldset class="form-horizontal">
 									<div class="table-responsive">

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2023-08-31 09:26:06
+/* Smarty version 3.1.32, created on 2023-09-06 12:06:01
   from 'C:\wamp\www\taxicms\admin\plg_option\option\templates\modify.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_64f0408e8e9104_20837762',
+  'unifunc' => 'content_64f84f098d1aa0_91281304',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3a4cdb5884182c2d2a5b918c817d46a68e2d0dcf' => 
     array (
       0 => 'C:\\wamp\\www\\taxicms\\admin\\plg_option\\option\\templates\\modify.tpl',
-      1 => 1693466759,
+      1 => 1693994756,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_64f0408e8e9104_20837762 (Smarty_Internal_Template $_smarty_tpl) {
+function content_64f84f098d1aa0_91281304 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\wamp\\www\\taxicms\\common\\libs\\plugins\\function.html_options.php','function'=>'smarty_function_html_options',),1=>array('file'=>'C:\\wamp\\www\\taxicms\\common\\libs\\plugins\\function.html_table_advanced.php','function'=>'smarty_function_html_table_advanced',),));
 echo '<script'; ?>
  type="text/javascript" src="CKeditor/ckeditor/ckeditor.js"><?php echo '</script'; ?>
@@ -158,7 +158,14 @@ echo '<script'; ?>
 
 										</div>
 									</div>
-									
+																		<div class="form-group">
+										<label class="col-sm-2 control-label"><?php echo $_smarty_tpl->tpl_vars['PLG_PRICE']->value;?>
+</label>
+										<div class="col-sm-8">
+											<input name="price" type="text" value="<?php echo $_smarty_tpl->tpl_vars['price']->value;?>
+" size="20" class="form-control">
+										</div>
+									</div>
                                 </fieldset>
                             </div>
 						</div>

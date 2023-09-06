@@ -138,7 +138,12 @@
 										  <a data-toggle="modal" data-target="#myModal7"><img class="image responsive image-title" src="{$slika}"  /><div class="overlay-icon"></div></a>
 										</div>
 									</div>*}
-
+									<div class="form-group">
+										<label class="col-sm-2 control-label">{$PLG_PRICE}</label>
+										<div class="col-sm-8">
+											<input name="price" type="text" value="{$price}" size="20" class="form-control">
+										</div>
+									</div>
                                 </fieldset>
                             </div>
 						</div>

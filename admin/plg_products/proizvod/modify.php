@@ -53,6 +53,23 @@
 			$tip = $ObjectFactory->createObject("PrTipProizvoda",$tpid);
 			$smarty->assign("tipproizvodanaziv",$tip->Naziv);
 			
+			//cena opcija
+			$crid="1.".ltrim($_REQUEST["proizvodid"]);	
+			$ObjectFactory->Reset();
+			$ObjectFactory->AddFilter("conres_id=".$crid);
+			$rr = $ObjectFactory->createObjects("ResRes");
+			$ObjectFactory->Reset();
+			foreach ($rr as $res) {
+				$resX=explode(".",$res->getResID());
+				if ($resX[0]=="8") $opt[]=$resX[1];
+			}
+			$options_price=0;
+			foreach ($opt as $o) {
+				$option = $ObjectFactory->createObject("Option",$o);
+				$options_price+=$option->getPrice();
+			}
+			$smarty->assign('options_price',$options_price);
+
 			// kreiram drop down listu sa svim proizvodjacima
 			$proizvodjaci = $ObjectFactory->createObjects("PrProizvodjac");
 			

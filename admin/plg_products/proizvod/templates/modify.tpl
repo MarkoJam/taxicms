@@ -171,9 +171,14 @@
 										</div>
 									</div>
 
-									<div class="form-group"><label class="col-sm-2 control-label">{$PLG_PRICE}</label>
-										<div class="col-sm-10">
+									<div class="form-group">
+										<label class="col-sm-2 control-label">{$PLG_PRICE}</label>
+										<div class="col-sm-4">
 											<input name="cenaa" type="text" value="{$cenaa}" size="20" class="form-control">
+										</div>
+										<label class="col-sm-2 control-label">{$PLG_PRICE} {$PLG_OPTION}</label>
+										<div class="col-sm-4">
+											{$options_price}
 										</div>
 									</div>
 

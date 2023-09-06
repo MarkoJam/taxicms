@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2023-04-03 14:09:11
+/* Smarty version 3.1.32, created on 2023-09-06 10:49:52
   from 'C:\wamp\www\taxicms\templates\products\product_details.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_642ac1e771e991_00532995',
+  'unifunc' => 'content_64f83d301a11d5_48414448',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ca29eb836087174f3eda5c8f55ceebecd6dddd64' => 
     array (
       0 => 'C:\\wamp\\www\\taxicms\\templates\\products\\product_details.tpl',
-      1 => 1671541919,
+      1 => 1693831228,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:products/conected_products.tpl' => 1,
   ),
 ),false)) {
-function content_642ac1e771e991_00532995 (Smarty_Internal_Template $_smarty_tpl) {
+function content_64f83d301a11d5_48414448 (Smarty_Internal_Template $_smarty_tpl) {
 echo '<script'; ?>
  type="application/ld+json">
 
@@ -172,9 +172,9 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 								<div class="col-sm-12 col-md-6 col-lg-6 product-detail-image">
 										<div class="product-detail-thumb">
                     	<div class="swiper myimage">
-														<div class="swiper-wrapper">
+							<div class="swiper-wrapper">
                               <div class="swiper-slide">
-  															<a class="lightbox-image" data-fancybox="gallery" href="<?php echo $_smarty_tpl->tpl_vars['ROOT_WEB']->value;
+  									<a class="lightbox-image" data-fancybox="gallery" href="<?php echo $_smarty_tpl->tpl_vars['ROOT_WEB']->value;
 echo $_smarty_tpl->tpl_vars['proizvod_detail']->value['slika'];?>
 ">
                                 	<img src="<?php echo $_smarty_tpl->tpl_vars['ROOT_WEB']->value;
@@ -244,47 +244,55 @@ echo $_smarty_tpl->tpl_vars['images_thumb']->value[(isset($_smarty_tpl->tpl_vars
 </p>
                                 <h2 class="product-detail-title"><?php echo $_smarty_tpl->tpl_vars['proizvod_detail']->value['naziv'];?>
 </h2>
-																<?php if ($_smarty_tpl->tpl_vars['proizvod_detail']->value['cenaamp'] != 0) {?>
-																	<?php if ($_smarty_tpl->tpl_vars['proizvod_detail']->value['cenabmp'] == 0) {?>
-																		<div class="product-detail-price">€ <?php echo $_smarty_tpl->tpl_vars['proizvod_detail']->value['cenaampformatirano'];?>
+								<?php if ($_smarty_tpl->tpl_vars['proizvod_detail']->value['cenaamp'] != 0) {?>
+									<?php if ($_smarty_tpl->tpl_vars['proizvod_detail']->value['cenabmp'] == 0) {?>
+										<div class="product-detail-price">€ <?php echo $_smarty_tpl->tpl_vars['proizvod_detail']->value['cenaampformatirano'];?>
 </div>
-																	<?php } else { ?>
-																		<div class="product-detail-old-price">€ <?php echo $_smarty_tpl->tpl_vars['proizvod_detail']->value['cenaampformatirano'];?>
+									<?php } else { ?>
+										<div class="product-detail-old-price">€ <?php echo $_smarty_tpl->tpl_vars['proizvod_detail']->value['cenaampformatirano'];?>
 </div>
-																		<div class="product-detail-price">€ <?php echo $_smarty_tpl->tpl_vars['proizvod_detail']->value['cenabmpformatirano'];?>
+										<div class="product-detail-price">€ <?php echo $_smarty_tpl->tpl_vars['proizvod_detail']->value['cenabmpformatirano'];?>
 </div>
-																	<?php }?>
+									<?php }?>
+								<?php } else { ?>
 
-																<?php } else { ?>
-
-																<?php }?>
+								<?php }?>
 
                                 <div class="product-description"><?php echo $_smarty_tpl->tpl_vars['proizvod_detail']->value['opis'];?>
-
-                                                                </div>
+</div>
+								
+								<?php
+$__section_cnt_3_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['proizvod_detail']->value['modules']) ? count($_loop) : max(0, (int) $_loop));
+$__section_cnt_3_total = $__section_cnt_3_loop;
+$_smarty_tpl->tpl_vars['__smarty_section_cnt'] = new Smarty_Variable(array());
+if ($__section_cnt_3_total !== 0) {
+for ($__section_cnt_3_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_cnt']->value['index'] = 0; $__section_cnt_3_iteration <= $__section_cnt_3_total; $__section_cnt_3_iteration++, $_smarty_tpl->tpl_vars['__smarty_section_cnt']->value['index']++){
+$_smarty_tpl->tpl_vars['__smarty_section_cnt']->value['last'] = ($__section_cnt_3_iteration === $__section_cnt_3_total);
+?>
+									<h4><a href="<?php echo $_smarty_tpl->tpl_vars['proizvod_detail']->value['modules'][(isset($_smarty_tpl->tpl_vars['__smarty_section_cnt']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_cnt']->value['index'] : null)]['link'];?>
+"><?php echo $_smarty_tpl->tpl_vars['proizvod_detail']->value['modules'][(isset($_smarty_tpl->tpl_vars['__smarty_section_cnt']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_cnt']->value['index'] : null)]['title'];?>
+</a></h4>
+									<?php
+$__section_cnt2_4_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['proizvod_detail']->value['modules'][(isset($_smarty_tpl->tpl_vars['__smarty_section_cnt']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_cnt']->value['index'] : null)]['options']) ? count($_loop) : max(0, (int) $_loop));
+$__section_cnt2_4_total = $__section_cnt2_4_loop;
+$_smarty_tpl->tpl_vars['__smarty_section_cnt2'] = new Smarty_Variable(array());
+if ($__section_cnt2_4_total !== 0) {
+for ($__section_cnt2_4_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_cnt2']->value['index'] = 0; $__section_cnt2_4_iteration <= $__section_cnt2_4_total; $__section_cnt2_4_iteration++, $_smarty_tpl->tpl_vars['__smarty_section_cnt2']->value['index']++){
+?>
+										<ul><a href="<?php echo $_smarty_tpl->tpl_vars['proizvod_detail']->value['modules'][(isset($_smarty_tpl->tpl_vars['__smarty_section_cnt']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_cnt']->value['index'] : null)]['options'][(isset($_smarty_tpl->tpl_vars['__smarty_section_cnt2']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_cnt2']->value['index'] : null)]['link'];?>
+"><?php echo $_smarty_tpl->tpl_vars['proizvod_detail']->value['modules'][(isset($_smarty_tpl->tpl_vars['__smarty_section_cnt']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_cnt']->value['index'] : null)]['options'][(isset($_smarty_tpl->tpl_vars['__smarty_section_cnt2']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_cnt2']->value['index'] : null)]['title'];?>
+</a></ul>
+									<?php
+}
+}
+?>
+								<?php
+}
+}
+?>
                               </div>
                             </div>
-                            <div class="col-sm-12 col-md-6 col-lg-6 product-detail-cart ">
-                                  <div class="row">
-                                    <div class="col-lg-6">
-                                        <div class="pro-qty"><label><?php echo $_smarty_tpl->tpl_vars['PLG_PRODUCT_ORDER_QUANTITY']->value;?>
-:</label>
-                                          <button type="button" id="sub" class="sub"><i class="fa-solid fa-chevron-down"></i></button>
-                                            <input type="text" class="quantity" title="Quantity" value="1"  disabled />
-                                            <button type="button" id="add" class="add"><i class="fa-solid fa-chevron-up"></i></button>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-																		<?php if ($_smarty_tpl->tpl_vars['proizvod_detail']->value['statusid'] != 54 && $_smarty_tpl->tpl_vars['proizvod_detail']->value['cenaamp'] != 0) {?>
-                                    <button id="add_cart" class="product-detail-cart-btn" type="button"><i class="fa-solid fa-cart-shopping"></i> <span><?php echo $_smarty_tpl->tpl_vars['PLG_PRODUCT_BASKET']->value;?>
-</span></button>
-                                    <div id="proizvodid" style="display:none"><?php echo $_smarty_tpl->tpl_vars['proizvod_detail']->value['proizvodid'];?>
-</div>
-																		<?php }?>
-                                    </div>
-                                  </div>
-                                </div>
-                                														</div>
+													</div>
                             	<?php $_smarty_tpl->_subTemplateRender("file:products/conected_products.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 													</div>
