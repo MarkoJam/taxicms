@@ -50,17 +50,21 @@
 </head>
 <input id='rootweb' name='rootweb' type='hidden' value='{$ROOT_WEB}'/>
 {assign var="data" value=""}
+
+{include file="templates/additional-style.tpl"}
 <body>
 	<!--== Wrapper Start ==-->
 	<div class="wrapper">
-	    <!--== Start Header Wrapper ==-->
-	    <header class="header-wrapper d-flex justify-content-center flex-column">
-	        <div class="header-middle">
+	    <!--== Header Wrapper Start ==-->
+	    <header class="header-wrapper d-flex justify-content-center flex-column header-wrapper-edit">
+			<div class="header-middle">
+				<!-- Conainer: -->
 	            <div class="container">
 	                <div class="row align-items-center justify-content-between align-items-center">
-						<nav class="navbar navbar-expand-lg navbar-default">
-							<a class="navbar-brand" href="{$ROOT_WEB}"><img class="logo-main" src="{$ROOT_WEB}images/logo/logo-black.svg" width="200" height="200" alt="Logo"></a>
+						<nav class="navbar navbar-expand-lg navbar-default navbar-default-edit">
+							<a class="navbar-brand" href="{$ROOT_WEB}"><img class="logo-main" src="{$ROOT_WEB}images/logo/logo-black.svg" alt="Logo" width="200px" height="100px"></a>
 							<div class="collapse navbar-collapse header-navigation " id="navbarSupportedContent">
+								<!-- Main nav: -->
 								<ul class="main-nav navbar-nav">
 									{$menu_render_horizontal}
 								</ul>
@@ -70,10 +74,11 @@
 									<div id="sb-search" class="sb-search" data-bs-toggle="modal" data-bs-target="#search"><i class="fa-solid fa-magnifying-glass"></i></div>
 									<!--<div id='cart_content' class=" minicart">
 										{* <template:def plugin="plg_productcart_default" position="standard" /> *}
-										{if CheckPlugin($smartypluginblocks, "plg_productcart_default", "standard", $data)}
+										<!-- plg_productcart_default->pluginName, standard->pluginPosition -->
+										{* {if CheckPlugin($smartypluginblocks, "plg_productcart_default", "standard", $data)}
 											{include file="order/productcart_default.tpl"}
-										{/if}
-									</div>!-->
+										{/if} *}
+									</div>
 									{*<div class="book">
 										<a href="{ROOT_WEB}{$lang}{$PLG_LINK_CATALOGUE}">
 											<svg width="16" height="19" viewBox="0 0 23 31" fill="#002D74" xmlns="http://www.w3.org/2000/svg">
@@ -92,10 +97,13 @@
 						</nav>
 	                </div>
 	            </div>
+
 	        </div>
 		</header>
 
+<!-- MAIN CONTENT ==================================================================================================== -->
 		<main class="main-content">
+			<!-- Top: -->
 			<div class="row">
 				<div class="col-md-9">
 					{* <template:def plugin="plg_sections_default" position="slideshow" /> *}
@@ -110,21 +118,24 @@
 					{/if}
 				</div>
 			</div>
+
+			<!-- Middle: -->
 			<div class="row">
 				<div class="col-md-9">			
-			{* <template:def plugin="plg_sections_default" position="about" /> *}
-			{if CheckPlugin($smartypluginblocks, "plg_sections_default", "about", $data)}
-				{include file="sections_default_about.tpl"}
-			{/if}
+					{* <template:def plugin="plg_sections_default" position="about" /> *}
+					{if CheckPlugin($smartypluginblocks, "plg_sections_default", "about", $data)}
+						{include file="sections_default_about.tpl"}
+					{/if}
 				</div>			
 				<div class="col-md-3">
-			{* ------ katalog proizvoda Home page ------ *}
-			{* <template:def plugin="plg_katalogproizvoda_default" position="home" /> *}
-			{if CheckPlugin($smartypluginblocks, "plg_katalogproizvoda_default", "home", $data)}
-				{include file="products/productcatalog_default_home.tpl"}
-			{/if}
+					{* ------ katalog proizvoda Home page ------ *}
+					{* <template:def plugin="plg_katalogproizvoda_default" position="home" /> *}
+					{if CheckPlugin($smartypluginblocks, "plg_katalogproizvoda_default", "home", $data)}
+						{include file="products/productcatalog_default_home.tpl"}
+					{/if}
 				</div>
 			</div>
+			
 			{* ------ grupa proizvoda HOMEPAGE ------ *}
 			{* <template:def plugin="plg_grupaproizvod_default" position="homepage" /> *}
 			{if CheckPlugin($smartypluginblocks, "plg_grupaproizvod_default", "homepage", $data)}
@@ -140,8 +151,6 @@
 			{if CheckPlugin($smartypluginblocks, "plg_newsletter_default", "standard", $data)}
 				{include file="newsletter_default_mc.tpl"}
 			{/if}
-
-
 
 			{* plugin for orders module *}
 			{* ------ korpa za kupovinu ------ *}
@@ -167,6 +176,8 @@
 					{include file="login_details.tpl"}
 			{/if}
 
+
+			<!-- Section: --------- -->
 			<section {if $HOME_PAGE neq "true"} id="content" {/if}>
 				{if $HOME_PAGE neq "true" and $pagecms eq "true" and $plg_sitemap neq "true" and $plugin neq "order" }
 					{* <template:def plugin="plg_sections_default" position="onama-sekcija1" /> *}
@@ -205,91 +216,100 @@
 					{if CheckPlugin($smartypluginblocks, "plg_sections_default", "system-sekcija6", $data)}
 						{include file="sections_default_system6.tpl"}
 					{/if}
+
 					<div class="container">
 						{* <template:def plugin="plg_naviglinks_default" position="standard" /> *}
 						{if CheckPlugin($smartypluginblocks, "plg_naviglinks_default", "standard", $data)}
 							{include file="navlinks_default.tpl"}
 						{/if}
+						
 						{if $html neq ''}
-						<div class="row">
-							<div class="col-md-12">
-								<div class="content page-desc">
-									<h1>{$header}</h1>
-									<h4>{$shorthtml}</h4>
-									{$html}
+							<div class="row">
+								<div class="col-md-12">
+									<div class="content page-desc">
+										<h1>{$header}</h1>
+										<h4>{$shorthtml}</h4>
+										{$html}
+									</div>
 								</div>
 							</div>
-						</div>
 						{/if}
+
 						{if $page_img neq ''}
-						<div class="row">
-							{section name=cnt loop=$images}
-								{if $smarty.section.cnt.index gt 1}
-									{assign var='rows' value='true'}
-								{else}
-									{assign var='rows' value='false'}
-								{/if}
-							{/section}
-							<div class="col-lg-12 col-md-12 col-12 order-lg-12 {if $rows eq 'true'}content-gallery{/if}">
-								<div class="row {if $rows eq 'true'}web-rows{/if}">
-									{section name=cnt loop=$images start=1}
-										<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12 galerija-wrap">
-											<div class="galerija">
-												<a class="example-image-link" href="{$ROOT_WEB}{$images[cnt]}" data-lightbox="example-1">
-													<div class="image-wrap">
-														<img class="example-image" alt="" src="{$ROOT_WEB}{$images_thumb[cnt]}">
-													</div>
-												</a>
+							<div class="row">
+								{section name=cnt loop=$images}
+									{if $smarty.section.cnt.index gt 1}
+										{assign var='rows' value='true'}
+									{else}
+										{assign var='rows' value='false'}
+									{/if}
+								{/section}
+								<div class="col-lg-12 col-md-12 col-12 order-lg-12 {if $rows eq 'true'}content-gallery{/if}">
+									<div class="row {if $rows eq 'true'}web-rows{/if}">
+										{section name=cnt loop=$images start=1}
+											<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12 galerija-wrap">
+												<div class="galerija">
+													<a class="example-image-link" href="{$ROOT_WEB}{$images[cnt]}" data-lightbox="example-1">
+														<div class="image-wrap">
+															<img class="example-image" alt="" src="{$ROOT_WEB}{$images_thumb[cnt]}">
+														</div>
+													</a>
+												</div>
 											</div>
-										</div>
-									{/section}
+										{/section}
+									</div>
+									<div class="loadmore"><button id="loadMore">Load more</button></div>
 								</div>
-								<div class="loadmore"><button id="loadMore">Load more</button></div>
 							</div>
-						</div>
 						{/if}
+
 						{if $page_vid neq ''}
-						<div class="row video-gallery">
-							{$page_vid}
-						</div>
+							<div class="row video-gallery">
+								{$page_vid}
+							</div>
 						{/if}
+
 						{if $page_doc neq ''}
-						<div class="row web-rows">
-							<div class="col-lg-12 col-md-12 col-12">
-								<div class="page-title">
-									<h2>{$PLG_PAGE_DOC}</h2>
-								</div>
-								<div class="product-pdf row">
-									{$page_doc}
+							<div class="row web-rows">
+								<div class="col-lg-12 col-md-12 col-12">
+									<div class="page-title">
+										<h2>{$PLG_PAGE_DOC}</h2>
+									</div>
+									<div class="product-pdf row">
+										{$page_doc}
+									</div>
 								</div>
 							</div>
-						</div>
 						{/if}
-					</div>
+					</div> <!-- End of container -->
+
 				{/if}
+
 				{if (CheckPlugin($smartypluginblocks, "plg_katalogproizvoda_default", "standard", $data) and $plg_search_details neq "true" and $plg_news_details neq "true") or ($plg_katalogproizvoda_details eq "true" and $plg_product_details neq "true") or CheckPlugin($smartypluginblocks, "plg_grupaproizvod_default", "standard", $data)}
-				<div class="row position-relative mb-10">
-					{* ------ katalog proizvoda STANDARD ------ *}
-					{* <template:def plugin="plg_katalogproizvoda_default" position="standard" /> *}
-					{if CheckPlugin($smartypluginblocks, "plg_katalogproizvoda_default", "standard", $data) and $plg_search_details neq "true" and $plg_news_details neq "true"}
-						{include file="products/productcatalog_default.tpl"}
-					{/if}
-					{* ------ katalog proizvoda (details kataloga proizvoda) ------ *}
-					{if isset($plg_katalogproizvoda_details) and $plg_katalogproizvoda_details eq "true" and $plg_product_details neq "true"}
-						<!-- page main wrapper start -->
+
+					<div class="row position-relative mb-10">
 						{* ------ katalog proizvoda STANDARD ------ *}
-						{* <template:def plugin="plg_katalogproizvoda_default" position="products" /> *}
-						{if CheckPlugin($smartypluginblocks, "plg_katalogproizvoda_default", "products", $data) and $plg_search_details neq "true" and $plg_news_details neq "true"}
+						{* <template:def plugin="plg_katalogproizvoda_default" position="standard" /> *}
+						{if CheckPlugin($smartypluginblocks, "plg_katalogproizvoda_default", "standard", $data) and $plg_search_details neq "true" and $plg_news_details neq "true"}
 							{include file="products/productcatalog_default.tpl"}
 						{/if}
-						<div id="catalog-detail" class="col-sm-12 col-md-8 col-lg-9 col-xl-9 product-group">{include file="products/productcatalog_details.tpl"}</div>
-					{/if}
-					{* ------ grupa proizvoda  ------ *}
-					{* <template:def plugin="plg_grupaproizvod_default" position="standard" /> *}
-					{if CheckPlugin($smartypluginblocks, "plg_grupaproizvod_default", "standard", $data) and $plg_news_details neq "true"}
-						{include file="products/productgroup_default.tpl"}
-					{/if}
-				</div>
+						{* ------ katalog proizvoda (details kataloga proizvoda) ------ *}
+						{if isset($plg_katalogproizvoda_details) and $plg_katalogproizvoda_details eq "true" and $plg_product_details neq "true"}
+							<!-- page main wrapper start -->
+							{* ------ katalog proizvoda STANDARD ------ *}
+							{* <template:def plugin="plg_katalogproizvoda_default" position="products" /> *}
+							{if CheckPlugin($smartypluginblocks, "plg_katalogproizvoda_default", "products", $data) and $plg_search_details neq "true" and $plg_news_details neq "true"}
+								{include file="products/productcatalog_default.tpl"}
+							{/if}
+							<div id="catalog-detail" class="col-sm-12 col-md-8 col-lg-9 col-xl-9 product-group">{include file="products/productcatalog_details.tpl"}</div>
+						{/if}
+						{* ------ grupa proizvoda  ------ *}
+						{* <template:def plugin="plg_grupaproizvod_default" position="standard" /> *}
+						{if CheckPlugin($smartypluginblocks, "plg_grupaproizvod_default", "standard", $data) and $plg_news_details neq "true"}
+							{include file="products/productgroup_default.tpl"}
+						{/if}
+					</div>
+
 				{/if}
 
 				{* ------ proizvod detalji prikaz------ *}
@@ -346,6 +366,8 @@
 				{/if}
 			</section>
 		</main>
+
+<!-- FOOTER ========================================================================================================= -->
 		<footer class="footer-area">
 			<div class="container">
 				<div class="row">
@@ -377,17 +399,21 @@
 							<div class="copyright">{$GLOBAL_COPYRIGHT}</div>
 							<div class="social"><a href="https://www.facebook.com/taxicms"><i class="fa-brands fa-facebook"></i></a> <a href="https://www.linkedin.com/company/taxicms/"><i class="fa-brands fa-linkedin"></i></a> <a href="https://www.instagram.com/taxicms/"><i class="fa-brands fa-square-instagram"></i></a></div>
 						</div>
+
 						<div class="footer-bottom">
 							{* <template:def plugin="plg_sections_default" position="float-contact" /> *}
 							{if CheckPlugin($smartypluginblocks, "plg_sections_default", "float-contact", $data)}
 								{include file="sections_default_contact.tpl"}
 							{/if}
 						</div>
+
 					</div>	
 				</div>	
 			</div>
 		</footer>
-	</div>
+	</div> <!-- End of wrapper -->
+
+<!-- SOCIAL MEDIA ====================================================================================== -->
 	<div class="social-icons">
 		<a href="https://www.facebook.com/taxicms" target="_blank"><div class="in"><img src="{$ROOT_WEB}images/icon-fb.svg" width="22" height="22" /></div></a>
 		<a href="https://www.linkedin.com/company/taxicms/" target="_blank"><div class="in"><img src="{$ROOT_WEB}images/icon-in.svg" width="22" height="22" /></div></a>
@@ -409,6 +435,7 @@
 
 
 	</div>
+<!-- OTHER: ================================================================================= -->
 	{include file="search_default.tpl"}
 	<!-- Custom Main JS -->
 	<!-- Bootstrap Core JavaScript -->
