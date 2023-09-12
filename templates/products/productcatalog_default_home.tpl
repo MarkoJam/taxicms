@@ -6,7 +6,7 @@
         <div class="col-md-6 itemheight mb-5">
           <a href="{$data.menuItem.items[cnt].link}" class="product-category-item">
             <div class="product-category-thumb">
-            <img src="{$ROOT_WEB}{$data.menuItem.items[cnt].image}" alt="{$data.menuItem.items[cnt].title}">
+            {*<img src="{$ROOT_WEB}{$data.menuItem.items[cnt].image}" alt="{$data.menuItem.items[cnt].title}">*}
             <h5 class="product-category-title">{$data.menuItem.items[cnt].title}</h5>
             </div>
           </a>

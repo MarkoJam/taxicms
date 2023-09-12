@@ -32,7 +32,7 @@
 								<small><i>{$conmodule[pom].shorthtml}</i></small>
 							</div>							
 							<div class="col-lg-4 col-md-4 col-4">
-								<a class="bg-info rounded-circle" href="{$ROOT_DEMO}{$conmodule[pom].link}"><i>DEMO</i></a>
+								<a class="bg-info rounded-circle" href="{$ROOT_DEMO}{$conmodule[pom].link}/?Login=1&username=taxicms&password=1234&language=en""><i>DEMO</i></a>
 								<a href="{$ROOT_HELP}{$conmodule[pom].link}"><i class="fa fa-question-circle" aria-hidden="true"></i></a>
 							</div>
 						</div>

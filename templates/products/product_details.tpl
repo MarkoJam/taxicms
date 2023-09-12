@@ -150,7 +150,7 @@ function update_basket_details(url) {
 										<ul>
 											<a href="{$proizvod_detail.modules[cnt].options[cnt2].link_dt}">{$proizvod_detail.modules[cnt].options[cnt2].title}</a>
 											{if $proizvod_detail.modules[cnt].options[cnt2].link ne ""}
-												<a class="bg-info rounded-circle" href="{$ROOT_DEMO}{$proizvod_detail.modules[cnt].options[cnt2].link}"><i>DEMO</i></a>
+												<a class="bg-info rounded-circle" href="{$ROOT_DEMO}{$proizvod_detail.modules[cnt].options[cnt2].link}/?Login=1&username=taxicms&password=1234&language=en"><i>DEMO</i></a>
 												<a href="{$ROOT_HELP}{$proizvod_detail.modules[cnt].options[cnt2].link}"><i class="fa fa-question-circle" aria-hidden="true"></i></a>
 											{/if}
 										</ul>
