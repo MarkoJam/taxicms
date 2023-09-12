@@ -28,8 +28,12 @@
 							<div class="col-lg-4 col-md-4 col-4">
 								<div class="box-text"><a href='{$conmodule[pom].link_print_dt}'>{$conmodule[pom].header}</a></div>
 							</div>
-							<div class="col-lg-8 col-md-8 col-8">
+							<div class="col-lg-4 col-md-4 col-4">
 								<small><i>{$conmodule[pom].shorthtml}</i></small>
+							</div>							
+							<div class="col-lg-4 col-md-4 col-4">
+								<a class="bg-info rounded-circle" href="{$ROOT_DEMO}{$conmodule[pom].link}"><i>DEMO</i></a>
+								<a href="{$ROOT_HELP}{$conmodule[pom].link}"><i class="fa fa-question-circle" aria-hidden="true"></i></a>
 							</div>
 						</div>
 					{/section}

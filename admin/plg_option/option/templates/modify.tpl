@@ -121,12 +121,12 @@
 
 										</div>
 									</div>
+									<div class="form-group"><label class="col-sm-2 control-label">{$PLG_LINK}</label>
+										<div class="col-sm-10"><input type="text" name="link" value="{$link}" class="form-control" placeholder="{$PLG_LINK}"></div>
+									</div>									
 									{*<div class="form-group"><label class="col-sm-2 control-label">{$PLG_DURATION}</label>
 										<div class="col-sm-1"><input type="text" name="duration" value="{$duration}" class="form-control" placeholder="{$PLG_DURATION}"></div>
 									</div>									
-									<div class="form-group"><label class="col-sm-2 control-label">{$PLG_LINK}</label>
-										<div class="col-sm-10"><input type="text" name="link" value="{$link}" class="form-control" placeholder="{$PLG_LINK}"></div>
-									</div>
 									<div class="form-group"><label class="col-sm-2 control-label">{$PLG_IMAGE}</label>
 										<div class="col-sm-6">
 										   <input id="slika" name="slika" type="text" value="{$slika}" size="50" class="form-control image">

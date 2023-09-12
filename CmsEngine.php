@@ -41,6 +41,8 @@ class CmsEngine
 		$this->smarty->assign("link_search",$link_search);
 		$this->smarty->assign("ROOT_HOME",ROOT_HOME);
 		$this->smarty->assign("ROOT_WEB",ROOT_WEB);
+		$this->smarty->assign("ROOT_DEMO",ROOT_DEMO);
+		$this->smarty->assign("ROOT_HELP",ROOT_HELP);
 		$this->smarty->assign("captchakey1",CAPTCHA_KEY_1);
 		$this->smarty->assign("captchakey2",CAPTCHA_KEY_2);
 	}

@@ -560,12 +560,13 @@ class katalogproizvodaPlugin extends pagePlugin {
 				if (in_array($o->getOptionID(),$optionsX)) {
 					$option['id']=$o->getOptionID();
 					$option['title']=$o->getHeader();
+					$option['link']=$o->getLink();
 					$this->ObjectFactory->Reset();
 					$this->ObjectFactory->AddFilter("option_id=".$o->getOptionID());
 					$orders2 = $this->ObjectFactory->createObjects("OptionOptionCategory");
 					$this->ObjectFactory->Reset();			
 					$option['order']=$orders2[0]->getOptionOptionCategoryOrder();
-					$option['link'] = $this->LanguageHelper->GetPrintLink ( new LinkResourceDetails($this->LanguageHelper, 'option', $o->getOptionID(),'w',$o->getHeaderUnchanged()));
+					$option['link_dt'] = $this->LanguageHelper->GetPrintLink ( new LinkResourceDetails($this->LanguageHelper, 'option', $o->getOptionID(),'w',$o->getHeaderUnchanged()));
 					$options[]=$option;
 				}	
 			}

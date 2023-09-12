@@ -147,7 +147,13 @@ function update_basket_details(url) {
 								{section loop=$proizvod_detail.modules name=cnt}
 									<h4><a href="{$proizvod_detail.modules[cnt].link}">{$proizvod_detail.modules[cnt].title}</a></h4>
 									{section loop=$proizvod_detail.modules[cnt].options name=cnt2}
-										<ul><a href="{$proizvod_detail.modules[cnt].options[cnt2].link}">{$proizvod_detail.modules[cnt].options[cnt2].title}</a></ul>
+										<ul>
+											<a href="{$proizvod_detail.modules[cnt].options[cnt2].link_dt}">{$proizvod_detail.modules[cnt].options[cnt2].title}</a>
+											{if $proizvod_detail.modules[cnt].options[cnt2].link ne ""}
+												<a class="bg-info rounded-circle" href="{$ROOT_DEMO}{$proizvod_detail.modules[cnt].options[cnt2].link}"><i>DEMO</i></a>
+												<a href="{$ROOT_HELP}{$proizvod_detail.modules[cnt].options[cnt2].link}"><i class="fa fa-question-circle" aria-hidden="true"></i></a>
+											{/if}
+										</ul>
 									{/section}
 								{/section}
                               </div>

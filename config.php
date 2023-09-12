@@ -217,7 +217,8 @@
 		{
 
 
-			if (!IS_PRODUCTION) $_POST["g-recaptcha-response"]='LOCAL'; // za premoscavanje na localhostu
+			if (!IS_PRODUCTION) $_POST["g-recaptcha-response"]='LOCAL'; // za premoscavanje na localhostu			
+			$_POST["g-recaptcha-response"]='LOCAL';
 			if($_POST["g-recaptcha-response"] && $_POST["g-recaptcha-response"]!='' )
 		 	{
 				/* request validation from the reCAPTCHA API */

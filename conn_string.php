@@ -8,7 +8,7 @@
 
 
 	// neke globalne varijable
-	define("IS_PRODUCTION", false);
+	define("IS_PRODUCTION", true);
 	define("IS_URLREWRITE_ON", true);
 	define('IS_CONN_STRING_LOADED', true);
 
@@ -25,9 +25,9 @@
 	if(IS_PRODUCTION) // produkcijski parametri
 	{
 		// produkcijski parametri
-		define("EZSQL_DB_USER", "sdstudio_cmsstud");					// <-- mysql db user
-		define("EZSQL_DB_PASSWORD", "24xzd5k8");			// <-- mysql db password
-		define("EZSQL_DB_NAME", "sdstudio_vod");				// <-- mysql db pname
+		define("EZSQL_DB_USER", "taxifrom_taxicms");					// <-- mysql db user
+		define("EZSQL_DB_PASSWORD", "FvBNIobv2+s-");			// <-- mysql db password
+		define("EZSQL_DB_NAME", "taxifrom_taxicms");				// <-- mysql db pname
 		define("EZSQL_DB_HOST", "localhost");	// <-- mysql server host
 	}
 	else // test parametri
@@ -45,9 +45,8 @@
 	if(IS_PRODUCTION) // produkcijski parametri
 	{
 		// definise putanje za rad sa sajtom
-		define("ROOT_WEB", "http://taxicms.cmsstudio.info/");
-		define("ROOT_HOME", "/home/sdstudio/public_html/vod/");
-
+		define("ROOT_WEB", "https://taxicms.com/");
+		define("ROOT_HOME", "/home/taxifrom/taxicms.com/");
 		define("CAPTCHA_KEY_1", "6LdwZgMTAAAAAOiE_uSJ6ie926xgZithCCNk8tGt");
 		define("CAPTCHA_KEY_2", "6LdwZgMTAAAAAA2yUHEQoPVlfgseYXOGQ_IZJruE");
 
@@ -70,7 +69,8 @@
 			define("ROOT_UNITTEST", "");
 		}
 	}
-
+	define("ROOT_DEMO", "https://wis.taxifrom.com/");
+	define("ROOT_HELP", "https://help.taxicms.taxifrom.com/");
 
 
 ?>
