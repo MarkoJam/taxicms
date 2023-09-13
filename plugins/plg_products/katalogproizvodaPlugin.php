@@ -538,7 +538,6 @@ class katalogproizvodaPlugin extends pagePlugin {
 		foreach ($rr as $res) {
 			$resX=explode(".",$res->getResID());
 			if ($resX[0]=="7") $modulesX[]=$resX[1];
-			if ($resX[0]=="8") $optionsX[]=$resX[1];
 		}
 		$modules=array();		
 		foreach ($modulesX as $m) {
@@ -557,22 +556,20 @@ class katalogproizvodaPlugin extends pagePlugin {
 			$this->ObjectFactory->Reset();
 			$options=array();
 			foreach ($opt as $o) {
-				if (in_array($o->getOptionID(),$optionsX)) {
-					$option['id']=$o->getOptionID();
-					$option['title']=$o->getHeader();
-					$option['link']=$o->getLink();
-					$this->ObjectFactory->Reset();
-					$this->ObjectFactory->AddFilter("option_id=".$o->getOptionID());
-					$orders2 = $this->ObjectFactory->createObjects("OptionOptionCategory");
-					$this->ObjectFactory->Reset();			
-					$option['order']=$orders2[0]->getOptionOptionCategoryOrder();
-					$option['link_dt'] = $this->LanguageHelper->GetPrintLink ( new LinkResourceDetails($this->LanguageHelper, 'option', $o->getOptionID(),'w',$o->getHeaderUnchanged()));
-					$options[]=$option;
-				}	
+				$option['id']=$o->getOptionID();
+				$option['title']=$o->getHeader();
+				$option['link']=$o->getLink();
+				$this->ObjectFactory->Reset();
+				$this->ObjectFactory->AddFilter("option_id=".$o->getOptionID());
+				$orders2 = $this->ObjectFactory->createObjects("OptionOptionCategory");
+				$this->ObjectFactory->Reset();			
+				$option['order']=$orders2[0]->getOptionOptionCategoryOrder();
+				$option['link_dt'] = $this->LanguageHelper->GetPrintLink ( new LinkResourceDetails($this->LanguageHelper, 'option', $o->getOptionID(),'w',$o->getHeaderUnchanged()));
+				$options[]=$option;
 			}
 			usort($options,function($first,$second){
 					return $first['order'] > $second['order'];
-			});				
+			});			
 			$module['options']=$options;
 			$modules[]=$module;
 		}

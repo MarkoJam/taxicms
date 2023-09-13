@@ -8,7 +8,7 @@
 
 
 	// neke globalne varijable
-	define("IS_PRODUCTION", true);
+	define("IS_PRODUCTION", false);
 	define("IS_URLREWRITE_ON", true);
 	define('IS_CONN_STRING_LOADED', true);
 

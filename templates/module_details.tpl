@@ -23,17 +23,17 @@
 				</div>	
 				<div class="col-lg-6 col-md-6 col-6">
 					<p>{$PLG_MENU_OPTIONS}</p>
-					{section name=pom loop=$conmodule}
+					{section name=pom loop=$module_detail.options}
 						<div class="row">
 							<div class="col-lg-4 col-md-4 col-4">
-								<div class="box-text"><a href='{$conmodule[pom].link_print_dt}'>{$conmodule[pom].header}</a></div>
+								<div class="box-text"><a href='{$module_detail.options[pom].link_print_dt}'>{$module_detail.options[pom].header}</a></div>
 							</div>
 							<div class="col-lg-4 col-md-4 col-4">
-								<small><i>{$conmodule[pom].shorthtml}</i></small>
+								<small><i>{$module_detail.options[pom].shorthtml}</i></small>
 							</div>							
 							<div class="col-lg-4 col-md-4 col-4">
-								<a class="bg-info rounded-circle" href="{$ROOT_DEMO}{$conmodule[pom].link}/?Login=1&username=taxicms&password=1234&language=en""><i>DEMO</i></a>
-								<a href="{$ROOT_HELP}{$conmodule[pom].link}"><i class="fa fa-question-circle" aria-hidden="true"></i></a>
+								<a class="bg-info rounded-circle" href="{$ROOT_DEMO}{$module_detail.options[pom].link}/?Login=1&username=taxicms&password=1234&language=en""><i>DEMO</i></a>
+								<a href="{$ROOT_HELP}{$module_detail.options[pom].link}"><i class="fa fa-question-circle" aria-hidden="true"></i></a>
 							</div>
 						</div>
 					{/section}

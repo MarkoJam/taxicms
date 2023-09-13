@@ -192,6 +192,12 @@
 				$module->setHtml($html);
 				$module_array = $module->toArray();
 				
+				$this->ObjectFactory->AddFilter("module_id =" . $_REQUEST['module_id']);
+				$this->Options = $this->ObjectFactory->createObjects("Option");
+				$this->ObjectFactory->ResetFilters();
+				foreach ($this->Options as $option) {
+					$option_array[] = $option->toArray();
+				}
 				// vezani resursi
 				$view = new ConnectedObject($this->ObjectFactory,$this->DatabaseBroker, $this->SetLabels());		
 				
@@ -209,6 +215,7 @@
 				$this->smarty->assign("images_thumb",$images_thumb);
 
 				$module_array = array_merge($module_array, array(	
+					"options"  => $option_array,
 					"img_rows" => $view->ViewConnectedObject('Module', 'img', $module->getModuleID()),
 					"vid_rows" => $view->ViewConnectedObject('Module', 'vid', $module->getModuleID()),
 					"web_rows" => $view->ViewConnectedObject('Module', 'web', $module->getModuleID()),			
