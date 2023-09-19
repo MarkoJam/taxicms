@@ -74,7 +74,8 @@
 									<div id="sb-search" class="sb-search" data-bs-toggle="modal" data-bs-target="#search"><i class="fa-solid fa-magnifying-glass"></i></div>
 									<!--<div id='cart_content' class=" minicart">
 										{* <template:def plugin="plg_productcart_default" position="standard" /> *}
-										<!-- plg_productcart_default->pluginName, standard->pluginPosition -->
+
+										<!-- Info - plg_productcart_default->pluginName, standard->pluginPosition -->
 										{* {if CheckPlugin($smartypluginblocks, "plg_productcart_default", "standard", $data)}
 											{include file="order/productcart_default.tpl"}
 										{/if} *}
@@ -138,14 +139,15 @@
 			
 			{* ------ grupa proizvoda HOMEPAGE ------ *}
 			{* <template:def plugin="plg_grupaproizvod_default" position="homepage" /> *}
-			{if CheckPlugin($smartypluginblocks, "plg_grupaproizvod_default", "homepage", $data)}
+
+			{* {if CheckPlugin($smartypluginblocks, "plg_grupaproizvod_default", "homepage", $data)}
 				{if $data.grupaproizvoda_view eq "SIMPLE_VIEW"}
 					{include file="products/product_default_home.tpl"}
 				{/if}
 				{if $data.grupaproizvoda_view eq "COMPLEX_VIEW"}
 					{include file="products/productgroupcomplex_default.tpl"}
 				{/if}
-			{/if}
+			{/if} *}
 
 			{* <template:def plugin="plg_newsletter_default" position="standard" /> *}
 			{if CheckPlugin($smartypluginblocks, "plg_newsletter_default", "standard", $data)}
