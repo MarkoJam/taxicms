@@ -71,22 +71,22 @@
 										   <input id="slika" name="slika" type="text" value="{$slika}" class="form-control image">
 										</div>
 										<div class="col-sm-2">
-										  <a class="btn btn-success" href="javascript:BrowseServer(this);"><i class="fa fa-plus-square-o" ></i> {$PLG_ADD}</a>
+										  <a class="btn btn-success" href="javascript:BrowseServerSlika(this);"><i class="fa fa-plus-square-o" ></i> {$PLG_ADD}</a>
 										</div>
 										<div class="col-sm-2">
-										 <a data-toggle="modal" data-target="#myModal7"><img class="image responsive image-title" src="{$slika}"  /><div class="overlay-icon"></div></a>
+										 <a data-toggle="modal" data-target="#myModal7"><img class="imageover responsive image-title" src="{$slika}"  /><div class="overlay-icon"></div></a>
 										</div>
 									</div>
 									<div class="form-group"><label class="col-sm-2 control-label">Video</label>
 										<div class="col-sm-6">
-										 {*  <input id="video" name="slika" type="text" value="{$slika}"  class="form-control">*}
+											<input id="video" name="video" type="text" value="{$video}"  class="form-control">
 										</div>
 										<div class="col-sm-2">
 										  <a class="btn btn-success" href="javascript:BrowseServerVideo(this);"><i class="fa fa-plus-square-o" ></i> {$PLG_ADD} video</a>
 										</div>
 										<div class="col-sm-2">
 											<video class="responsive" autoplay muted loop>
-									    	<source class="video" src="{$slika}" type="video/mp4" />
+									    	<source class="video" src="{$video}" type="video/mp4" />
 									  	</video>
 										</div>
 									</div>

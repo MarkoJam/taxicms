@@ -1,0 +1,54 @@
+NEW LOCATION
+
+Here you can enter a new location into the system
+Our new location will be Trpanj on the Pelješac peninsula.
+For the location we need to prepare latitude and longitude and altitude
+We choose a country, it is Croatia. Type the first three letters CRO and select Croatia.
+We enter the name of the location, it is Trpanj.
+The SEO name is self-loading.
+We select the location type, for Trpanj the City type is selected.
+We enter the name of the town in which the location is located or in whose surroundings, it is also Trpanj.
+We enter the address if the location has one, now we skip it.
+This location is not on an island, it is accessible without ferry transportation from the mainland.
+We enter or copy previously prepared geographic data.
+The location is marked as active and remains so.
+This location is not a terminal and remains so.
+We have entered all the data and now we are going to record the location.
+Now we check if the location was recorded successfully.
+If so, our job is done.
+
+NEW ROUTE
+
+Here you can enter a new route into the system
+We will introduce a new route from Split airport to Trpanj
+For the route, we need to prepare the distance in kilometers and the standard travel time
+In the field named from We select the starting location. Enter the first three letters SPL and select Split airport.
+We do the same in the field called TO. Type the first three letters TRP and select Trpanj.
+We should mark the Approved field with YES. The route is now available
+This route is not top route. We skip this field.
+Now we choose the terminal for our route. The selection field is filled with locations that are marked as terminals and that are located in the zone of our route.
+We choose Split airport.
+Then we entered the distance in kilometers and the duration of the trip in minutes.
+Now we check the entered data and confirm it with the Save button
+We check if the route was entered successfully and if so, the job is done.
+
+NEW USER
+
+Here you can enter a new user into the system.
+The user is marked as No active we will mark as Active.
+Our new user is our partner, a transport company, and we will select the DRIVER level.
+The selected language remains English.
+Now we enter the username and password for the user who will be able to log in to their profile on the system.
+In the REAL NAME field, we enter the name of the user by which he will be displayed in the system.
+Next, we enter the partner's company and brand names.
+Then we enter the name of the partner's company, brand and contact person.
+The next part is where we will enter the requested contact information of the partner, address, city, ZIP code, country, e-mail. We also enter phone numbers.
+We enter the message that will be written on the partner's profile.
+In the next 5 fields, we enter the data required for financial transactions.
+If it exists, we enter the web address.
+In the partner description field, we store important information about the partner.
+A note is a reminder for some action that we still need to do.
+Now we check the entered data and confirm it with the Save button.
+The tab with the newly entered partner is displayed. We enter it, we check the data.
+If we have a partner's logo, we change it to the required format and record it.
+We have finished entering partners and can do additional settings later.

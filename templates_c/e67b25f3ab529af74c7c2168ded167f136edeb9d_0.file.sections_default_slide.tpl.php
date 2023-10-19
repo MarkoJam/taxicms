@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2023-04-03 13:47:21
+/* Smarty version 3.1.32, created on 2023-10-17 09:25:24
   from 'C:\wamp\www\taxicms\templates\sections_default_slide.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_642abcc9b80887_29544002',
+  'unifunc' => 'content_652e36e4800315_33521567',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e67b25f3ab529af74c7c2168ded167f136edeb9d' => 
     array (
       0 => 'C:\\wamp\\www\\taxicms\\templates\\sections_default_slide.tpl',
-      1 => 1671542194,
+      1 => 1694591102,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_642abcc9b80887_29544002 (Smarty_Internal_Template $_smarty_tpl) {
+function content_652e36e4800315_33521567 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
 
   <div class="carousel-inner">

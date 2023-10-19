@@ -179,7 +179,7 @@ class Sections extends OpstiDomenskiObjekat
 	public $SectionsCategory; // array
 	
     private $Slika;
-    private $SlikaThumb;
+    private $Video;
     
 	private $CreatedBy;
 	private	$ModifiedBy;
@@ -198,7 +198,7 @@ class Sections extends OpstiDomenskiObjekat
 		$this->SectionLink = "";
         
         $this->Slika = "";
-        $this->SlikaThumb = "";
+        $this->Video = "";
         
 		$this->CreatedBy = "";
 		$this->ModifiedBy = "";
@@ -223,17 +223,17 @@ class Sections extends OpstiDomenskiObjekat
 		$this->Html = isset($post["html"]) ? $post["html"] : "";
 		$this->SectionLink = isset($post["section_link"]) ? $post["section_link"] : "";		
         $this->Slika = isset($post["slika"]) ? $post["slika"] : "";
-        $this->SlikaThumb = isset($post["slikathumb"]) ? $post["slikathumb"] : "";
+        $this->Video = isset($post["video"]) ? $post["video"] : "";
         
 		$this->SfStatus->setStatusID(isset($post["statusid"])? $post["statusid"] : $this->SfStatus->getStatusID());		
 		$this->SectionsCategory = array();
     }
     
     // DatabaseBroker functions
-    function vratiImenaAtributa() {return "`sections_id` , `header` , `shorthtml`, `html` , `section_link`,`slika`,`slika_thumb`,`status_id`,`created_by`,`created_date`,`modified_by`,`modified_date`";}
+    function vratiImenaAtributa() {return "`sections_id` , `header` , `shorthtml`, `html` , `section_link`,`slika`,`video`,`status_id`,`created_by`,`created_date`,`modified_by`,`modified_date`";}
     function vratiImeKlase(){return $this->TableName;}
-	function vratiVrednostiAtributa(){ return "'',". $this->quote_smart($this->Header) . ",". $this->quote_smart($this->ShortHtml).",". $this->quote_smart($this->Html) . ",". $this->quote_smart($this->SectionLink) . ",	".$this->quote_smart($this->Slika) . " , ".$this->quote_smart($this->SlikaThumb) . " ,". $this->quote_smart($this->SfStatus->getStatusID()) .",". $this->quote_smart($this->getCreatedBy()).", ". $this->quote_smart($this->getCreatedDate()).", ". $this->quote_smart($this->getModifiedBy()).", ". $this->quote_smart($this->getModifiedDate()); }
-    function postaviVrednostiAtributa(){ return "`header` = ".$this->quote_smart($this->Header). " , `shorthtml` = ".$this->quote_smart($this->ShortHtml)." , `html` = ".$this->quote_smart($this->Html).",`section_link` = ".$this->quote_smart($this->SectionLink).",`slika` =". $this->quote_smart($this->Slika).",`slika_thumb` =". $this->quote_smart($this->SlikaThumb).",`status_id` =".$this->quote_smart($this->SfStatus->getStatusID()).",`created_by` =". $this->quote_smart($this->getCreatedBy()).",`created_date` =". $this->quote_smart($this->getCreatedDate()).",`modified_by` =". $this->quote_smart($this->getModifiedBy()).",`modified_date` =". $this->quote_smart($this->getModifiedDate()); }
+	function vratiVrednostiAtributa(){ return "'',". $this->quote_smart($this->Header) . ",". $this->quote_smart($this->ShortHtml).",". $this->quote_smart($this->Html) . ",". $this->quote_smart($this->SectionLink) . ",	".$this->quote_smart($this->Slika) . " , ".$this->quote_smart($this->Video) . " ,". $this->quote_smart($this->SfStatus->getStatusID()) .",". $this->quote_smart($this->getCreatedBy()).", ". $this->quote_smart($this->getCreatedDate()).", ". $this->quote_smart($this->getModifiedBy()).", ". $this->quote_smart($this->getModifiedDate()); }
+    function postaviVrednostiAtributa(){ return "`header` = ".$this->quote_smart($this->Header). " , `shorthtml` = ".$this->quote_smart($this->ShortHtml)." , `html` = ".$this->quote_smart($this->Html).",`section_link` = ".$this->quote_smart($this->SectionLink).",`slika` =". $this->quote_smart($this->Slika).",`video` =". $this->quote_smart($this->Video).",`status_id` =".$this->quote_smart($this->SfStatus->getStatusID()).",`created_by` =". $this->quote_smart($this->getCreatedBy()).",`created_date` =". $this->quote_smart($this->getCreatedDate()).",`modified_by` =". $this->quote_smart($this->getModifiedBy()).",`modified_date` =". $this->quote_smart($this->getModifiedDate()); }
 	function nazivVezeKaRoditelju(){ return "sections";}
     function vratiAtributPretrazivanja(){ return "sections_id"; }
     function vratiUslovZaNadjiSlog(){ return "sections_id=" . $this->quote_smart($this->SectionsID);}
@@ -252,7 +252,7 @@ class Sections extends OpstiDomenskiObjekat
 		$this->Html = $result_row->html;
 		$this->SectionLink = $result_row->section_link;		
 		$this->Slika = $result_row->slika;
-		$this->SlikaThumb = $result_row->slika_thumb;
+		$this->Video = $result_row->video;
 		$this->SfStatus->setStatusID($result_row->status_id);
 		$this->CreatedBy= $result_row->created_by;
 		$this->CreatedDate = $result_row->created_date;
@@ -271,7 +271,7 @@ class Sections extends OpstiDomenskiObjekat
 				$nw->Html = $result_row->html;
 				$nw->SectionLink = $result_row->section_link;				
 				$nw->Slika = $result_row->slika;
-				$nw->SlikaThumb = $result_row->slika_thumb;
+				$nw->Video = $result_row->video;
 				$nw->SfStatus->setStatusID($result_row->status_id);
 				$nw->CreatedBy= $result_row->created_by;
 				$nw->CreatedDate = $result_row->created_date;
@@ -324,7 +324,7 @@ class Sections extends OpstiDomenskiObjekat
 			$arr = array_merge($arr, array("html" => $this->getHtml()));
 			$arr = array_merge($arr, array("sectionlink" => $this->getSectionLink()));			
 			$arr = array_merge($arr, array("slika" => $this->getSlika()));
-			$arr = array_merge($arr, array("slikathumb" => $this->getSlikaThumb()));
+			$arr = array_merge($arr, array("video" => $this->getVideo()));
 			$arr = array_merge($arr, array("statusid" => $this->getStatusID()));
 			$arr = array_merge($arr, array("sectionscategoryprint" => $this->getSectionsCategoryPrint()));
 			$arr = array_merge($arr, array("createdby" => $this->getCreatedBy()));
@@ -371,9 +371,9 @@ class Sections extends OpstiDomenskiObjekat
 	{
 		return $this->Slika;
 	}
-	function getSlikaThumb()
+	function getVideo()
 	{
-		return $this->SlikaThumb;
+		return $this->Video;
 	}
 	function getSfStatus()
 	{
@@ -444,9 +444,9 @@ class Sections extends OpstiDomenskiObjekat
 	{
 		$this->Slika = $val;
 	}
-	function setSlikaThumb($val)
+	function setVideo($val)
 	{
-		$this->SlikaThumb = $val;
+		$this->Video = $val;
 	}
 	function setStatusID($val)
 	{

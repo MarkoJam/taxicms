@@ -674,7 +674,7 @@
        width		: '900',
        height	: '800',
        type		: 'iframe',
-       src   : 'CKeditor/filemanager/dialog.php?type=1&fldr=images&field_id=slikaover&relative_url=1',
+       src   : 'CKeditor/filemanager/dialog.php?type=1&fldr=images&field_id=slika&relative_url=1',
        autoScale    	: false,
        iframe : {
            css : {
@@ -684,7 +684,7 @@
       });
       $(function() {
             // Funkcija gleda promenu polja #slika i izvrsava dodavanje src slike u klasu
-               $("#slikaover").observe_field(1, function( ) {
+               $("#slika").observe_field(1, function( ) {
                  $('.imageover').attr('src',this.value).show();
                  CheckImageData();
                });
@@ -718,7 +718,7 @@
        width		: '900',
        height	: '800',
        type		: 'iframe',
-       src   : 'CKeditor/filemanager/dialog.php?type=2&fldr=File&field_id=slika&relative_url=1',
+       src   : 'CKeditor/filemanager/dialog.php?type=2&fldr=File&field_id=video&relative_url=1',
        autoScale    	: false,
        iframe : {
            css : {
@@ -727,8 +727,8 @@
                 }
       });
       $(function() {
-            // Funkcija gleda promenu polja #slika i izvrsava dodavanje src slike u klasu
-               $("#slika").observe_field(1, function( ) {
+            // Funkcija gleda promenu polja #videoi izvrsava dodavanje src slike u klasu
+               $("#video").observe_field(1, function( ) {
                  $('.video').attr('src',this.value).show();
                });
             });

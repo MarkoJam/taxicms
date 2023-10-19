@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2023-04-03 13:47:17
+/* Smarty version 3.1.32, created on 2023-10-17 09:25:17
   from 'c:\wamp\www\taxicms\templates\pagination.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_642abcc57602a2_87467663',
+  'unifunc' => 'content_652e36dd3489a2_92178697',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0506a41ccc33a53cf90934f4badb3a53637553a2' => 
     array (
       0 => 'c:\\wamp\\www\\taxicms\\templates\\pagination.tpl',
-      1 => 1666608896,
+      1 => 1694591103,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_642abcc57602a2_87467663 (Smarty_Internal_Template $_smarty_tpl) {
+function content_652e36dd3489a2_92178697 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="pagination">
 			<?php if ($_smarty_tpl->tpl_vars['first']->value) {?><a class='pager' href="<?php echo $_REQUEST['basicurl'];?>
 /1"> << </a>|<?php }?>

@@ -180,7 +180,8 @@ class DatabaseBroker
 		try
 		{
 			$upit="UPDATE ".$odo->vratiImeKlase()." SET ". $odo->postaviVrednostiAtributa(). " WHERE " .$odo->vratiUslovZaNadjiSlog();
-			//exit ($upit);
+			//echo "<div class='success'>".$upit."</div>";
+
 			$this->con->query($upit);
 			if ($this->debug) { $this->con->debug();}
 		}

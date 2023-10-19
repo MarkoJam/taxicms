@@ -196,7 +196,8 @@
 				$this->Options = $this->ObjectFactory->createObjects("Option");
 				$this->ObjectFactory->ResetFilters();
 				foreach ($this->Options as $option) {
-					$option_array[] = $option->toArray();
+					$links_print_dt = $this->LanguageHelper->GetPrintLink ( new LinkResourceDetails($this->LanguageHelper, 'option', $option->getOptionID(),'w',$option->getHeaderUnchanged()));
+					$option_array[] = array_merge($option->toArray(), array("link_print_dt" => $links_print_dt));
 				}
 				// vezani resursi
 				$view = new ConnectedObject($this->ObjectFactory,$this->DatabaseBroker, $this->SetLabels());		

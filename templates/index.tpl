@@ -218,7 +218,10 @@
 					{if CheckPlugin($smartypluginblocks, "plg_sections_default", "system-sekcija6", $data)}
 						{include file="sections_default_system6.tpl"}
 					{/if}
-
+					{* <template:def plugin="plg_sections_default" position="cts" /> *}
+					{if CheckPlugin($smartypluginblocks, "plg_sections_default", "cts", $data)}
+						{include file="sections_default_cts.tpl"}
+					{/if}
 					<div class="container">
 						{* <template:def plugin="plg_naviglinks_default" position="standard" /> *}
 						{if CheckPlugin($smartypluginblocks, "plg_naviglinks_default", "standard", $data)}
