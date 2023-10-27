@@ -69,32 +69,21 @@
 									{$menu_render_horizontal}
 								</ul>
 							</div>
-							<div class="col-auto">
+							<!--<div class="col-auto">
 								<div class="header-action d-flex align-items-center">
 									<div id="sb-search" class="sb-search" data-bs-toggle="modal" data-bs-target="#search"><i class="fa-solid fa-magnifying-glass"></i></div>
-									<!--<div id='cart_content' class=" minicart">
 										{* <template:def plugin="plg_productcart_default" position="standard" /> *}
 
-										<!-- Info - plg_productcart_default->pluginName, standard->pluginPosition -->
-										{* {if CheckPlugin($smartypluginblocks, "plg_productcart_default", "standard", $data)}
+										{if CheckPlugin($smartypluginblocks, "plg_productcart_default", "standard", $data)}
 											{include file="order/productcart_default.tpl"}
-										{/if} *}
+										{/if} 
 									</div>
-									{*<div class="book">
-										<a href="{ROOT_WEB}{$lang}{$PLG_LINK_CATALOGUE}">
-											<svg width="16" height="19" viewBox="0 0 23 31" fill="#002D74" xmlns="http://www.w3.org/2000/svg">
-												<path d="M22.1054 9.2647V25.7747C22.1054 26.6073 21.3917 27.0045 20.5265 27.6249C19.8318 28.1242 18.9476 27.5053 18.9476 26.6887V10.5567C18.9476 10.2201 18.8307 9.89951 18.4518 9.70333C18.0728 9.50714 6.23415 3.21958 6.23415 3.21958C6.0431 3.14781 5.20944 2.61667 4.09788 3.19406C3.04159 3.74275 2.46686 4.33929 2.32002 4.62001L15.2355 11.7689C15.5782 11.9507 15.7897 12.2314 15.7897 12.5919V29.8213C15.7858 30.0156 15.7295 30.2052 15.6268 30.3696C15.5242 30.5341 15.3791 30.6671 15.2071 30.7544C15.0436 30.8359 14.8636 30.8779 14.6813 30.8772C14.4669 30.8797 14.256 30.8223 14.0719 30.7113C13.7324 30.5023 1.7974 23.1094 1.00953 22.6293C0.630586 22.3997 0.186911 21.9291 0.177438 21.5798L0.000599562 5.17348C0.000599562 4.85767 -0.0357154 4.301 0.456906 3.52742C1.55741 1.79842 5.39733 -0.168233 7.34097 0.850983L21.5496 8.11629C21.8922 8.29493 22.1054 8.65221 22.1054 9.2647Z" fill=""/>
-											</svg>
-										</a>
-									</div>*}
+
 									<div id="language" class="{$language}">
-										{*<a href="{$ROOT_WEB}eng">ENG</a>*}
+										<a href="{$ROOT_WEB}eng">ENG</a>
 									</div>
 								</div>
-								{*<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="25" height="25" fill="#002D74"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
-								</button>*}
-							</div>
+							</div>!-->
 						</nav>
 	                </div>
 	            </div>
@@ -221,22 +210,37 @@
 					{* <template:def plugin="plg_sections_default" position="cts" /> *}
 					{if CheckPlugin($smartypluginblocks, "plg_sections_default", "cts", $data)}
 						{include file="sections_default_cts.tpl"}
+					{/if}					
+					{* <template:def plugin="plg_sections_default" position="pc" /> *}
+					{if CheckPlugin($smartypluginblocks, "plg_sections_default", "pc", $data)}
+						{include file="sections_default_pc.tpl"}
 					{/if}
-					<div class="container">
-						{* <template:def plugin="plg_naviglinks_default" position="standard" /> *}
-						{if CheckPlugin($smartypluginblocks, "plg_naviglinks_default", "standard", $data)}
-							{include file="navlinks_default.tpl"}
-						{/if}
-						
+					
+					<div class="container">						
 						{if $html neq ''}
 							<div class="row">
-								<div class="col-md-12">
-									<div class="content page-desc">
-										<h1>{$header}</h1>
-										<h4>{$shorthtml}</h4>
-										{$html}
-									</div>
-								</div>
+								{* <template:def plugin="plg_naviglinks_default" position="standard" /> *}
+								{if CheckPlugin($smartypluginblocks, "plg_naviglinks_default", "standard", $data)}
+									<div class="col-md-8">
+										<div class="content page-desc">
+											<h1>{$header}</h1>
+											<h4>{$shorthtml}</h4>
+											{$html}	
+										</div>
+									</div>	
+									<div class="col-md-4">
+										{include file="navlinks_default.tpl"}
+									</div>										
+								{else}
+									<div class="col-md-12">
+								
+										<div class="content page-desc">
+											<h1>{$header}</h1>
+											<h4>{$shorthtml}</h4>
+											{$html}
+										</div>
+									</div>	
+								{/if}	
 							</div>
 						{/if}
 

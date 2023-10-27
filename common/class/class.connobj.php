@@ -329,7 +329,11 @@ $change=true;
 
 
 					case 'vid':
-								$row.="<div class='col-md-6 pb-5'>".htmlspecialchars_decode($result->url)."</div>";
+								$row.="<div class='col-md-6 pb-5'>
+								<video controls style='width:100%;'>
+									<source class='responsive' muted autoplay loop src='".htmlspecialchars_decode($result->url)."' type='video/mp4'>
+								</video>														
+								</div>";
 
 						break;
 
