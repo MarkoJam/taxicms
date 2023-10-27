@@ -211,10 +211,6 @@
 					{if CheckPlugin($smartypluginblocks, "plg_sections_default", "cts", $data)}
 						{include file="sections_default_cts.tpl"}
 					{/if}					
-					{* <template:def plugin="plg_sections_default" position="pc" /> *}
-					{if CheckPlugin($smartypluginblocks, "plg_sections_default", "pc", $data)}
-						{include file="sections_default_pc.tpl"}
-					{/if}
 					
 					<div class="container">						
 						{if $html neq ''}
@@ -229,6 +225,7 @@
 										</div>
 									</div>	
 									<div class="col-md-4">
+										<img src="{$page_img}"/ style="width:100%">
 										{include file="navlinks_default.tpl"}
 									</div>										
 								{else}

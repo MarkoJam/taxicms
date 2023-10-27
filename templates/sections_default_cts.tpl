@@ -79,12 +79,18 @@
 						<br>	
 						<h4>{$data.sections_all[pom].header}</h4>	
 						<div class="row row-edit">
+							{if $data.sections_all[pom].slika}
 							<div class="col-lg-8">
+							{else}
+							<div class="col-lg-12">					
+							{/if}
 								{$data.sections_all[pom].html}
-							</div>				
+							</div>	
+							{if $data.sections_all[pom].slika}	
 							<div class="col-lg-4">
 								<img src="{$ROOT_WEB}{$data.sections_all[pom].slika}"/>
 							</div>
+							{/if}							
 						</div>
 						<hr>
 						<div class="row footer">

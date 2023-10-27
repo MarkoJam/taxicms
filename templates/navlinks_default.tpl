@@ -1,5 +1,5 @@
 {if count($data.page_headers) gt 0}
-<br><br><br><br><br>
+<br><br>
 
 <div class="row sm">
 	<ul>
