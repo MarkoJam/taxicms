@@ -215,32 +215,30 @@
 					<div class="container">						
 						{if $html neq ''}
 							<div class="row">
-								{* <template:def plugin="plg_naviglinks_default" position="standard" /> *}
-								{if CheckPlugin($smartypluginblocks, "plg_naviglinks_default", "standard", $data)}
+								{if $page_img}
 									<div class="col-md-8">
 										<div class="content page-desc">
-											<h1>{$header}</h1>
+											<h2>{$header}</h2>
 											<h4>{$shorthtml}</h4>
 											{$html}	
 										</div>
 									</div>	
 									<div class="col-md-4">
 										<img src="{$page_img}"/ style="width:100%">
-										{include file="navlinks_default.tpl"}
 									</div>										
 								{else}
 									<div class="col-md-12">
 								
 										<div class="content page-desc">
-											<h1>{$header}</h1>
+											<h2>{$header}</h2>
 											<h4>{$shorthtml}</h4>
 											{$html}
 										</div>
 									</div>	
 								{/if}	
 							</div>
+	
 						{/if}
-
 						{if $page_img neq ''}
 							<div class="row">
 								{section name=cnt loop=$images}
@@ -287,6 +285,10 @@
 								</div>
 							</div>
 						{/if}
+						{* <template:def plugin="plg_naviglinks_default" position="standard" /> *}
+						{if CheckPlugin($smartypluginblocks, "plg_naviglinks_default", "standard", $data)}
+							{include file="navlinks_default.tpl"}
+						{/if}						
 					</div> <!-- End of container -->
 
 				{/if}
