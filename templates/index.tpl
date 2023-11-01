@@ -223,12 +223,17 @@
 											{$html}	
 										</div>
 									</div>	
+									{* <template:def plugin="plg_naviglinks_default" position="standard" /> *}
+									<div class="col-md-4">
+										{if CheckPlugin($smartypluginblocks, "plg_naviglinks_default", "standard", $data)}
+											{include file="navlinks_default.tpl"}
+										{/if}
+									</div>
 									<div class="col-md-4">
 										<img src="{$page_img}"/ style="width:100%">
-									</div>										
+									</div>
 								{else}
 									<div class="col-md-12">
-								
 										<div class="content page-desc">
 											<h2>{$header}</h2>
 											<h4>{$shorthtml}</h4>
@@ -285,10 +290,7 @@
 								</div>
 							</div>
 						{/if}
-						{* <template:def plugin="plg_naviglinks_default" position="standard" /> *}
-						{if CheckPlugin($smartypluginblocks, "plg_naviglinks_default", "standard", $data)}
-							{include file="navlinks_default.tpl"}
-						{/if}						
+												
 					</div> <!-- End of container -->
 
 				{/if}
