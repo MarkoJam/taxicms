@@ -72,6 +72,8 @@ img{
     border-radius: 5px !important;
 }
 
+#content{ padding:10px; }
+
 
 /* BOTTOM: ----------------------------------------------------------------------- */
 
@@ -86,6 +88,12 @@ img{
 /* -------------------------------------------------------------------------------- */
 
 /* MEDIA QUERY: */
+@media only screen and (min-width: 1200px){
+    .product-categories-area .col-md-6{
+        width: 100%;
+    }
+}
+
 @media only screen and (max-width: 1199px){
     .col-md-9,.col-md-3{
         display: flex;
@@ -126,10 +134,5 @@ img{
     }
 }
 
-@media only screen and (min-width: 1200px){
-    .product-categories-area .col-md-6{
-        width: 100%;
-    }
-}
 
 </style>
