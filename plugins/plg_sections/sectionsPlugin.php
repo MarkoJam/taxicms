@@ -97,8 +97,14 @@
 					foreach ($result_set as $result) {
 						$img[]=$result->url;
 					}
+					//random video
+					$video_rnd="/files/tutorials/WIS_Calendar.webm";
+					$files = glob("files/tutorials/*.webm");
+					shuffle($files);
 					$sections_array = array_merge($sections_array, array("images" => $img));	
 					$sections_array = array_merge($sections_array, array("order" => $sections->Order));																				
+					$sections_array = array_merge($sections_array, array("video_rnd" => $files[0]));
+
 					$sections_all[] = $sections_array;
 					$cnt++;
 				}

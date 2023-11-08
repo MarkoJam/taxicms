@@ -51,20 +51,23 @@
 <input id='rootweb' name='rootweb' type='hidden' value='{$ROOT_WEB}'/>
 {assign var="data" value=""}
 
-{include file="templates/additional-style.tpl"}
+{*include file="templates/additional-style.tpl"*}
 <body>
 	<!--== Wrapper Start ==-->
 	<div class="wrapper">
+		{* <template:def plugin="plg_sections_default" position="header" /> *}
+		{if CheckPlugin($smartypluginblocks, "plg_sections_default", "header", $data)}
+			{include file="sections_default_header.tpl"}
+		{/if}	
 	    <!--== Header Wrapper Start ==-->
-	    <header class="header-wrapper d-flex justify-content-center flex-column header-wrapper-edit">
+	    <header class="sticky-top d-flex justify-content-center flex-column">
 			<div class="header-middle">
 				<!-- Conainer: -->
 	            <div class="container">
 	                <div class="row align-items-center justify-content-between align-items-center">
-						<nav class="navbar navbar-expand-lg navbar-default navbar-default-edit">
-							<a class="navbar-brand" href="{$ROOT_WEB}"><img class="logo-main" src="{$ROOT_WEB}images/logo/logo-black.svg" alt="Logo" width="200px" height="100px"></a>
+						<nav  style="background:white;" class="navbar navbar-expand-lg navbar-default sticky-top">
+							<a class="navbar-brand" href="{$ROOT_WEB}"><img class="logo-main" src="{$ROOT_WEB}images/logo/logo-blackM.png" style="height:100%" alt="Logo"></a>
 							<div class="collapse navbar-collapse header-navigation " id="navbarSupportedContent">
-								<!-- Main nav: -->
 								<ul class="main-nav navbar-nav">
 									{$menu_render_horizontal}
 								</ul>
@@ -92,56 +95,37 @@
 		</header>
 
 <!-- MAIN CONTENT ==================================================================================================== -->
-		<main class="main-content">
-			<!-- Top: -->
-			<div class="row">
-				<div class="col-md-9">
-					{* <template:def plugin="plg_sections_default" position="slideshow" /> *}
-					{if CheckPlugin($smartypluginblocks, "plg_sections_default", "slideshow", $data)}
-						{include file="sections_default_slide.tpl"}
-					{/if}
-				</div>			
-				<div class="col-md-3">
-					{* <template:def plugin="plg_news_default" position="homepage" /> *}
-					{if CheckPlugin($smartypluginblocks, "plg_news_default", "homepage", $data)}
-						{include file="news_default_home.tpl"}
-					{/if}
-				</div>
-			</div>
+		<main class="main-content">			
+			{* <template:def plugin="plg_sections_default" position="slideshow" /> *}
+			{if CheckPlugin($smartypluginblocks, "plg_sections_default", "slideshow", $data)}
+				{include file="sections_default_slide.tpl"}
+			{/if}
 
-			<!-- Middle: -->
-			<div class="row">
-				<div class="col-md-9">			
-					{* <template:def plugin="plg_sections_default" position="about" /> *}
-					{if CheckPlugin($smartypluginblocks, "plg_sections_default", "about", $data)}
-						{include file="sections_default_about.tpl"}
-					{/if}
-				</div>			
-				<div class="col-md-3">
-					{* ------ katalog proizvoda Home page ------ *}
-					{* <template:def plugin="plg_katalogproizvoda_default" position="home" /> *}
-					{if CheckPlugin($smartypluginblocks, "plg_katalogproizvoda_default", "home", $data)}
-						{include file="products/productcatalog_default_home.tpl"}
-					{/if}
+			{if $HOME_PAGE eq "true"}
+			<div class="container">
+				<div class="row align-items-center justify-content-between align-items-center">
+					<nav  style="background-color:#FF7F40;" class="navbar navbar-expand-lg navbar-default">
+						<div class="collapse navbar-collapse header-navigation " id="navbarSupportedContent">
+							<ul class="main-nav navbar-nav">
+								{*$menu_render_horizontal*}
+							</ul>
+						</div>
+					</nav>
 				</div>
-			</div>
+			</div>	
+			{/if}
+			<!-- Middle: -->
+		
+			{* <template:def plugin="plg_sections_default" position="about" /> *}
+			{if CheckPlugin($smartypluginblocks, "plg_sections_default", "about", $data)}
+				{include file="sections_default_about.tpl"}
+			{/if}
+
 			
 			{* ------ grupa proizvoda HOMEPAGE ------ *}
 			{* <template:def plugin="plg_grupaproizvod_default" position="homepage" /> *}
 
-			{* {if CheckPlugin($smartypluginblocks, "plg_grupaproizvod_default", "homepage", $data)}
-				{if $data.grupaproizvoda_view eq "SIMPLE_VIEW"}
-					{include file="products/product_default_home.tpl"}
-				{/if}
-				{if $data.grupaproizvoda_view eq "COMPLEX_VIEW"}
-					{include file="products/productgroupcomplex_default.tpl"}
-				{/if}
-			{/if} *}
 
-			{* <template:def plugin="plg_newsletter_default" position="standard" /> *}
-			{if CheckPlugin($smartypluginblocks, "plg_newsletter_default", "standard", $data)}
-				{include file="newsletter_default_mc.tpl"}
-			{/if}
 
 			{* plugin for orders module *}
 			{* ------ korpa za kupovinu ------ *}
