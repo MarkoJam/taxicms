@@ -66,7 +66,7 @@
 	            <div class="container">
 	                <div class="row align-items-center justify-content-between align-items-center">
 						<nav  style="background:white;" class="navbar navbar-expand-lg navbar-default sticky-top">
-							<a class="navbar-brand" href="{$ROOT_WEB}"><img class="logo-main" src="{$ROOT_WEB}images/logo/logo-blackM.png" style="height:100%" alt="Logo"></a>
+							<a class="navbar-brand" href="{$ROOT_WEB}"><img class="logo-main" src="{$ROOT_WEB}images/logo/logo-blackM.png" height="50" width="70" alt="Logo"></a>
 							<div class="collapse navbar-collapse header-navigation " id="navbarSupportedContent">
 								<ul class="main-nav navbar-nav">
 									{$menu_render_horizontal}
@@ -87,6 +87,9 @@
 									</div>
 								</div>
 							</div>!-->
+							<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="25" height="25" fill="#002D74"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+							</button>							
 						</nav>
 	                </div>
 	            </div>
@@ -101,24 +104,11 @@
 				{include file="sections_default_slide.tpl"}
 			{/if}
 
-			{if $HOME_PAGE eq "true"}
-			<div class="container">
-				<div class="row align-items-center justify-content-between align-items-center">
-					<nav  style="background-color:#FF7F40;" class="navbar navbar-expand-lg navbar-default">
-						<div class="collapse navbar-collapse header-navigation " id="navbarSupportedContent">
-							<ul class="main-nav navbar-nav">
-								{*$menu_render_horizontal*}
-							</ul>
-						</div>
-					</nav>
-				</div>
-			</div>	
-			{/if}
 			<!-- Middle: -->
 		
-			{* <template:def plugin="plg_sections_default" position="about" /> *}
-			{if CheckPlugin($smartypluginblocks, "plg_sections_default", "about", $data)}
-				{include file="sections_default_about.tpl"}
+			{* <template:def plugin="plg_sections_default" position="banners" /> *}
+			{if CheckPlugin($smartypluginblocks, "plg_sections_default", "banners", $data)}
+				{include file="sections_default.tpl"}
 			{/if}
 
 			
@@ -154,43 +144,7 @@
 
 			<!-- Section: --------- -->
 			<section {if $HOME_PAGE neq "true"} id="content" {/if}>
-				{if $HOME_PAGE neq "true" and $pagecms eq "true" and $plg_sitemap neq "true" and $plugin neq "order" }
-					{* <template:def plugin="plg_sections_default" position="onama-sekcija1" /> *}
-					{if CheckPlugin($smartypluginblocks, "plg_sections_default", "onama-sekcija1", $data)}
-						{include file="sections_default_onama1.tpl"}
-					{/if}
-					{* <template:def plugin="plg_sections_default" position="onama-sekcija2" /> *}
-					{if CheckPlugin($smartypluginblocks, "plg_sections_default", "onama-sekcija2", $data)}
-						{include file="sections_default_onama2.tpl"}
-					{/if}
-					{* <template:def plugin="plg_sections_default" position="onama-sekcija3" /> *}
-					{if CheckPlugin($smartypluginblocks, "plg_sections_default", "onama-sekcija3", $data)}
-						{include file="sections_default_onama3.tpl"}
-					{/if}
-					{* <template:def plugin="plg_sections_default" position="system-sekcija1" /> *}
-					{if CheckPlugin($smartypluginblocks, "plg_sections_default", "system-sekcija1", $data)}
-						{include file="sections_default_system1.tpl"}
-					{/if}
-					{* <template:def plugin="plg_sections_default" position="system-sekcija2" /> *}
-					{if CheckPlugin($smartypluginblocks, "plg_sections_default", "system-sekcija2", $data)}
-						{include file="sections_default_system2.tpl"}
-					{/if}
-					{* <template:def plugin="plg_sections_default" position="system-sekcija3" /> *}
-					{if CheckPlugin($smartypluginblocks, "plg_sections_default", "system-sekcija3", $data)}
-						{include file="sections_default_system3.tpl"}
-					{/if}
-					{* <template:def plugin="plg_sections_default" position="system-sekcija4" /> *}
-					{if CheckPlugin($smartypluginblocks, "plg_sections_default", "system-sekcija4", $data)}
-						{include file="sections_default_system4.tpl"}
-					{/if}
-					{* <template:def plugin="plg_sections_default" position="system-sekcija5" /> *}
-					{if CheckPlugin($smartypluginblocks, "plg_sections_default", "system-sekcija5", $data)}
-						{include file="sections_default_system5.tpl"}
-					{/if}
-					{* <template:def plugin="plg_sections_default" position="system-sekcija6" /> *}
-					{if CheckPlugin($smartypluginblocks, "plg_sections_default", "system-sekcija6", $data)}
-						{include file="sections_default_system6.tpl"}
-					{/if}
+				{if $HOME_PAGE neq "true" and $pagecms eq "true" and $plg_sitemap neq "true" and $plugin neq "order" }		
 					{* <template:def plugin="plg_sections_default" position="cts" /> *}
 					{if CheckPlugin($smartypluginblocks, "plg_sections_default", "cts", $data)}
 						{include file="sections_default_cts.tpl"}
