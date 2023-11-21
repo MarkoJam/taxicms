@@ -51,7 +51,7 @@
 <input id='rootweb' name='rootweb' type='hidden' value='{$ROOT_WEB}'/>
 {assign var="data" value=""}
 
-{*include file="templates/additional-style.tpl"*}
+{include file="templates/additional-style.tpl"}
 <body>
 	<!--== Wrapper Start ==-->
 	<div class="wrapper">
@@ -98,221 +98,136 @@
 		</header>
 
 <!-- MAIN CONTENT ==================================================================================================== -->
-		<main class="main-content">			
+		<main class="main-content">
 			{* <template:def plugin="plg_sections_default" position="slideshow" /> *}
 			{if CheckPlugin($smartypluginblocks, "plg_sections_default", "slideshow", $data)}
 				{include file="sections_default_slide.tpl"}
 			{/if}
-
-			<!-- Middle: -->
-		
 			{* <template:def plugin="plg_sections_default" position="banners" /> *}
 			{if CheckPlugin($smartypluginblocks, "plg_sections_default", "banners", $data)}
 				{include file="sections_default.tpl"}
-			{/if}
-
-			
-			{* ------ grupa proizvoda HOMEPAGE ------ *}
-			{* <template:def plugin="plg_grupaproizvod_default" position="homepage" /> *}
-
-
-
-			{* plugin for orders module *}
-			{* ------ korpa za kupovinu ------ *}
-			{if $plugin eq "order" and $plugin_view eq "basket"}
-				<div id='order_basket'>{include file="order/basket.tpl"}</div>
-			{/if}
-			{if $plugin eq "order" and $plugin_view eq "shipment"}
-				{include file="order_shipment.tpl"}
-			{/if}
-			{if $plugin eq "order" and $plugin_view eq "overview"}
-				{include file="order/overview.tpl"}
-			{/if}
-			{if $plugin eq "order" and $plugin_view eq "checkout"}
-				{include file="order/checkout.tpl"}
-			{/if}
-			{if $plugin eq "order" and $plugin_view eq "orderfinish"}
-				{include file="order/finish.tpl"}
-			{/if}
-
-			{include file="products/product_basket_message.tpl"}
-
-			{if isset($plg_login_details) and $plg_login_details eq "true"}
-					{include file="login_details.tpl"}
-			{/if}
-
-
+			{/if}	
 			<!-- Section: --------- -->
-			<section {if $HOME_PAGE neq "true"} id="content" {/if}>
-				{if $HOME_PAGE neq "true" and $pagecms eq "true" and $plg_sitemap neq "true" and $plugin neq "order" }		
-					{* <template:def plugin="plg_sections_default" position="cts" /> *}
-					{if CheckPlugin($smartypluginblocks, "plg_sections_default", "cts", $data)}
-						{include file="sections_default_cts.tpl"}
-					{/if}					
-					
-					<div class="container">						
-						{if $html neq ''}
-							<div class="row">
-								{if $page_img}
-									<div class="col-md-8">
-										<div class="content page-desc">
-											<h2>{$header}</h2>
-											<h4>{$shorthtml}</h4>
-											{$html}	
-										</div>
-									</div>	
-									{* <template:def plugin="plg_naviglinks_default" position="standard" /> *}
-									<div class="col-md-4">
-										{if CheckPlugin($smartypluginblocks, "plg_naviglinks_default", "standard", $data)}
-											{include file="navlinks_default.tpl"}
+			<section {if $HOME_PAGE neq "true"} id="content" {/if}>			
+				<div class="container body">
+					<div class="row">
+					{if CheckPlugin($smartypluginblocks, "plg_naviglinks_default", "standard", $data) or CheckPlugin($smartypluginblocks, "plg_gallery_default", "levo", $data)}
+						<div class="col-md-3">
+							{* <template:def plugin="plg_naviglinks_default" position="standard" /> *}
+							{if CheckPlugin($smartypluginblocks, "plg_naviglinks_default", "standard", $data)}
+								{include file="navlinks_default.tpl"}
+							{/if}
+						</div>
+						<div class="col-md-9">
+					{else}
+						<div class="col-md-12 content">
+					{/if}	
+							{if !empty($html)}
+								<h2>{$header}</h2>
+								<h5>{$shorthtml}</h5>
+								{$html}
+							{/if}
+							{* <template:def plugin="plg_sections_default" position="cts" /> *}
+							{if CheckPlugin($smartypluginblocks, "plg_sections_default", "cts", $data)}
+								{include file="sections_default_cts.tpl"}
+							{/if}					
+							{if $page_img neq ''}
+								<div class="row">
+									{section name=cnt loop=$images}
+										{if $smarty.section.cnt.index gt 1}
+											{assign var='rows' value='true'}
+										{else}
+											{assign var='rows' value='false'}
 										{/if}
-									</div>
-									<div class="col-md-4">
-										<img src="{$page_img}"/ style="width:100%">
-									</div>
-								{else}
-									<div class="col-md-12">
-										<div class="content page-desc">
-											<h2>{$header}</h2>
-											<h4>{$shorthtml}</h4>
-											{$html}
-										</div>
-									</div>	
-								{/if}	
-							</div>
-	
-						{/if}
-						{if $page_img neq ''}
-							<div class="row">
-								{section name=cnt loop=$images}
-									{if $smarty.section.cnt.index gt 1}
-										{assign var='rows' value='true'}
-									{else}
-										{assign var='rows' value='false'}
-									{/if}
-								{/section}
-								<div class="col-lg-12 col-md-12 col-12 order-lg-12 {if $rows eq 'true'}content-gallery{/if}">
-									<div class="row {if $rows eq 'true'}web-rows{/if}">
-										{section name=cnt loop=$images start=1}
-											<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12 galerija-wrap">
-												<div class="galerija">
-													<a class="example-image-link" href="{$ROOT_WEB}{$images[cnt]}" data-lightbox="example-1">
-														<div class="image-wrap">
-															<img class="example-image" alt="" src="{$ROOT_WEB}{$images_thumb[cnt]}">
-														</div>
-													</a>
+									{/section}
+									<div class="col-lg-12 col-md-12 col-12 order-lg-12 {if $rows eq 'true'}content-gallery{/if}">
+										<div class="row {if $rows eq 'true'}web-rows{/if}">
+											{section name=cnt loop=$images start=1}
+												<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12 galerija-wrap">
+													<div class="galerija">
+														<a class="example-image-link" href="{$ROOT_WEB}{$images[cnt]}" data-lightbox="example-1">
+															<div class="image-wrap">
+																<img class="example-image" alt="" src="{$ROOT_WEB}{$images_thumb[cnt]}">
+															</div>
+														</a>
+													</div>
 												</div>
-											</div>
-										{/section}
-									</div>
-									<div class="loadmore"><button id="loadMore">Load more</button></div>
-								</div>
-							</div>
-						{/if}
-
-						{if $page_vid neq ''}
-							<div class="row video-gallery">
-								{$page_vid}
-							</div>
-						{/if}
-
-						{if $page_doc neq ''}
-							<div class="row web-rows">
-								<div class="col-lg-12 col-md-12 col-12">
-									<div class="page-title">
-										<h2>{$PLG_PAGE_DOC}</h2>
-									</div>
-									<div class="product-pdf row">
-										{$page_doc}
+											{/section}
+										</div>
+										<div class="loadmore"><button id="loadMore">Load more</button></div>
 									</div>
 								</div>
-							</div>
-						{/if}
-												
-					</div> <!-- End of container -->
-
-				{/if}
-
-				{if (CheckPlugin($smartypluginblocks, "plg_katalogproizvoda_default", "standard", $data) and $plg_search_details neq "true" and $plg_news_details neq "true") or ($plg_katalogproizvoda_details eq "true" and $plg_product_details neq "true") or CheckPlugin($smartypluginblocks, "plg_grupaproizvod_default", "standard", $data)}
-
-					<div class="row position-relative mb-10">
-						{* ------ katalog proizvoda STANDARD ------ *}
-						{* <template:def plugin="plg_katalogproizvoda_default" position="standard" /> *}
-						{if CheckPlugin($smartypluginblocks, "plg_katalogproizvoda_default", "standard", $data) and $plg_search_details neq "true" and $plg_news_details neq "true"}
-							{include file="products/productcatalog_default.tpl"}
-						{/if}
-						{* ------ katalog proizvoda (details kataloga proizvoda) ------ *}
-						{if isset($plg_katalogproizvoda_details) and $plg_katalogproizvoda_details eq "true" and $plg_product_details neq "true"}
-							<!-- page main wrapper start -->
+							{/if}
+							{if $page_vid neq ''}
+								<div class="row video-gallery">
+									{$page_vid}
+								</div>
+							{/if}
+							{if $page_doc neq ''}
+								<div class="row web-rows">
+									<div class="col-lg-12 col-md-12 col-12">
+										<div class="page-title">
+											<h2>{$PLG_PAGE_DOC}</h2>
+										</div>
+										<div class="product-pdf row">
+											{$page_doc}
+										</div>
+									</div>
+								</div>
+							{/if}
 							{* ------ katalog proizvoda STANDARD ------ *}
-							{* <template:def plugin="plg_katalogproizvoda_default" position="products" /> *}
-							{if CheckPlugin($smartypluginblocks, "plg_katalogproizvoda_default", "products", $data) and $plg_search_details neq "true" and $plg_news_details neq "true"}
+							{* <template:def plugin="plg_katalogproizvoda_default" position="standard" /> *}
+							{if CheckPlugin($smartypluginblocks, "plg_katalogproizvoda_default", "standard", $data) and $plg_search_details neq "true" and $plg_news_details neq "true"}
 								{include file="products/productcatalog_default.tpl"}
 							{/if}
-							<div id="catalog-detail" class="col-sm-12 col-md-8 col-lg-9 col-xl-9 product-group">{include file="products/productcatalog_details.tpl"}</div>
-						{/if}
-						{* ------ grupa proizvoda  ------ *}
-						{* <template:def plugin="plg_grupaproizvod_default" position="standard" /> *}
-						{if CheckPlugin($smartypluginblocks, "plg_grupaproizvod_default", "standard", $data) and $plg_news_details neq "true"}
-							{include file="products/productgroup_default.tpl"}
-						{/if}
-					</div>
-
-				{/if}
-
-				{* ------ proizvod detalji prikaz------ *}
-				{if isset($plg_product_details) and $plg_product_details eq "true"}
-					{include file="products/product_details.tpl"}
-				{/if}
-
-				{if isset($plg_search_details) and $plg_search_details eq "true"}
-					{include file="search_details.tpl"}
-				{/if}
-
-				{if isset($plg_news_details) and $plg_news_details eq "true"}
-					{include file="news_details.tpl"}
-				{/if}				
-				
-				{if isset($plg_module_details) and $plg_module_details eq "true"}
-					{include file="module_details.tpl"}
-				{/if}				
-				
-				{if isset($plg_option_details) and $plg_option_details eq "true"}
-					{include file="option_details.tpl"}
-				{/if}
-
-				{* <template:def plugin="plg_formcontact_default" position="standard" /> *}
-				{if CheckPlugin($smartypluginblocks, "plg_formcontact_default", "standard", $data)}
-					{include file="formcontact_default.tpl"}
-				{/if}
-				{* <template:def plugin="plg_sections_default" position="kontakt-sekcija1" /> *}
-				{if CheckPlugin($smartypluginblocks, "plg_sections_default", "kontakt-sekcija1", $data)}
-					{include file="sections_default_contact1.tpl"}
-				{/if}
-				{* <template:def plugin="plg_sections_default" position="kontakt-sekcija2" /> *}
-				{if CheckPlugin($smartypluginblocks, "plg_sections_default", "kontakt-sekcija2", $data)}
-					{include file="sections_default_contact2.tpl"}
-				{/if}
-				{* <template:def plugin="plg_sections_default" position="termsofuse" /> *}
-				{if CheckPlugin($smartypluginblocks, "plg_sections_default", "termsofuse", $data)}
-					{include file="sections_default_termsofuse.tpl"}
-				{/if}
-
-				{* <template:def plugin="plg_news_default" position="standard" />*}
-				{if CheckPlugin($smartypluginblocks, "plg_news_default", "standard", $data)}
-					{include file="news_default.tpl"}
-				{/if}				
-				
-				{* <template:def plugin="plg_module_default" position="standard" />*}
-				{if CheckPlugin($smartypluginblocks, "plg_module_default", "standard", $data)}
-					{include file="module_default.tpl"}
-				{/if}				
-				
-				{* <template:def plugin="plg_option_default" position="standard" />*}
-				{if CheckPlugin($smartypluginblocks, "plg_option_default", "standard", $data)}
-					{include file="option_default.tpl"}
-				{/if}
-			</section>
+							{* ------ proizvod detalji prikaz------ *}
+							{if isset($plg_product_details) and $plg_product_details eq "true"}
+								{include file="products/product_details.tpl"}
+							{/if}
+							{if isset($plg_search_details) and $plg_search_details eq "true"}
+								{include file="search_details.tpl"}
+							{/if}
+							{if isset($plg_news_details) and $plg_news_details eq "true"}
+								{include file="news_details.tpl"}
+							{/if}				
+							{if isset($plg_module_details) and $plg_module_details eq "true"}
+								{include file="module_details.tpl"}
+							{/if}				
+							{if isset($plg_option_details) and $plg_option_details eq "true"}
+								{include file="option_details.tpl"}
+							{/if}
+							{* <template:def plugin="plg_formcontact_default" position="standard" /> *}
+							{if CheckPlugin($smartypluginblocks, "plg_formcontact_default", "standard", $data)}
+								{include file="formcontact_default.tpl"}
+							{/if}
+							{* <template:def plugin="plg_sections_default" position="kontakt-sekcija1" /> *}
+							{if CheckPlugin($smartypluginblocks, "plg_sections_default", "kontakt-sekcija1", $data)}
+								{include file="sections_default_contact1.tpl"}
+							{/if}
+							{* <template:def plugin="plg_sections_default" position="kontakt-sekcija2" /> *}
+							{if CheckPlugin($smartypluginblocks, "plg_sections_default", "kontakt-sekcija2", $data)}
+								{include file="sections_default_contact2.tpl"}
+							{/if}
+							{* <template:def plugin="plg_sections_default" position="termsofuse" /> *}
+							{if CheckPlugin($smartypluginblocks, "plg_sections_default", "termsofuse", $data)}
+								{include file="sections_default_termsofuse.tpl"}
+							{/if}
+							{* <template:def plugin="plg_news_default" position="standard" />*}
+							{if CheckPlugin($smartypluginblocks, "plg_news_default", "standard", $data)}
+								{include file="news_default.tpl"}
+							{/if}				
+							{* <template:def plugin="plg_module_default" position="standard" />*}
+							{if CheckPlugin($smartypluginblocks, "plg_module_default", "standard", $data)}
+								{include file="module_default.tpl"}
+							{/if}				
+							{* <template:def plugin="plg_option_default" position="standard" />*}
+							{if CheckPlugin($smartypluginblocks, "plg_option_default", "standard", $data)}
+								{include file="option_default.tpl"}
+							{/if}				
+						</div>
+					</div>	
+				</div>
+			</section>	
 		</main>
 
 <!-- FOOTER ========================================================================================================= -->
