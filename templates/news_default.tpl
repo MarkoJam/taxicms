@@ -36,7 +36,7 @@
 		})
 	{/literal}
 </script>
-<section class="news-area page-top">
+<section class="news-area news-area-edit page-top">
 	<div class="container">
 		<div class="row">
 		{section name=pom loop=$data.news_all}
