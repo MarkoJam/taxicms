@@ -178,8 +178,10 @@ hr {
 .header-navigation .main-nav > li.active > a {
   color: #FF7F40;
 }
+/* changed: */
 .header-navigation .main-nav > li > a {
-  color: #002D74;
+  /* color: #002D74; old */
+  color: #3c3c3c;
 }
 .header-navigation .main-nav > li > a:hover {
   color: #FF7F40;
@@ -261,13 +263,15 @@ hr {
   margin-bottom: 0;
   border-bottom: none;
 }
+/* changed: */
 .submenu-nav-link, .dropdown-item {
   font-size:0.9rem;
   font-weight:600;
   display: block;
   padding: 5px 25px 5px;
   position: relative;
-  color:#002D74;
+  /* color:#002D74; old */
+  color: #3c3c3c;
   transition: all 0.3s ease-out;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
@@ -1690,9 +1694,10 @@ p.date{
   text-decoration:none;
 }
 
+/* changed: */
 footer{
   padding:80px 0px;
-  background:#011132;
+  /* background:#011132; */
   color:#fff;
   font-size:0.8rem;
 }

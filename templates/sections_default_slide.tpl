@@ -8,10 +8,10 @@
 			<div class="container carousel-wrap">
 				<div class="row">
 					<div class="col-md-6">
-						<div class="carousel-caption d-flex justify-content-center flex-column">
+						<div class="carousel-caption carousel-caption-edit d-flex justify-content-center flex-column">
 							{$data.sections_all[pom].shorthtml}
 							{$data.sections_all[pom].html}
-							<a class="carousel-button" href="{$data.sections_all[pom].sectionlink}">Check Products</a>
+							<a class="carousel-button carousel-button-edit" href="{$data.sections_all[pom].sectionlink}">Check Products</a>
 						</div>
 					</div>
 				</div>

@@ -65,8 +65,8 @@
 				<!-- Conainer: -->
 	            <div class="container">
 	                <div class="row align-items-center justify-content-between align-items-center">
-						<nav  style="background:white;" class="navbar navbar-expand-lg navbar-default sticky-top">
-							<a class="navbar-brand" href="{$ROOT_WEB}"><img class="logo-main" src="{$ROOT_WEB}images/logo/logo-blackM.png" height="50" width="70" alt="Logo"></a>
+						<nav  style="background:white;" class="navbar navbar-expand-lg navbar-default navbar-default-edit sticky-top">
+							<a class="navbar-brand" href="{$ROOT_WEB}"><img class="logo-main logo-main-edit" src="{$ROOT_WEB}images/logo/logo-blackM.png" height="50" width="70" alt="Logo"></a>
 							<div class="collapse navbar-collapse header-navigation " id="navbarSupportedContent">
 								<ul class="main-nav navbar-nav">
 									{$menu_render_horizontal}
@@ -231,7 +231,7 @@
 		</main>
 
 <!-- FOOTER ========================================================================================================= -->
-		<footer class="footer-area">
+		<footer class="footer-area footer-area-edit">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-4">
