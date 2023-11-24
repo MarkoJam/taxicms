@@ -86,6 +86,9 @@ p{
     /* font-size: 1.5vw; */
     font-size: 1.1rem;
 }
+.carousel-caption-edit h5 a{
+    color: #fff;
+}
 
 .carousel-button-edit{
     margin-bottom: 90px;
@@ -112,6 +115,10 @@ p{
     padding: 10px;
 }
 
+/* Modules: */
+.col-md-6-modules-edit{
+	margin-bottom: 10px;
+}
 
 /* BOTTOM: ======================================================================= */
 
