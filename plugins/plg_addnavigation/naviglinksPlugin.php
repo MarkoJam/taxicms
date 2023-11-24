@@ -33,9 +33,17 @@
 			$pages = $this->ObjectFactory->createObjects("Page");
 			$this->ObjectFactory->ResetFilters();
 
+			$header_arr = array();
+			$pageid_arr = array();
+			$links_arr = array();
 			// samo ako nema vise dece onda se vratimo i kupimo bracu
 			if(count($pages) == 0)
 			{
+				$header_arr[] = $ppage->getHeader()." All";
+				$pageid_arr[] = $ppage->getPageID();
+				$linkaddnav =  new LinkAdditionalNavigation($this->LanguageHelper,$ppage->getPageID(),$ppage->getHeaderUnchanged(),$this->HierarchicalTree->path_to_url($ppage->getPageID()));
+				$links_arr[] = $this->LanguageHelper->getPrintLink($linkaddnav);
+				
 				// II varijanta svu bracu
 				$this->ObjectFactory->ResetFilters();
 				$this->ObjectFactory->AddFilter("parent_id=".$cpage->getParentID());
@@ -46,12 +54,8 @@
 				$header = $ppage->getHeader();
 			}
 
-			$header_arr = array();
-			$pageid_arr = array();
-			$links_arr = array();
-
 			if(count($pages)>0)
-			{
+			{				
 				foreach ($pages as $page)
 				{
 					$header_arr[] = $page->getHeader();
