@@ -1,5 +1,9 @@
 <style>
 
+body{
+    overflow-x: hidden;
+}
+
 img{
     border-radius: 5px;
 }
@@ -9,14 +13,15 @@ p{
 }
 
 
-/* .wrapper{
-} */
+.wrapper-edit{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-image: url(http://localhost/taxicms/images/background-section.png);
+    
+}
 
-/* .header-wrapper-edit{
-    height:auto;
-} */
-
-/* TOP: ======================================================================== */
+/* HEADER: ======================================================================== */
 .header-middle{
     background: #d7d7d75c;
     background-image: url(./images/kocka.png),url(./images/kocka-right.png);
@@ -40,8 +45,8 @@ p{
 /* Navigation: */
 .dropdown-menu{
     width:auto;
-    /* background: rgba(226, 237, 243, 0.78); old */
     background-image: linear-gradient(#f7f7f72b, #cbcbcb42);
+    /* background: rgba(226, 237, 243, 0.78); old */
     border-radius: 7px;
     left:0;
 }
@@ -60,8 +65,8 @@ p{
 
 /* MIDDLE: ========================================================================= */
 
-.main-content{
-    background-image: url(http://localhost/taxicms/images/background-section.png);
+.main-content-edit{
+    flex:1;
 }
 
 /* Social icons: */
@@ -118,6 +123,11 @@ p{
 /* Modules: */
 .col-md-6-modules-edit{
 	margin-bottom: 10px;
+}
+
+.add-navlinks-default-row{
+    background-color: #7a7a7a17;
+    text-shadow: 0px 1px 1px #686767;
 }
 
 /* BOTTOM: ======================================================================= */
@@ -239,11 +249,9 @@ p{
 }
 
 @media only screen and (max-width: 600px){
-    .carousel-caption-edit h5, .carousel-caption-edit p{
-        /* background: #4ecdeba3; */
+    .carousel-caption-edit h5 a, .carousel-caption-edit p{
         color: #404040;
     }
-
     .carousel-button{
         width:50%;
     }

@@ -1,6 +1,6 @@
 <div class="row">
 	{section name=pom loop=$data.module_all}
-		<div class="col-md-6">
+		<div class="col-md-6 col-md-6-modules-edit">
 			<a href="{$data.module_all[pom].link_print_dt}">
 				<div class="news-group-box">
 					<image src="{$ROOT_WEB}{$data.module_all[pom].slika}"></image>
