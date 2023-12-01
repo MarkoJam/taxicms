@@ -54,7 +54,7 @@
 {include file="templates/additional-style.tpl"}
 <body>
 	<!--== Wrapper Start ==-->
-	<div class="wrapper">
+	<div class="wrapper wrapper-edit">
 		{* <template:def plugin="plg_sections_default" position="header" /> *}
 		{if CheckPlugin($smartypluginblocks, "plg_sections_default", "header", $data)}
 			{include file="sections_default_header.tpl"}
@@ -98,7 +98,7 @@
 		</header>
 
 <!-- MAIN CONTENT ==================================================================================================== -->
-		<main class="main-content">
+		<main class="main-content main-content-edit">
 			{* <template:def plugin="plg_sections_default" position="slideshow" /> *}
 			{if CheckPlugin($smartypluginblocks, "plg_sections_default", "slideshow", $data)}
 				{include file="sections_default_slide.tpl"}
@@ -223,7 +223,14 @@
 							{* <template:def plugin="plg_option_default" position="standard" />*}
 							{if CheckPlugin($smartypluginblocks, "plg_option_default", "standard", $data)}
 								{include file="option_default.tpl"}
-							{/if}				
+							{/if}
+
+							{* Start: *}
+							{* <template:def plugin="plg_company_default" position="standard" />*}
+							{if CheckPlugin($smartypluginblocks, "plg_company_default", "standard", $data)}
+								{include file="company_default.tpl"}
+							{/if}
+							
 						</div>
 					</div>	
 				</div>
