@@ -17,7 +17,7 @@ p{
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    background-image: url(http://localhost/taxicms/images/background-section.png);
+    background-image: url(./images/background-section.png);
     
 }
 
@@ -116,7 +116,7 @@ p{
 } */
 
 .wrapper-section{
-    background-image: url(http://localhost/taxicms/images/light_noise_diagonal.png);
+    background-image: url(./images/light_noise_diagonal.png);
     padding: 10px;
 }
 
