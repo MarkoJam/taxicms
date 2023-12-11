@@ -46,8 +46,8 @@
 <link rel="stylesheet" href="{$ROOT_WEB}css/lightbox.css">
 <link rel="stylesheet" href="{$ROOT_WEB}css/main.css?version=1">
 <link rel="stylesheet" href="{$ROOT_WEB}css/responsive.css?version=1">
-
 </head>
+
 <input id='rootweb' name='rootweb' type='hidden' value='{$ROOT_WEB}'/>
 {assign var="data" value=""}
 
@@ -122,6 +122,7 @@
 					{else}
 						<div class="col-md-12 content">
 					{/if}	
+						<!-- Title: -->
 							{if !empty($html)}
 								<h2>{$header}</h2>
 								<h5>{$shorthtml}</h5>
@@ -212,10 +213,8 @@
 							{if CheckPlugin($smartypluginblocks, "plg_sections_default", "termsofuse", $data)}
 								{include file="sections_default_termsofuse.tpl"}
 							{/if}
-							{* <template:def plugin="plg_news_default" position="standard" />*}
-							{if CheckPlugin($smartypluginblocks, "plg_news_default", "standard", $data)}
-								{include file="news_default.tpl"}
-							{/if}				
+
+				
 							{* <template:def plugin="plg_module_default" position="standard" />*}
 							{if CheckPlugin($smartypluginblocks, "plg_module_default", "standard", $data)}
 								{include file="module_default.tpl"}
@@ -225,12 +224,18 @@
 								{include file="option_default.tpl"}
 							{/if}
 
-							{* Start: *}
-							{* <template:def plugin="plg_company_default" position="standard" />*}
-							{if CheckPlugin($smartypluginblocks, "plg_company_default", "standard", $data)}
-								{include file="company_default.tpl"}
+							<!-- Company: -->
+							{* <template:def plugin="plg_sections_default" position="company" /> *}
+							{if CheckPlugin($smartypluginblocks, "plg_sections_default", "company", $data)}
+								{include file="section_company.tpl"}		
 							{/if}
-							
+
+							<!-- News: -->
+							{* <template:def plugin="plg_news_default" position="standard" />*}
+							{if CheckPlugin($smartypluginblocks, "plg_news_default", "standard", $data)}
+								{include file="news_default.tpl"}
+							{/if}
+
 						</div>
 					</div>	
 				</div>
@@ -315,5 +320,22 @@
 	<script src="{$ROOT_WEB}includes/js/lightbox.js"></script>
 	<script src="{$ROOT_WEB}includes/js/main.js?version=1"></script>
 
+	<script>
+		// Dynamic links for property background-image:
+		var root = document.location.hostname;
+		var path = './images/';
+
+		if(root == 'localhost'){
+			$(".wrapper-edit").css('background-image', 'url(http://'+root+'/taxicms/images/background-section.png)');
+			$(".header-middle").css({
+				'background-image':'url(http://'+root+'/taxicms/images/kocka.png),url(http://'+root+'/taxicms/images/kocka-right.png)'
+			});
+			$(".wrapper-section").css('background-image', 'url(http://'+root+'/taxicms/images/light_noise_diagonal.png)');
+		}else{
+			$(".wrapper-edit").css('background-image', 'url(https://'+root+'/images/'+file+')');
+		}
+	</script>
+
 </body>
 </html>
+

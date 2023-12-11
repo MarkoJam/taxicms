@@ -17,14 +17,13 @@ p{
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    background-image: url(https://www.taxicms.com/images/background-section.png);
-    
+    /* background-image: url(https://www.taxicms.com/images/background-section.png); */
 }
 
 /* HEADER: ======================================================================== */
 .header-middle{
     background: #d7d7d75c;
-    background-image: url(https://www.taxicms.com/images/kocka.png),url(https://www.taxicms.com/images/kocka-right.png);
+    /* background-image: url(https://www.taxicms.com/images/kocka.png),url(https://www.taxicms.com/images/kocka-right.png); */
     background-repeat: no-repeat, no-repeat;
     background-position: left, right;
 } 
@@ -116,7 +115,7 @@ p{
 } */
 
 .wrapper-section{
-    background-image: url(https://www.taxicms.com/images/light_noise_diagonal.png);
+    /* background-image: url(https://www.taxicms.com/images/light_noise_diagonal.png); */
     padding: 10px;
 }
 
