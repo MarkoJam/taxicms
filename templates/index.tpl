@@ -323,7 +323,6 @@
 	<script>
 		// Dynamic links for property background-image:
 		var root = document.location.hostname;
-
 		if(root == 'localhost'){
 			$(".wrapper-edit").css('background-image', 'url(http://'+root+'/taxicms/images/background-section.png)');
 			$(".header-middle").css({
@@ -333,9 +332,9 @@
 		}else{
 			$(".wrapper-edit").css('background-image', 'url(https://'+root+'/images/background-section.png)');
 			$(".header-middle").css({
-				'background-image':'url(https://'+root+'/taxicms/images/kocka.png),url(https://'+root+'/taxicms/images/kocka-right.png)'
+				'background-image':'url(https://'+root+'/images/kocka.png),url(https://'+root+'/images/kocka-right.png)'
 			});
-			$(".wrapper-section").css('background-image', 'url(https://'+root+'/taxicms/images/light_noise_diagonal.png)');
+			$(".wrapper-section").css('background-image', 'url(https://'+root+'/images/light_noise_diagonal.png)');
 		}
 	</script>
 
