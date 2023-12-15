@@ -72,65 +72,54 @@ function update_basket_details(url) {
 <!-- tpl:ProductDetails -->
 <div class="container">
     <div class="row position-relative">
-{if $details.pathData neq "" and $details.pathData neq "&nbsp;"}
-<div class="path path-products">
-{if count($details.pathData) gt 1}
-<ul>
-		{foreach from=$details.pathData item=pathData name=parentData}
-	 			{if $smarty.foreach.parentData.first}
-	 				<li><a href="{$ROOT_WEB}{$lang}{$PLG_LINK_PRODUCTS}">{$pathData.title}</a></li>
-	 			{else}
-	 				<li><a href='{$pathData.link}'>{$pathData.title}</a></li>
- 				{/if}
-		{/foreach}
-    <li>{$proizvod_detail.naziv}</li>
-</ul>
+		{if $details.pathData neq "" and $details.pathData neq "&nbsp;"}
+			<div class="path path-products">
+				{if count($details.pathData) gt 1}
+					<ul>
+						{foreach from=$details.pathData item=pathData name=parentData}
+							{if $smarty.foreach.parentData.first}
+								<li><a href="{$ROOT_WEB}{$lang}{$PLG_LINK_PRODUCTS}">{$pathData.title}</a></li>
+							{else}
+								<li><a href='{$pathData.link}'>{$pathData.title}</a></li>
+							{/if}
+						{/foreach}
+						<li>{$proizvod_detail.naziv}</li>
+					</ul>
+				{/if}
+			</div>
 		{/if}
-</div>
-{/if}
-
-	<form action="plugins/plg_order/korpa_add_one.php" method="POST">
-		<div class="product-detail-area">
+		<form action="plugins/plg_order/korpa_add_one.php" method="POST">
+			<div class="product-detail-area">
 				<div class="container">
-						<div class="row product-detail-box">
-								<div class="col-sm-12 col-md-6 col-lg-6 product-detail-image">
-										<div class="product-detail-thumb">
-                    	<div class="swiper myimage">
-							<div class="swiper-wrapper">
-                              <div class="swiper-slide">
-  									<a class="lightbox-image" data-fancybox="gallery" href="{$ROOT_WEB}{$proizvod_detail.slika}">
-                                	<img src="{$ROOT_WEB}{$proizvod_detail.slika}"  alt="Image">
-                                </a>
-                              </div>
-															{section name=cnt loop=$images start=0}
-                              <div class="swiper-slide">
-  															<a class="lightbox-image" data-fancybox="gallery" href="{$ROOT_WEB}{$images[cnt]}">
-                                	<img src="{$ROOT_WEB}{$images[cnt]}"  alt="Image">
-                                </a>
-                              </div>
-															{/section}
-														</div>
-
-													</div>
-													<div thumbsSlider="" class="swiper myimagethumb">
-															<div class="swiper-wrapper">
-                                <div class="nav-item swiper-slide">
-                                  	<img src="{$ROOT_WEB}{$proizvod_detail.slika}"  alt="Image">
-                                </div>
-																{section name=cnt loop=$images start=0}
-																<div class="nav-item swiper-slide">
-                                	<img src="{$ROOT_WEB}{$images_thumb[cnt]}" alt="Image" >
-                                </div>
-																{/section}
-															</div>
-														</div>
-													</div>
+					<div class="row product-detail-box">
+						<div class="col-sm-12 col-md-6 col-lg-6 product-detail-image">
+							<div class="product-detail-thumb">
+								<div class="swiper myimage">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<img src="{$ROOT_WEB}{$proizvod_detail.slika}"  alt="Image">
+										</div>			
+									</div>
+								</div>
+								{*<div thumbsSlider="" class="swiper myimagethumb">
+									<div class="swiper-wrapper">
+										<div class="nav-item swiper-slide">
+											<img src="{$ROOT_WEB}{$proizvod_detail.slika}"  alt="Image">
+										</div>
+										{section name=cnt loop=$images start=0}
+											div class="nav-item swiper-slide">
+												<img src="{$ROOT_WEB}{$images_thumb[cnt]}" alt="Image" >
 											</div>
-											<div class="col-sm-12 col-md-6 col-lg-6 product-detail-content">
-                            <div class="product-detail-content">
-                                <h4>{$pathData.title}</h4>
-                                <p class="code">{$proizvod_detail.sifra}</p>
-                                <h2 class="product-detail-title">{$proizvod_detail.naziv}</h2>
+										{/section}
+									</div>
+								</div>*}
+							</div>
+						</div>
+						<div class="col-sm-12 col-md-6 col-lg-6 product-detail-content">
+							<div class="product-detail-content">
+								<h4>{$pathData.title}</h4>
+								<p class="code">{$proizvod_detail.sifra}</p>
+								<h2 class="product-detail-title">{$proizvod_detail.naziv}</h2>
 								{if $proizvod_detail.cenaamp neq 0}
 									{if $proizvod_detail.cenabmp eq 0}
 										<div class="product-detail-price">€ {$proizvod_detail.cenaampformatirano}</div>
@@ -138,64 +127,63 @@ function update_basket_details(url) {
 										<div class="product-detail-old-price">€ {$proizvod_detail.cenaampformatirano}</div>
 										<div class="product-detail-price">€ {$proizvod_detail.cenabmpformatirano}</div>
 									{/if}
-								{else}
-
 								{/if}
-
-                                <div class="product-description">{$proizvod_detail.opis}</div>
-								
-								{section loop=$proizvod_detail.modules name=cnt}
-									<h4><a href="{$proizvod_detail.modules[cnt].link}">{$proizvod_detail.modules[cnt].title}</a></h4>
-									{section loop=$proizvod_detail.modules[cnt].options name=cnt2}
-										<ul>
-											<a href="{$proizvod_detail.modules[cnt].options[cnt2].link_dt}">{$proizvod_detail.modules[cnt].options[cnt2].title}</a>
-											{if $proizvod_detail.modules[cnt].options[cnt2].link ne ""}
-												<a class="bg-info rounded-circle" href="{$ROOT_DEMO}{$proizvod_detail.modules[cnt].options[cnt2].link}/?Login=1&username=taxicms&password=1234&language=en"><i>DEMO</i></a>
-												<a href="{$ROOT_HELP}{$proizvod_detail.modules[cnt].options[cnt2].link}"><i class="fa fa-question-circle" aria-hidden="true"></i></a>
-											{/if}
-										</ul>
-									{/section}
-								{/section}
-                              </div>
-                            </div>
-							{*
-                            <div class="col-sm-12 col-md-6 col-lg-6 product-detail-cart ">
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <div class="pro-qty">
-											<label>{$PLG_PRODUCT_ORDER_QUANTITY}:</label>
-											<button type="button" id="sub" class="sub"><i class="fa-solid fa-chevron-down"></i></button>
-                                            <input type="text" class="quantity" title="Quantity" value="1"  disabled />
-                                            <button type="button" id="add" class="add"><i class="fa-solid fa-chevron-up"></i></button>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-									{if $proizvod_detail.statusid neq 54 and $proizvod_detail.cenaamp neq 0 }
-										<button id="add_cart" class="product-detail-cart-btn" type="button"><i class="fa-solid fa-cart-shopping"></i> <span>{$PLG_PRODUCT_BASKET}</span></button>
-										<div id="proizvodid" style="display:none">{$proizvod_detail.proizvodid}</div>
+								<div class="product-description">{$proizvod_detail.opis}</div>
+								<i title="{$proizvod_detail.calc_price}" class="fa fa-euro fa-sm"></i>
+							</div>
+						</div>	
+						{*
+						<div class="col-sm-12 col-md-6 col-lg-6 product-detail-cart ">
+							<div class="row">
+								<div class="col-lg-6">
+									<div class="pro-qty">
+										<label>{$PLG_PRODUCT_ORDER_QUANTITY}:</label>
+										<button type="button" id="sub" class="sub"><i class="fa-solid fa-chevron-down"></i></button>
+										<input type="text" class="quantity" title="Quantity" value="1"  disabled />
+										<button type="button" id="add" class="add"><i class="fa-solid fa-chevron-up"></i></button>
+									</div>
+								</div>
+								<div class="col-lg-6">
+								{if $proizvod_detail.statusid neq 54 and $proizvod_detail.cenaamp neq 0 }
+									<button id="add_cart" class="product-detail-cart-btn" type="button"><i class="fa-solid fa-cart-shopping"></i> <span>{$PLG_PRODUCT_BASKET}</span></button>
+									<div id="proizvodid" style="display:none">{$proizvod_detail.proizvodid}</div>
+								{/if}
+								</div>
+							</div>
+						</div>
+						
+						<ul class="product-detail-meta">
+							{if $karakteristike_all|@count gt 0}
+							{section name=cnt loop=$karakteristike_all}
+							{if $karakteristike_all[cnt].vrednost neq "*"}
+							<li><span>{$karakteristike_all[cnt].naziv}:</span>{$karakteristike_all[cnt].vrednost}</li>
+							{else}
+							<li><span>{$karakteristike_all[cnt].naziv}</span></li>
+							{/if}
+							{/section}
+							{/if}
+						</ul>
+						*}
+					</div>
+					
+					<div class="row">
+						<h4>Included modules</h4>
+						{section loop=$proizvod_detail.modules name=cnt}
+							<h6><a href="{$proizvod_detail.modules[cnt].link}">{$proizvod_detail.modules[cnt].title}</a></h6>
+							{*{section loop=$proizvod_detail.modules[cnt].options name=cnt2}
+								<ul>
+									<a href="{$proizvod_detail.modules[cnt].options[cnt2].link_dt}">{$proizvod_detail.modules[cnt].options[cnt2].title}</a>
+									{if $proizvod_detail.modules[cnt].options[cnt2].link ne ""}
+										<a class="bg-info rounded-circle" href="{$ROOT_DEMO}{$proizvod_detail.modules[cnt].options[cnt2].link}/?Login=1&username=taxicms&password=1234&language=en"><i>DEMO</i></a>
+										<a href="{$ROOT_HELP}{$proizvod_detail.modules[cnt].options[cnt2].link}"><i class="fa fa-question-circle" aria-hidden="true"></i></a>
 									{/if}
-                                    </div>
-                                </div>
-                            </div>
-							
-							<ul class="product-detail-meta">
-								{if $karakteristike_all|@count gt 0}
-								{section name=cnt loop=$karakteristike_all}
-								{if $karakteristike_all[cnt].vrednost neq "*"}
-								<li><span>{$karakteristike_all[cnt].naziv}:</span>{$karakteristike_all[cnt].vrednost}</li>
-								{else}
-								<li><span>{$karakteristike_all[cnt].naziv}</span></li>
-								{/if}
-								{/section}
-								{/if}
-							</ul>
-							*}
-						</div>
-                            	{include file="products/conected_products.tpl"}
-													</div>
-
-						</div>
-
-	</form>
-  </div>
-  </div>
+								</ul>
+							{/section}*}
+						{/section}
+					</div>	
+					{include file="products/conected_products.tpl"}
+				</div>
+			</div>
+		</form>
+	</div>
+ </div>

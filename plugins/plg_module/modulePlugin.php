@@ -196,9 +196,19 @@
 				$this->Options = $this->ObjectFactory->createObjects("Option");
 				$this->ObjectFactory->ResetFilters();
 				foreach ($this->Options as $option) {
+					
+					$oid=$option->getOptionID();
+					$this->ObjectFactory->Reset();
+					$this->ObjectFactory->AddFilter("option_id = " . $oid);
+					$oc = $this->ObjectFactory->createObjects("OptionOptionCategory");
+					$this->ObjectFactory->Reset();
+					$order=$oc[0]->getOptionOptionCategoryOrder();
 					$links_print_dt = $this->LanguageHelper->GetPrintLink ( new LinkResourceDetails($this->LanguageHelper, 'option', $option->getOptionID(),'w',$option->getHeaderUnchanged()));
-					$option_array[] = array_merge($option->toArray(), array("link_print_dt" => $links_print_dt));
+					$option_array[] = array_merge($option->toArray(), array("link_print_dt" => $links_print_dt,"order" => $order));
 				}
+				usort($option_array,function($first,$second){
+					return $first['order'] > $second['order'];
+				});
 				// vezani resursi
 				$view = new ConnectedObject($this->ObjectFactory,$this->DatabaseBroker, $this->SetLabels());		
 				

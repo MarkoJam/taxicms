@@ -539,7 +539,8 @@ class katalogproizvodaPlugin extends pagePlugin {
 			$resX=explode(".",$res->getResID());
 			if ($resX[0]=="7") $modulesX[]=$resX[1];
 		}
-		$modules=array();		
+		$modules=array();	
+		$product_price=0;
 		foreach ($modulesX as $m) {
 			$module['id']=$m;
 			$md = $this->ObjectFactory->createObject("Module",$m);
@@ -556,6 +557,7 @@ class katalogproizvodaPlugin extends pagePlugin {
 			$this->ObjectFactory->Reset();
 			$options=array();
 			foreach ($opt as $o) {
+				$product_price+=$o->getPrice();
 				$option['id']=$o->getOptionID();
 				$option['title']=$o->getHeader();
 				$option['link']=$o->getLink();
@@ -576,7 +578,8 @@ class katalogproizvodaPlugin extends pagePlugin {
 		usort($modules,function($first,$second){
 				return $first['order'] > $second['order'];
 		});		
-		$pr_arr = array_merge($pr_arr, array("modules" => $modules));
+		$product_price=$product_price*20;
+		$pr_arr = array_merge($pr_arr, array("modules" => $modules, "calc_price" => $product_price));
 
 		//print_r($pr_arr);
 		//$this->smarty->assign("images",$images);

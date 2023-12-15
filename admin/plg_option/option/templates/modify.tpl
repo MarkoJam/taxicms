@@ -81,9 +81,6 @@
                                     <div class="form-group"><label class="col-sm-2 control-label">{$PLG_NAME}</label>
                                         <div class="col-sm-10"><input type="text" id='title' name="header" value="{$header}" class="form-control" placeholder="{$PLG_NAME}"></div>
                                     </div>
-									<div class="form-group"><label class="col-sm-2 control-label">{$PLG_PRICE}</label>
-										<div class="col-sm-10"><input type="text" name="price" value="{$price}" class="form-control" placeholder="{$PLG_PRICE}"></div>
-									</div>
 									<div class="form-group"><label class="col-sm-2 control-label">{$PLG_PUBLISHINGDATE}</label>
 										<div class="col-sm-10">
 											<input id="publishingdatum" name="publishingdate" type="text" class="form-control" value="{$publishingdatum}">

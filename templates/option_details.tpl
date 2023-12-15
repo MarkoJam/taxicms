@@ -50,4 +50,6 @@
 			{$option_detail.web_rows}
 		</div>	
     </section>
+	{$option_detail.help}
+	{$option_detail.fd}
 {/if}

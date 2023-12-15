@@ -213,15 +213,26 @@
 					"doc_rows" => $view->ViewConnectedObject('Option', 'doc', $option->getOptionID())));
 				$links_print_fb = $this->LanguageHelper->GetPrintLink ( new LinkResourceDetails($this->LanguageHelper, 'option', $option->getOptionID(),'fb',$option->getHeaderUnchanged()));
 				$links_print_in = $this->LanguageHelper->GetPrintLink ( new LinkResourceDetails($this->LanguageHelper, 'option', $option->getOptionID(),'in',$option->getHeaderUnchanged()));	
+				// get from HELP	
+				$url="https://wis.taxifrom.com/plugins/apiHelp.php?Module=".$option->getLink();
+				$ch = curl_init();
+				curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+				curl_setopt($ch, CURLOPT_URL,$url);
+				$result=curl_exec($ch);
+				curl_close($ch);
+				$obj=json_decode($result);
 				$option_array = array_merge($option_array, array(
 																	"link_print_in" => $links_print_in,
-																	"link_print_fb" => $links_print_fb));
+																	"link_print_fb" => $links_print_fb,
+																	"help" => $obj->help,
+																	"fd" => html_entity_decode($obj->fd),
+																	));
+																	
 				$conres_all=$this->showConResource('Option',10);
 				$this->smarty->assign("plg_option_details","true");
 				$this->smarty->assign("option_detail",$option_array);
 				$this->smarty->assign("conoption",$conres_all);				
 				$this->smarty->assign("MASTER_TITLE",$this->getTranslation("PLG_OPTION_DETAILS_TITLE"));
-						
 			}
 
 		}

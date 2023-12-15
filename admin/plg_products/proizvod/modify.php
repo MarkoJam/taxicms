@@ -61,13 +61,19 @@
 			$ObjectFactory->Reset();
 			foreach ($rr as $res) {
 				$resX=explode(".",$res->getResID());
-				if ($resX[0]=="8") $opt[]=$resX[1];
+				if ($resX[0]=="7") $mod[]=$resX[1];
 			}
 			$options_price=0;
-			foreach ($opt as $o) {
-				$option = $ObjectFactory->createObject("Option",$o);
-				$options_price+=$option->getPrice();
+			foreach ($mod as $m) {
+				echo $m;
+				$ObjectFactory->AddFilter("module_id=".$m);
+				$opt = $ObjectFactory->createObjects("Option");
+				$ObjectFactory->Reset();
+				foreach ($opt as $o) {
+					$options_price+=$o->getPrice();
+				}	
 			}
+			$options_price=$options_price*20;
 			$smarty->assign('options_price',$options_price);
 
 			// kreiram drop down listu sa svim proizvodjacima
